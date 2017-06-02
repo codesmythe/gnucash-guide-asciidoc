@@ -1,0 +1,341 @@
+[[ch_import_bus_data]]
+
+== Importing Business Data
+
+[[import-invoices]]
+
+=== Import Bills or Invoices
+
+This functionality is only available by default for versions greater than 2.6
+
+For 2.4.13 the Customers and Vendors importer is an optional module and needs to enabled by editing the file __$HOME/.gnucash/config.user__,
+adding the line:
+
+++$$(gnc:module-load "gnucash/plugins/bi_import" 0)$$++
+
+On Linux systems this file is found at __$HOME/.gnucash/config.user__
+and on Mac OSX it is __$$~/Library/Application Support/Gnucash/config.user$$__.
+If the file doesn&rsquo;t already exist you will have to create it.
+After restarting GnuCash, the item will appear at the bottom
+of the business menu.
+
+In order for the importer to work the data must be in a fixed field
+length, comma separated line format. A example Python script to convert
+a downloaded order is shown below.
+
+
+
+[source, python]
+----
+
+import sys
+import csv
+
+VENDOR_ID="000013"
+INFILE=sys.argv[1]
+INV_ID=sys.argv[2]
+try:
+  ACCOUNT=sys.argv[3]
+except:
+  ACCOUNT="Expenses:Materials General"
+
+Reader = csv.reader(open(INFILE), delimiter=',')
+
+# Need to ignore 1st and last rows
+
+for row in Reader:
+  if row[0].isdigit(): # We only use numbered lines
+    outline=(INV_ID + ",," + VENDOR_ID + ",,,," + row[1] + " > " + row[4] + ",ea," +
+      ACCOUNT + "," + row[2] + "," + row[5].replace("GBP", "") + ",,,,no,,,,,,,")
+  print outline
+      
+----
+
+
+
+Example of a downloaded vendor order from __Rapid Electronics__ (UK).
+
+[source, python]
+----
+
+line number,product code,quantity,availability,product description,unit price,discounts,line total,delivery,sub total,vat,grand total
+1,47-3524,100,100 Available,BC848C SOT-23 NPN TRANSISTOR (INF) (RC),GBP0.03,GBP0.00,GBP0.03
+2,47-3278,30,30 Available,L78L05ACZ 0.1A +5V VOLTAGE REG (ST) (RC),GBP0.18,GBP0.00,GBP0.18
+3,22-0120,1,1 Available,Tube 34 14pin DIL socket, narrow7.62mm, without central support,GBP1.05,GBP0.00,GBP1.05
+4,22-0127,1,0 Available<br />1 on Back Order,Tube 17 28pin DIL socket, wide15.24mm, without central support,GBP1.22,GBP0.00,GBP1.22
+5,62-0368,1,1 Available,820R CR25 0.25W CF Resistor Pk 100,GBP0.50,GBP0.00,GBP0.50
+6,47-3130,100,100 Available,1N4001 1A 50V SILICON RECTIFIER DIODE RC,GBP0.01,GBP0.00,GBP0.01
+7,17-0310,1,1 Available,PROFESSIONAL MINATURE PROBE HOOK RED RC,GBP0.90,GBP0.00,GBP0.90
+8,17-0312,1,1 Available,PROFESSIONAL MINATURE PROBE HOOK BLACKRC,GBP0.90,GBP0.00,GBP0.90
+9,34-0655,1,1 Available,PROTOBLOC 2 BREADBOARD,GBP4.39,GBP0.00,GBP4.39
+10,18-0200,1,1 Available,PP3 9V ALKALINE BATTERY "Not For Retail Sale",GBP1.37,GBP0.00,GBP1.37
+,,,,,,,,GBP4.95,GBP24.93,GBP4.35,GBP29.28
+      
+----
+
+
+
+A similar file after processing with the Python script.
+
+
+[source, python]
+----
+
+MEC-0071,,000013,,,,34-0655 > PROTOBLOC 2 BREADBOARD,ea,Expenses:Materials General,1,4.39,,,,no,,,,,,,
+MEC-0071,,000013,,,,18-0105 > PP3 / PP6 BATTERY CLIP 150MM (RC),ea,Expenses:Materials General,10,0.06,,,,no,,,,,,,
+MEC-0071,,000013,,,,62-0370 > 1k CR25 0.25W CF Resistor Pk 100,ea,Expenses:Materials General,1,0.50,,,,no,,,,,,,
+MEC-0071,,000013,,,,62-0354 > 220R CR25 0.25W CF Resistor Pk 100,ea,Expenses:Materials General,1,0.50,,,,no,,,,,,,
+MEC-0071,,000013,,,,34-5548 > PLAIN DOCUMENT WALLET ASSORTED PK 50 RE,ea,Expenses:Materials General,1,6.95,,,,no,,,,,,,
+MEC-0071,,000013,,,,62-0386 > 4k7 CR25 0.25W CF Resistor Pk 100,ea,Expenses:Materials General,1,0.50,,,,no,,,,,,,
+MEC-0071,,000013,,,,34-0860 > COPPER CLAD SRBP SS 100 X 160 (RC),ea,Expenses:Materials General,5,0.50,,,,no,,,,,,,
+MEC-0071,,000013,,,,18-0163 > PP3 BATTERY HOLDER WITH FLYING LEADS RC,ea,Expenses:Materials General,5,0.23,,,,no,,,,,,,
+MEC-0071,,000013,,,,73-4290 > ATMEGA8-16PU 8-BIT MICRO 8K DIL-28 (RC),ea,Expenses:Materials General,3,1.99,,,,no,,,,,,,
+MEC-0071,,000013,,,,81-0014 > BC108 NPN GP TRANSISTOR RC,ea,Expenses:Materials General,20,0.16,,,,no,,,,,,,
+MEC-0071,,000013,,,,DELIVERY,ea,Expenses:Postage,1,4.95,,,,no,,,,,,,
+MEC-0071,,000013,,,,VAT,tax,Expenses:VAT,1,4.35,,,,no,,,,,,,
+        
+----
+
+
+
+
+As can be seen there are some fields that are absent and some that
+are not required for import. The first line is not required and the last
+line is superfluous as GnuCash will total the order for us. All that is
+required is to take what we want and produce an output file with the
+correct format to import into GnuCash. In this case we join the part
+number and description fields and these become description in GnuCash
+invoice/bill. We need the qty and part price fields. Contrary to the
+header line VAT is not included by line and is always zero, the VAT is
+calculated on the last line as VAT on the order total.
+
+[NOTE]
+====
+This will cause problems later.
+
+====
+
+
+In this example I have assigned the
+__Expenses:Materials General__ account to be the target account. This can be
+changed after import in the usual way, along with any other data. If there
+is no such account as __Expenses:Materials General__ then that field will be
+left blank on import and will have to be set manually. Lines beginning
+with a "#" are regarded as comment lines and ignored.
+
+
+The script is called with the following command:
+
+__$$python importer.py __++file_to_import++__, __++invoice_id++__ &gt; __++file_to_save_as.csv++__$$__
+
+This short script can easily be
+changed to suit any downloaded format. The only restriction is that the
+final number of field is fixed, at least at the moment. The importer will
+ignore lines with the wrong number of fields. (This may be fixed in future
+version). Vendor ID is simply the ID assigned to the specific vendor, or
+client. The row[N] items refer to the position in the line where the
+correct data lies. Note that the first field is row[0] NOT row[1].
+
+
+Once you have converted the file navigate to menu:Business[Invoice &amp; Bill Import] to open a new import window.
+Select the file you have just created, select Bill
+or Invoice and Comma separated format. At this
+point the data should show up in the preview window. Check that the field
+data are in the correct columns before selecting OK. Once imported the
+invoice can be opened for editing and posting in the usual way.
+
+
+A note on VAT, or any purchase tax. As previously mentioned __Rapid Electronics__ calculate the VAT on the bill total not line by line. GnuCash
+calculated the VAT per line then totals the VAT. This can lead to
+inaccuracies in the VAT of the region of a few pennies and is enough to
+cause problems when reconciling the purchase with your bank or credit card
+account used to make the purchase. As to how you overcome that, for the
+moment, is a problem for you to use whatever method suits your conscience
+or accountant best. Personally I add the VAT as a separate line along with
+delivery charges manually. So some work is left to the user but the tedium
+of entering each item eliminated.
+
+
+Future: Currently the import format is quite strict and many users
+may have problems with the conversion process. Adding a template for every
+possible vendor CSV format would be mammoth and likely impossible task
+notwithstanding the fact the vendors are likely to change the format
+without informing the GnuCash team. Future import enhancements will be
+based on user feedback and hopefully the process can be made simpler or
+more flexible. Note that often "simple" is incompatible with
+"flexible".
+
+
+
+[NOTE]
+====
+If Python (other languages are avaialble) is not your thing then
+post a request to link:$$https://lists.gnucash.org/mailman/listinfo/gnucash-user$$[GnuCash user list],
+with an example of your downloaded CSV, and someone may write you a Python script to do the
+translation.
+
+
+====
+
+[[python-author-notes]]
+
+==== Notes for Python authors
+
+In order for the import to succeed the number of fields must be
+adhered to, so the trailing commas are important.
+
+
+A complete list of the required fields is:
+
+id, date_opened, owner_id, billingid, notes, date, desc, action,
+account, quantity, price, disc_type, disc_how, discount, taxable,
+taxincluded, tax_table, date_posted, due_date, account_posted,
+memo_posted, accu_splits,
+
+
+
+[NOTE]
+====
+Mind the trailing comma.
+
+====
+
+[[python-import-fields]]
+
+==== A brief description of each field
+
+
+
+** __id__ -
+The invoice number. All lines must
+contain this or the line will be rejected.
+
+
+** __$$date_opened$$__ -
+Use the same date format as setup in Preferences. Today's date is inserted if this is blank.
+
+
+** __$$owner_id$$__ -
+ID number of the vendor or customer. All lines must
+contain this or the line will be rejected.
+
+
+** __billingid__ -
+Billing ID.
+
+
+** __notes__ -
+Invoice notes.
+
+
+** __date__ -
+The date of the item line. Can be left blank for todays
+date.
+
+
+** __desc__ -
+Description as per normal invoice or bill.
+
+
+** __action__ -
+For bills usually "ea".
+
+
+** __account__ -
+Account to which the item is attributed.
+
+
+** __quantity__ -
+Quantity of each item. Must contain a value or the line
+will be rejected.
+
+
+** __price__ -
+Price of each item. Must contain a value or the line will be
+rejected.
+
+
+** __$$disc_type$$__ -
+Type of discount, either "%" or "TODO", only applies to
+invoices. Some experimentation may be required here as may be currency
+dependent.
+
+
+** __$$disc_how$$__ -
+Only applies to invoices.
+
+
+** __discount__ -
+Amount of discount to be applied. only applies to
+invoices.
+
+
+** __taxable__ -
+Will tax be applied to the item? "yes" or blank.
+
+
+** __taxincluded__ -
+Is tax included in the item price? "yes" or blank.
+
+
+** __$$tax_table$$__ -
+Tax table to apply to item.
+
+
+** __$$date_posted$$__ -
+If posted, what date. Normally left blank for manual
+posting after editing the invoice.  Use the same date format as setup in Preferences.
+
+
+** __$$due_date$$__ -
+Date payment is due.   Use the same date format as setup in Preferences.
+
+
+** __$$account_posted$$__ -
+Posted to what account.
+
+
+** __$$memo_posted$$__ -
+If posted insert memo here.
+
+
+** __$$accu_splits$$__ -
+Accumulate splits? "yes" or blank.
+
+
+
+[[import-customers-vendors]]
+
+=== Importing Customers and Vendors
+
+This functionality is only available in the 2.6 versions of GnuCash and is only loaded by default for versions greater than 2.6.
+
+For versions lower than 2.6 the Customers and Vendors importer is an optional module and needs to
+enabled by editing the file __$HOME/.gnucash/config.user__,
+adding the line:
+
+++$$(gnc:module-load "gnucash/plugins/customer_import" 0)
+    $$++
+
+On Linux systems this file is found at __$HOME/.gnucash/config.user__
+and on Mac OSX it is __$$~/Library/Application Support/Gnucash/config.user$$__.
+If the file doesn&rsquo;t already exist you will have to create it.
+After restarting GnuCash the item will appear at the bottom
+of the business menu.
+
+In order for the importer to work each line in the input file must have the following structure.
+
+
+++
+    id,  company,  name,  addr1,  addr2,  addr3,  addr4,  phone,  fax,  email,  notes,  shipname,  shipaddr1,  shipaddr2,  shipaddr3, shipaddr4, shiphone, shipfax, shipmail
+    ++
+
+
+Fields can be separated with commas or semicolons and each field can be in quotes.  These options are selectable in the import dialog. Vendors don&rsquo;t have shipping information so even though the fields have to exist, leave them empty.
+The id field is optional and if it is empty a new id will be chosen. If the id field has a value this will UPDATE any vendor/customer with the same id.  This may not be what you want.  Note that in your input file the data must be a single line for each customer/vendor.
+
+
+
+The importer does not currently import billing information for customers or vendors, these will have to be edited individually after importing.
+
+
