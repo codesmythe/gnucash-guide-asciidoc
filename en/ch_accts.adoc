@@ -13,6 +13,10 @@ utility.
 
 === Basic Accounting Concepts
 
+**I am adding this line to the code. **
+
+=== This is a header line
+
 As we saw in the previous chapter, accounting is based on 5 basic
 account types: Assets,
 Liabilities, Equity,
