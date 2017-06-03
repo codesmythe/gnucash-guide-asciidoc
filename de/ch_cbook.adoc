@@ -1,0 +1,278 @@
+[[chapter_cbook]]
+
+== Girokonto
+
+Dieses Kapitel gibt Ihnen jene besonderen Informationen, die Sie benötigen, um Ihr Girokonto mit GnuCash zu verwalten. 
+Die Verwaltung Ihrer Girokontenansicht ist der erste Schritt, Ihre Finanzen zu beobachten. 
+GnuCash macht dies viel einfacher als ein herkömmliches Papierjournal.
+
+Um nur eine Sache zu nennen, ist die Dateneingabe üblicher Buchungen, wie in <<chapter_txns>> behandelt, 
+für Sie wegen der Selbstvervollständigungsfunktion GnuCash zweckmäßig gemacht. 
+GnuCash unterhält eine laufende Bilanz für jedes Konto. Es macht das Abgleichen dieser Konten einfach. 
+Die Doppelte Buchführung hilft Ihnen durch die Anforderung eines Übertragungskontos für Entnahmen, Ihre Ausgaben zu buchen. Dadurch können Sie einfach herausfinden, wie viel Geld Sie in verschiedenen Bereichen ausgegeben haben.
+
+Wenn Sie erst einmal vertraut mit der Nutzung von GnuCash für Ihre Giro- und andere Bankkonten sind, wollen Sie möglicherweise auch andere Finanzkonten beobachten. 
+Die Kapitel 6 bis 9 behandeln Methoden, um Ihre anderen Konten zu verwalten.
+
+[[cbook-accounts1]]
+
+=== Konten einrichten
+
+Der erste Schritt zur Verwaltung Ihres Girokontos ist, die benötigten Konten einzurichten. 
+Entweder Sie nutzen die  GnuCash-Standardkonten oder erstellen Ihre eigenen Konten. 
+Weitere Einzelheiten, wie Sie neuen Konten erstellen, finden Sie unter <<accts-examples-toplevel2>>. 
+Eine Anleitung, wie Sie Ihre Konten von einem anderen Programm importieren, finden Sie unter <<oview-featureseasy2>>.
+
+Wir starten mit den Bankkonten, die Sie benötigen. 
+Sie benötigen ein GnuCash Konto vom Typ Bankkonto für jedes Bankkonto, das Sie beobachten wollen. 
+Wenn Sie Ihre Konten selbst erstellen oder die Standardkonten von GnuCash benutzen,
+müssen Sie sicherstellen, dass Sie einen Anfangsbestand für jedes Ihrer Bankkonto haben. 
+Der einfachste Weg, diese Zahlen zu erhalten, ist, den Stand des letzten Kontoauszuges als Anfangsbestand zu benutzen. 
+Sie können dies in das Fenster Konteninformation als Teil des Neuen Kontenrahmen erstellen-Assistenten automatisch oder eine händische Buchung direkt in das Konto eingeben. Um die Buchung händisch einzugeben, geben Sie einen Übertrag von einem Anfangsbestand-Konto (Typ Eigenkapital) zum Bankkonto ein.
+
+Das übliche Bankkonto, dass Sie verfolgen, enthält:
+
+
+
+** Girokonto - jedes institutionelles Konto, das die Befugnis zur Ausstellung von Schecks bietet.
+
+** Sparkonto - ein zinsbringendes institutionelles Konto, welches üblicherweise genutzt wird, um Geld für einen längeren Zeitraum zu halten als ein Girokonto.
+
+
+Übliche Buchungen, die diese Bankkonten berühren, sind Auszahlungen und Einzahlungen.
+__Auszahlungen__ sind Geldüberträge vom Bankkonto gewöhnlich auf ein Aufwandskonto. 
+__Einzahlungen__ sind Geldüberträge auf das Bankkonto gewöhnlich von einem Ertragskonto. 
+Sie werden Ertrags- und Aufwandskonten benötigen, um zu beobachten, woher Ihr Geld kommt und wohin es geht. 
+Erinnern Sie sich, dass eine ausgeglichene Buchung einen Übertrag der gleichen Summe von einem Konto auf ein anderes Konto erfordert. 
+Wenn Sie Geld auf Ihr Girokonto einzahlen, müssen Sie auch das Konto angeben, wo das Geld herkommt.
+Wenn Sie eine Rechnung von Ihrem Girokonto bezahlen, müssen Sie das Konto angeben, wohin das Geld geht.
+
+[[cbook-deposits1]]
+
+=== Einlagen eingeben
+
+Die meisten Einzahlungsbuchungen werden als Überträge von einem Ertragskonto auf das Bankkonto angegeben.
+Der Ertrag kann verschiedene Quellen haben. 
+Es ist eine gute Idee, für jeden Typ einer Ertragsquelle ein eigenes Ertragskonto einzurichten. 
+Zum Beispiel: Ihr Einkommen besteht hauptsächlich aus Ihrem Gehalt, aber Sie bekommen auch Zinsen für Ihr Sparkonto. 
+In diesem Fall sollten Sie ein Ertragskonto für den Arbeitslohn und ein anderes für die Zinserträge haben.
+
+
+[TIP]
+====
+Vergewissern Sie sich, dass Sie das Kästchen steuerrelevant angehakt und eine  entsprechende Steuerkategorie im  Einkommenssteuerinformation-Dialog (menu:Bearbeiten[Optionen Steuerbericht]) zugewiesen haben, wenn Sie steuerpflichtige Einkünfte haben. 
+Einige Arten von Einkünfte wie Schenkungen, müssen nicht immer steuerpflichtig sein. 
+Überprüfen Sie die entsprechenden Steuerregeln, um zu entscheiden, was steuerpflichtig ist. Für die Art und Weise, wie Einkünfte aus Kapitalveräußerungen zu beobachten sind, finden Sie Informationen unter <<chapter_capgain>>.
+
+====
+
+Bevor Sie beginnen, Gehaltszahlungen einzugeben, entscheiden Sie, wie ausführlich Sie diese beobachten wollen. 
+Der Grunddetaillierungsgrad ist die Eingabe der Nettozahlung, wie Sie es in Ihrer Papieraufzeichnung hätten. 
+Dies ist die einfachste Form. 
+Aber Sie können mehr Informationen von GnuCash bekommen, wenn Sie Ihre Bruttozahlung mit den Abzügen eingeben. 
+Es ist ein bisschen mehr Aufwand, die Abzüge einzugeben, aber die Eingabe einbehaltener Steuer über das Jahr erlaubt Ihnen, einen nützliche Steuerbericht jederzeit in GnuCash zu erstellen. 
+Diese Berichte können Ihnen bei der Entscheidung helfen, ob von Ihnen genügend Steuern einbehalten wurden und Ihnen helfen bei der vorzeitigen Schätzung Ihres Steuerbescheides. 
+Wenn Sie sich unsicher über den Detaillierungsgrad sind, beginnen Sie mit der Eingabe der Nettozahlung. Sie können jederzeit zurückgehen und Ihre Buchungen später bearbeiten, wenn Sie sich für mehr Details entscheiden.
+
+[[cbook-withdrawals1]]
+
+=== Ausgaben eingeben
+
+Wenn Sie Geld von Ihrem Girokonto zurückrufen, egal aus welchem Grunde, übertragen Sie Geld von Ihrem Bankkonto an einen anderen Ort. 
+In GnuCash ist dieser andere Ort auch ein Konto. 
+Je mehr detaillierte Konten Sie anlegen und für Ihre Ausgaben nutzen, desto mehr Informationen werden Sie erhalten, wo Ihr Geld hingeht.
+
+Auszahlungen nehmen viele Formen an. 
+Abhebungen an Geldautomaten sind eine der meist genutzten Buchungen. 
+Ausstellung von Schecks ist ein Weg, um Geld auszugeben, um Rechnungen zu bezahlen, Einkäufe durchzuführen oder für wohltätige Zwecke zu spenden. 
+Abhängig von Ihrer Bank zahlen Sie auch Bankgebühren, indem die Bank Geld von Ihrem Konto abbucht. 
+Geldüberträge auf ein anderes Konto sind auch Ausgaben. 
+Wir werden uns jede dieser Ausgabenarten anschauen und wie sie in GnuCash aufgezeichnet werden.
+
+[[cbook-atm2]]
+
+==== Abhebungen Bar oder am Geldautomat
+
+Barabhebungen werden als Übertrag vom Bankkonto auf ein Bargeldkonto behandelt. 
+GnuCash stellt spezielle __Bargeld__-Kontoarten bereit, um Ihre Bareinkäufe aufzuzeichnen. 
+Sie sollten ein Bargeldkonto einrichten, um Ihre Bargeldabhebungen und die vom Geldautomaten aufzuzeichnen.
+
+Bargeldkonten können mit einem unterschiedlichen Detaillierungsgrad genutzt werden. 
+Im Grunddetaillierungsgrad übertragen Sie einfach Geld von Ihrem Girokonto auf das Bargeldkonto. 
+Damit erfahren Sie, wie viel Geld Sie an einem bestimmten Tag von Ihrem Girokonto abgeholt haben, aber es sagt Ihnen nicht, wofür Sie das Geld ausgegeben haben. 
+Mit etwas mehr Aufwand können Sie das Bargeldkonto nutzen, um auch Ihre Bareinkäufe aufzuzeichnen, so dass Sie sehen, wohin das Bargeld ging. 
+Sie zeichnen diese Einkäufe auf als einen Übertrag vom Bargeldkonto auf Aufwandskonten.
+
+Einige Leute zeichnen jeden Bareinkauf auf, aber das ist mehr Arbeit. 
+Ein einfacherer Weg ist die Aufzeichnung der Einkäufe, für die Sie eine Quittung haben.  
+Dann müssen Sie den Saldo des Kontos an Ihre Geldbörse anpassen.
+
+Es ist eine gute Idee ein Bargeldkonto für Ihre Ausgaben einzurichten. 
+Wenn Sie sich entscheiden aufzuzeichnen, wohin Ihr Geld geht, können Sie die Buchungen für das Geld eingeben, das Sie ausgeben. Sie bestimmen den Detaillierungsgrad, den Sie nutzen wollen.
+
+[[cbook-reconacct1]]
+
+=== Abgleichen Ihrer Konten
+
+GnuCash macht das Abgleichen Ihrer Bankkonten mit Ihren monatlichen Kontoauszügen einfacher. 
+<<txns-reconcile1>> gibt Ihnen eine Anleitung, wie Sie Ihre Buchungen mit den monatlichen Kontoauszügen abgleichen. 
+Dies ist die Hauptaufgabe des Abgleichens, das Sie jeden Monat machen.
+
+Aber was ist mit all den anderen Konnten, die Sie erstellt haben? 
+Sollten diese auch abgeglichen werden? 
+Wenn Sie für diese Konten Kontoauszüge erhalten, dann sollten Sie ein Abgleichen erwägen.
+Die Beispiele enthalten den Girokontoauszug, den Sparbuchkontenauszug und die Kreditkartenabrechnung. Die Kreditkartenabrechnung und die Kreditkartenbuchungen werden in <<chapter_cc>> beschrieben. 
+Wenn Sie daran interessiert sind, Ihre Kreditkarten in GnuCash zu beobachten, schauen Sie in die dortige Anleitung.
+
+Ertrags- und Aufwandskonten werden gewöhnlich nicht abgeglichen, weil es keine Aufstellungen gibt, um Sie dagegen zu prüfen. 
+Sie brauchen die Bargeldkonten aus dem gleichen Grund nicht abzugleichen. 
+Das Bargeldkonto sollten Sie immer mal wieder abgleichen, damit Ihr Bargeldbestand mit dem Bargeldkonto übereinstimmt. Wie Sie den Kontostand angleichen, erfahren Sie im nächsten Abschnitt.
+
+[[cbook-together1]]
+
+=== Alles Zusammensetzen 
+
+Wie unter beschrieben <<chapter_txns>> haben Sie einige Buchungen auf Ihrem Girokonto eingegeben. In diesem Kapitel werden wir mehrere Buchungen hinzufügen und diese dann abgleichen.
+
+[[cbook-puttoget-open2]]
+
+==== Anfangsbestände
+
+ Lassen Sie uns mit der Datei  starten, dass Sie im letzten Kapitel (__test.gnucash__). Ihr Kontenblatt sollte so aussehen:
+
+[[cbook-gcashdata4]]
+.Eröffnungsbilanzs
+image::figures/cbook_gcashdata4.png["Dieses Bild zeigt die Eröffnungsbilanz.",width=]
+
+[[cbook-puttoget-transactions]]
+
+==== Einige Buchungen hinzufügen
+
+
+. Nun öffnen Sie im Hauptfenster das Konto __Girokonto__. Im letzten Kapitel haben Sie eine Gehaltszahlung als Einzahlung ins Girokonto eingegeben. 
+Nun wollen wir eine weitere Einzahlungsart eingeben - ein Geldübertrag vom Sparkonto auf das Girokonto. 
+In einer leeren Zeile geben Sie eine Buchung ein, um 500,- € vom __Sparkonto__ auf das __Girokonto__ zu übertragen (In diesem Fall war das letzte Buchungsdatum der 28.03.2015, aber diese Buchung erfolgte am 24.03.2015). 
+Das Übertragskonto ist das __Sparkonten__, wenn Sie im __Girokonto__ sind. 
+Ihr __Girokonto__ sieht nun so aus:
++
+[[cbook-transferin]]
+.Das Kontenblatt Girokonto
+image::figures/cbook_transferin.png["Dieses Bild zeigt das Kontenblatt Girokonto.",width=]
+
+
+. Nun stellen wir einige Schecks auf dieses Konto aus. 
+Zuerst stellen wir einen Scheck für den Lebensmittelhändler vor Ort über 75,- € aus (05.03.2015). 
+Das Übertragskonto ist __Aufwendungen:Lebensmittel__, weil alles Geld dazu benutzt wird, Lebensmittel zu kaufen. 
+Als nächstes schreiben wir einen Scheck für ABC Hardware über 100,- € (06.03.2015) und teilen diesen Betrag zwischen zwei Aufwandskonten auf: __Haushalt__ mit 50,- € und __Werkzeuge__ mit 50,- €. 
+Sie benötigen dazu ein Konto vom Typ __Aufwand__ für jedes davon, dann geben Sie die Teilbuchungen davon ein. 
+Ihr Girokonto sollte dann so aussehen:
++
+[[cbook-checkexamp]]
+.Das Kontenblatt Girokonto
+image::figures/cbook_checkexamp.png["Dieses Bild zeigt das Kontenblatt Girokonto nach der Eintragung weiterer Schecks.",width=]
+
+
+. Nehmen Sie an, dass Sie Geld abheben wollen. 
+Wenn Sie kein Bargeldkonto eingerichtet haben, so sollten Sie eins erstellen. 
+Erstellen Sie ein Konto als Bargeld mit der Kontenart  Aktiva. 
+In Ihrem __Girokonten__ Kontenblatt geben Sie eine Abhebung am Geldautomaten, um 100,- € vom __Girokonto__ auf das __Bargeld__-Konto am 25.03.2015 zu übertragen.
++
+[[cbook-atm]]
+.Das Kontenblatt Girokonto
+image::figures/cbook_atm.png["Dieses Bild zeigt das Kontenblatt Girokonto mit einer Abhebung am Geldautomat.",width=]
+
+[[cbook-puttoget-reconcile]]
+
+==== Anfangsbestand
+
+Nun sind wir bereit dieses __Girokonto__ unter Nutzung des Kontoauszuges auszugleichen:
+
+[[cbook-bankstmt]]
+.Ein Muster eines Kontenauszuges
+image::figures/cbook_bankstmt.png["Dieses Bild zeigt ein Kontenauszugsmuster.",width=]
+
+
+. Wählen Sie im Menü menu:Aktionen[Abgleichen] und füllen Sie als Schlusssaldo 1.451,79 €. 
+Klicken Sie OK, um mit dem Abgleichen des Kontos zu beginnen. 
+Prüfen Sie die Einträge wie sie auf dem Kontenauszugsmuster erscheinen.
+Wenn Sie all Ihre Einträge geprüft haben, sollte das Abgleichsfenster so aussehen: 
++
+[[cbook-reconexamp]]
+.Das Abgleichen Fenster
+image::figures/cbook_reconexamp.png["Dieses Bild zeigt das Abgleichen Fenster mit 5,- € Differenz.",width=]
++
+Beachten Sie, dass Ihr Abgleichungssaldo von Ihrem Schlusssaldo um 5,- € abweicht. 
+Wenn Sie auf Ihr Kontenauszugsmuster schauen, sehen Sie, dass es 5,- € Kontoführungsgebühren gibt, die nicht Ihrem __Girokonto__ hinzugefügt wurden.
+
+
+. Klicken Sie auf __Girokonto__ Kontenblatt und fügen Sie 5,- € Kontoführungsgebühren Ihrem __Girokonto__ hinzu. 
+In der leeren Zeile des __Girokonto__ Kontenblatt geben Sie eine Buchung ein, um 5,- € vom __Girokonto__ auf das Konto __Kontoführungsgebühren__. 
+(Sie müssen ein Konto __Kontoführungsgebühren__ mit der Kontenart Aufwendungen erstellen.) 
+Nutzen Sie das Buchungsdatum, das auf dem Kontenauszug gedruckt ist, als Datum als Datum für diese Buchung. 
+Ihr __Girokonto__ sollte wie folgt aussehen:
++
+[[cbook-servch]]
+.Das Girokonto Kontenblatt
+image::figures/cbook_servch.png["Dieses Bild zeigt das Girokonto Kontenblatt mit den hinzugefügten Kontenführungsgebühren.",width=]
+
+
+. Klicken Sie zurück im Fenster Abgleichen und Sie sollten die Kontoführungsgebühren unter Belastung. 
+Klicken Sie darauf, um es als abgeglichen zu kennzeichnen und beachten Sie, dass der Differenzbetrag nun 0,00 ist. 
+Klicken Sie die Beenden-Schaltfläche in der __Werkzeugleiste__ um das Abgleichen abzuschließen. 
+Die Spalte Abgleichen (J) in Ihrem __Girokonto__ Kontenblatt sollte nun ein j für jede Buchung zeigen, die Sie abgeglichen haben. 
+Beachten Sie auch, dass die Statusleiste unten nun Abgeglichen: 1.451,79 € anzeigt
++
+[[cbook-reconciledCheckAct]]
+.Das Girokonto Kontenblatt
+image::figures/cbook_reconciledCheckAct.png["Das Bild zeigt das abgeglichene Kontenblatt des Girokontos.",width=]
+
+[[cbook-puttoget-save]]
+
+==== Datei speichern
+
+Gehen Sie zurück zum Hauptfenster und speichern Ihre Datei unter dem neuen Namen__test2.gnucash__. 
+Ihre Kontenansicht wächst stetig und sollte nun so aussehen:
+
+[[cbook-chartaccts5]]
+.Die Kontenansicht
+image::figures/cbook_chartaccts5.png["Das Bild zeigt die Kontenansicht.",width=]
+
+[[cbook-puttoget-reports]]
+
+==== Berichte
+
+Wie wir in den vergangenen Kapiteln gesehen haben, lassen Sie uns den Kapitalfluss- und den Buchungsbericht ansehen.
+
+
+. Zuerst schauen wir uns den Kapitalfluss Bericht für den Monat März an.
++
+Wählen Sie den Kapitalflussbericht von menu:Berichte[Erträge &amp; Aufwendungen &gt; Kapitalfluss].
+
++
+[[cbook-puttoget2-Cash]]
+.Kapitalflussbericht für den Monat März
+image::figures/cbook_CashFlow.png["Dieses Bild zeigt den Kapitalflussbericht nach .",width=]
+
+
+. Nun schauen wir uns den dazugehörigen Buchungsbericht für die verschiedenen Aktivakonten an.
+
++
+Wählen Sie den Buchungsbericht unter menu:Berichte[Buchungsbericht].
+
++
+[[cbook-puttoget2-TransactionRptChecking]]
+.Buchungsbericht für die Aktivakonten während des Monats März
+image::figures/cbook_TransactionRptAssets.png["Dieses Bild zeigt den Buchungsbericht für die Aktivakonten im Monat März.",width=]
+
+
+. Nun ändern wir den Buchungsbericht, um nur die verschiedenen __Aufwandskonten__ anzuzeigen.
++
+[[cbook-puttoget2-TransactionRptExpenses]]
+.Buchungsbericht für die Aufwandskonten im Monat März
+image::figures/cbook_TransactionRptExpenses.png["Dieses Bild zeigt den Buchungsbericht für die verschiedenen Aufwandskonten im Monat März.",width=]
+
+Beachten Sie, dass Sie ein Konto Ihrer Eröffnungsbilanz nicht genutzt haben, das Kreditkarten-Konto. 
+Nun wissen Sie, wie Sie Ihre Bankkonten und Ihre Bargeldkonten in GnuCash beobachten und wollen dies nun auch für Ihre Kreditkarten tun. 
+GnuCash stellt Ihnen eine spezielle Kontoart für Kreditkarten zur Verfügung.
+Dieses wird im nächsten Kapitel besprochen 
+

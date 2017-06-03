@@ -1,0 +1,348 @@
+[[chapter_bus_setup]]
+
+== Einrichtung der geschäftlichen Buchhaltung
+
+Um GnuCash so einzurichten, Debitoren- 
+und Kreditorenkonten für Unternehmen zu händeln, müssen diese 
+vorbereitenden Schritte durchgeführt werden.
+
+
+** Erstellen Sie eine sachgemäße Kontenhierarchie.
+
+** Richten Sie Steuertabellen ein.
+
+** Tragen Sie das Unternehmen in GnuCash ein.
+
+** Setzen Sie die geschäftlichen Eigenschaften.
+
+** Richten Sie Zahlungsbedingungen ein.
+
+
+
+
+[[bus-setupacct]]
+
+=== Konteneinrichtung
+
+Es gibt viele verschiedene Möglichkeiten, eine Geschäftskontenhierarchie 
+einzurichten. Sie können mit der Einrichtung der Geschäftskonten anfangen, 
+die mit dem Neuen Kontenplan erstellen Assistenten zur Verfügung 
+gestellt werden oder einen Kontenplan händisch erstellen. Um auf 
+die vorgefertigten Geschäftskontenpläne zuzugreifen, 
+starten Sie  GnuCash und
+klicken auf menu:Datei[Neue Datei 
+      ] und fahren fort, bis Sie eine Liste der 
+verfügbaren Kontenpläne sehen. Dort wählen Sie 
+den gewünschten Kontenrahmen (z.B. SKR03 oder SKR04) aus.
+
+Die vorgefertigte Geschäftskontenhierarchie wird nicht exakt Ihren Bedürfnissen 
+entsprechen. Sie werden Anpassungen an der Kontenhierarchie durchführen, damit diese Ihre 
+spezielle Situation wiedergibt. Sie sollte aber tauglich genug sein, 
+damit beginnen zu können.
+
+Um GnuCash&rsquo;s eingebaute Debitorenbuchhaltung  
+zu nutzen, müssen Sie zunächst ein Konto (üblicherweise als Unterkonto 
+unter Aktiva) mit der Kontenart __Offene Forderungen__ einrichten. 
+Innerhalb dieses Kontos wird die integrierte Debitorenbuchhaltung Geschäftsvorfälle buchen.
+
+
+Um GnuCash&rsquo;s eingebaute 
+Kreditorenbuchhaltung nutzen zu können, müssen Sie dann, ein Konto 
+üblicherweise als Unterkonto unter Passiva mit 
+der Kontoart __Offene Verbindlichkeiten__ einrichten. 
+Innerhalb dieses Kontos wird die integrierte 
+Kreditorenbuchhaltung Geschäftsvorfälle buchen.
+
+
+
+....
+
+Basis Kontenhierarchie für Debitoren- und Kreditorenbuchhaltung:
+
+-Aktiva
+   -Forderungskonten
+   -Bankkonten
+-Aufwendungen
+  ...(nach Bedarf)
+-Erträge
+   -Verkäufe
+-Verbindlichkeiten
+  -Verbindlichkeiten aus Lieferungen und Leistungen
+  -Steuern
+      -Steuern auf Ankäufe (Vorsteuer)
+      -Steuern auf Verkäufe (Umsatzsteuer)
+  
+....
+Sie müssen zusätzliche Konten dieser Hierarchie hinzufügen, 
+um diese nutzbar zu machen.
+
+
+[NOTE]
+====
+Sie brauchen keine individuellen Konten für Forderungen aus 
+Lieferungen und Leistungen für jeden Kunden anzulegen. 
+GnuCash behält den einzelnen Kunden 
+intern im Auge und liefert einen Bericht für jeden Kunden auf der 
+Grundlage der internen Verfolgung. Das gleiche gilt für Verbindlichkeiten 
+aus Lieferungen und Leistungen und den Lieferanten.
+
+
+
+Wenn Sie mit den Kunden in mehr als einer Währung zu tun haben, 
+benötigen Sie für jede Währung ein eigenes Konto  
+__Offene Forderung__.
+
+
+
+Wenn Sie mit den Lieferanten in mehr als einer Währung zu tun haben, 
+benötigen Sie für jede Währung ein eigenes Konto 
+__Verbindlichkeiten aus Lieferungen und Leistungen__.
+
+
+Buchungen, an denen die Konten Offene Forderungen oder Verbindlichkeiten 
+beteiligt sind, sollten nicht in irgendeiner anderen Art und Weise hinzugefügt, 
+geändert oder gelöscht werden als unter Nutzung von:
+
+
+** einbuchen/ausbuchen der Eingangs-/Ausgangsrechnung/Gutschrift oder
+
+** Zahlungsvorganges
+
+
+
+
+====
+
+[[bus-setuptaxtables]]
+
+=== Steuertabellen
+
+Steuertabellen können genutzt werden, um die Steuer für die 
+Ausgangsrechnung an den Kunden (oder die Eingangsrechnung des Lieferanten) 
+zu ermitteln.
+
+
+ Eine Steuertabelle kann der Zeile Ausgangsrechnung oder Eingangsrechnung 
+zugewiesen werden.
+
+Erstellen Sie eine individuelle Steuertabelle für Kunden und 
+Lieferanten.
+
+Die Standardausgangsrechnung-Steuertabelle kann jedem Kunden 
+und die Standardeingangsrechnung-Steuertabelle jedem Lieferanten 
+zugewiesen werden.
+
+
+Die Standardsteuertabelle für neue Kunden oder neuen Lieferanten 
+kann in dem Fenster __Buch-Optionen__ bestimmt werden, 
+auf das Sie unter menu:Datei[Eigenschaften &gt; Reiter Geschäft] zugreifen können.
+
+
+Steuertabellen werden durch Nutzung des Editors 
+__Steuertabellen__ genutzt, auf den Sie im Menü unter 
+menu:Geschäft[Steuertabellen
+        ] zugreifen können.
+
+
+[[bus-taxmain]]
+.Editor Steuertabellen-Editor
+image::figures/bus_tax_main.png["",width=]
+
+[[bus-taxnew]]
+.Neue Steuertabellen
+image::figures/bus_tax_new.png["",width=]
+
+
+
+** Name: Dies ist der Name der Steuertabelle.
+
+** Typ: Entweder Prozent %
+oder Wert €
+.
+
+** Wert:
+Dies ist der Prozentsatz oder der Wert abhängig vom Typ.
+
+** Konto: Dies ist das Konto, auf welches die Steuer gebucht werden wird.
+Für Steuern, die von Kunden erhoben werden, sollte dies wohl ein Verbindlichkeitskonto sein, weil dies an die Steuerverwaltung bezahlt werden muss.
+Für Steuer, die an Lieferanten gezahlt werden, sollte dies, 
+wenn die Steuergesetze Vorsteuerabzug ermöglichen, wohl auch 
+ein Verbindlichkeitskonto sein (auch wenn es üblicherweise einen 
+negativen Stand aufweist). So kann der Nettobetrag der Steuer, 
+die der Verwaltung geschuldet wird, einfach festgestellt werden,
+
++
+Wenn Sie Umsatzsteuer und Vorsteuer als Unterkonten von 
+Verbindlichkeiten:Steuern einrichten, wird die Nettosteuer ständig 
+berechnet und erscheint im GnuCash Kontenreiter.
+
++
+__Wenn Sie wegen steuergesetzlicher Anforderungen unsicher sind, holen Sie professionellen Rat ein!__
+
+
+[[bus-setupcname]]
+
+=== Unternehmensregistrierung
+
+Nachdem Sie die Kontenstruktur erstellt und die Steuertabellen 
+eingerichtet haben, registrieren Sie die GnuCash
+Datei als zum Unternehmen gehörig. Um Ihr Unternehmen zu registrieren, 
+wählen Sie den Reiter Geschäft in dem Fenster
+Buch-Optionen, auf das Sie unter  
+menu:Datei[Eigenschaften] zugreifen können.
+
+
+[[bus-co-reg]]
+.Unternehmensregistrierung
+image::figures/bus_co_reg.png["",width=]
+
+Hier können Sie:
+
+
+
+** den Namen Ihres Unternehmens mit den Kontaktinformationen
+wie Telefon-, Faxnummern, E-Mail Adresse und URL der Webseite eingeben.
+
+** die Identifikationsnummer Ihres Unternehmens 
+(z.b die UStID) im Feld Firmennummer eingeben.
+
+** Wählen Sie die Standardsteuertabellen für die üblichen 
+Kunden und Lieferanten aus.
+
+
+[[bus_setup_pref]]
+
+=== Einstellungen für das Unternehmen
+
+Stellen Sie die Optionen im Reiter Geschäft in den 
+GnuCash Einstellungen ein, auf welche Sie 
+unter menu:Bearbeiten[Einstellungen]
+(menu:GnuCash[Einstellungen] 
+unter Mac OS X).
+
+
+++++++++++++++++++++++++++++++++++++++
+<!--
+        See Help manual chapter 10.3.3 Business Book Options Tab.
+        -->
+++++++++++++++++++++++++++++++++++++++
+    
+
+
+[[bus-setupterms]]
+
+=== Zahlungsbedingung
+
+Zahlungsbedingungen können genutzt werden, um das Zahlungsziel 
+festzulegen und um eine Richtschnur für die Festlegung des Skontos 
+bei vorzeitiger Zahlung der Ausgangsrechung (oder der Eingangsrechnung 
+des Lieferanten) zu sein.
+
+
+
+[NOTE]
+====
+Seit GnuCash Version 2.6.7, werden 
+Zahlungsbedingungen nur teilweise unterstützt. Das Fälligkeitsdatum 
+wird mit Hilfe der Zahlungsbedingungen berechnet, aber nicht der 
+Skontobetrag.
+
+
+
+Der Skonto für vorzeitige Zahlung ist nicht umgesetzt. Es gibt Wege, 
+wie dies getan werden kann. wenn auch keine davon empfohlen wird und 
+fragen Sie professionelle Berater um Rat, ob diese Bestimmungen 
+mit dem folgenden übereinstimmen:
+
+
+** Nach der Eingabe und der Buchung der Zahlung in voller 
+Höhe wird die Buchung der Zahlung manuell bearbeitet (gewöhnlich 
+dringend abgeraten) und die Zahlung gesplittet, um den Betrag 
+um den Skontobetrag zu reduzieren und eine ausgleichende Splitbuchung 
+auf einem Ertragskonto (Skonto) zu erstellen.
+
+
+** Alternative erstellen Sie nach der Eingabe und der Buchung 
+der Zahlung für den Skontobetrag eine Gutschrift und nutzen ein 
+spezielles negatives Ertragskonto aus Verkäufen (Skonto) als 
+Transfer  konto.
+
+
+
+
+
+====
+
+Sie können die Zahlungsbedingungen für jede Eingangs-/Ausgangsrechnung 
+bestimmen. Die Zahlungsbedingungen der Ausgangsrechnung werden durch 
+die Kundenzahlungsbedingungen vorgegeben. Die Zahlungsbedingungen 
+der Eingangsrechnung werden durch die Lieferantenzahlungsbedingungen 
+vorgegeben. 
+
+
+Zahlungsbedingungen werden im Editor für die Zahlungsbedingungen 
+gepflegt, auf den Sie unter menu:Geschäft[Zahlungsbedingungen…]
+zugreifen können.
+
+
+[[bus-termsmain]]
+.Zahlungsbedingungen-Editor
+image::figures/bus_terms_main.png["",width=]
+
+[[bus-termsnew]]
+.Neue Zahlungsbedingungen
+image::figures/bus_terms_new.png["",width=]
+
+
+
+** Name: Der interne Name der Zahlungsbedingung.
+Für einige Beispiele der Benennungen und Beschreibungen der 
+Zahlungsbedingungen schauen Sie unter link:$$http://wiki.gnucash.org/wiki/Terms$$[].
+
+
+** Beschreibung: Die Beschreibung der 
+Zahlungsbedingungen, wie Sie auf den Rechnungen gedruckt wird.
+
+** Es gibt zwei Arten von Zahlungsbedingungen, für die verschiedenen 
+Informationen eingegeben werden.
++
+
+
+** Art: Tage
++
+
+
+** Fälligkeitsdatum: Die Ausgangs- 
+oder Eingangsrechnung ist zur Zahlung innerhalb der Anzahl 
+dieser Tage nach dem Zugangsdatum.
+
+** Skontotag: Die Anzahl der Tage 
+nach dem Zugangsdatum während derer das Skonto für die 
+vorzeitige Zahlung angewendet wird.
+
+
+** Skonto %: Der Skonto-Pozentsatz, 
+der für die vorzeitige Zahlung angewendet wird. 
+
+
+** Type: Im nächsten Monat
++
+
+
+** Fälligkeitsdatum  Tag des Monats, an dem die Rechnung fällig wird.
+
+** Stichtag Skonto: Der letzte Tag des Monats für den Skonto für die vorzeitige Zahlung
+
+** Skonto %: Der Skonto-Pozentsatz, 
+der für die vorzeitige Zahlung angewendet wird.
+
+** Stichtag Monatswechsel Der 
+Stichtag Monatswechsel gilt für Eingangsrechnungen. Nach 
+dem Monatswechsel werden die Rechnungen im folgenden Monat 
+angewandt. Negative Werte werden vom Ende des Monats 
+rückwärts gezählt.
+
+
+
+
+

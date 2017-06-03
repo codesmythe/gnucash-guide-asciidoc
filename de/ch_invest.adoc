@@ -1,0 +1,1504 @@
+[[chapter_invest]]
+
+== Kapitalanlagen
+
+Dieses Kapitel erklärt, wie Sie Ihre Kapitalanlagen mit GnuCash verwalten.
+Viele Leute haben einen Geldanlageplan, ob sie das Geld in einen Investmentfont geben, 
+Belegschaftsaktien erwerben oder Aktien und Rentenpapiere durch eine Börsenmaklerfirma 
+kaufen und verkaufen. GnuCash 
+gibt Ihnen Werkzeuge, die Ihnen helfen, diese Kapitalanlagen zu verwalten, wie einen 
+__Preise-Editor__, der es Innen erlaubt, die Änderungen des Wertes der von 
+Ihnen gehaltenen Wertpapieren aufzuzeichnen.
+
+[[invest_concepts1]]
+
+=== Grundlagen
+
+Eine Kapitalanlage ist etwas, was Sie in der Hoffnung auf Rendite erwerben, 
+oder in der Hoffnung, es in Zukunft teurer zu verkaufen, als Sie sie erworben 
+haben. Unter dieser einfachen Definition können viele Dinge als Kapitalanlage 
+betrachtet werden: das Haus in dem Sie leben, ein wertvolles Gemälde, Beteiligungen an 
+börsenorientierten Unternehmen, Ihre Spareinlagen bei einer Bank oder 
+verbriefte Bankeinlagen. Diese vielen Arten der Geldanlage werden in diesem Kapitel 
+unter dem Gesichtspunkt besprochen, wie man sie durch GnuCash aufzeichnet.
+
+[[invest_terms2]]
+
+==== Terminologie
+
+Bevor wir Geldanlagen speziell diskutieren, wird es hilfreich sein, 
+ein Glossar des Geldanlagenfachvokabulars vorzulegen. Die unten vorgelegten Ausdrücke 
+stellen die Grundlagen der Investitionen dar. Es ist eine gute Idee, 
+sich mit diesen Ausdrücken vertraut zu machen, oder zumindest auf diese Liste zu verweisen, 
+wenn Sie ein unbekanntes Wort in den späteren Abschnitten stoßen.
+
+__Kapitalerträge__:: Dies ist die Differenz zwischen dem An- und Verkaufspreis 
+einer Kapitalanlage. 
+Dies ist auch als __realisierter Gewinn/Verlust__ bekannt.
+Wenn der Verkaufspreis niedriger ist als der 
+Ankaufspreis, nennt man das einen __Veräußerungsverlust__. 
+
+
+__Maklergebühr__:: Dies ist die Gebühr, die Sie an den Makler zahlen, damit er 
+Wertpapiere kauft oder verkauft.
+
+__Stammaktien__:: Dies ist ein Wertpapier, dass einen bestimmten Anteil an 
+einem Unternehmen darstellt. Dies ist das, was Sie kaufen beim
+"Aktienerwerb" in ein Unternehmen auf dem freien 
+Markt. Dies 
+wird auch __Stammkapital__ genannt.
+
+__Aufzinsung__:: Dies ist das Konzept, dass die wiederangelegten Zinsen später  
+wieder eigene Zinsen abwerfen (Zinseszinsen). 
+Dies wird oft als __Aufzinsen__ bezeichnet.
+
+
+__Dividenden__:: Dividenden sind Barzahlungen, die die Unternehmen an die Aktionäre zahlen. 
+Die Höhe dieser Zahlung bestimmt sich normalerweise als Anteil an der Höhe 
+des Gewinns des Unternehmens. Beachten Sie, dass nicht alle Stammaktien 
+Dividenden ausschütten.
+
+__Dividendenpapiere__:: Dies sind Kapitalanlagen. mit denen der Kapitalanleger 
+zum Teil (oder ganz) Eigentümer wird. Dies schließt 
+Stammaktien eines Unternehmens und Anteile an einem Immobilienfonds ein.
+
+__Zinsen__:: Dies ist, was ein Darlehensnehmer einem Darlehensgeber zahlt, 
+um dessen Geld zu nutzen. Normalerweise wird dies als Prozentsatz 
+der Kreditsumme pro Jahr ausgedrückt. Im Falle eines Sparguthabens 
+mit 1 % Zinsen (Sie sind der Darlehensgeber, die Bank ist der 
+Darlehensnehmer) wird Ihnen 1,- € pro Jahr für jede 100,- € zahlen, 
+die Sie dort zahlen.
+
+__Liquidität__:: Dies ist ein Maß, wie einfach eine Kapitalanlage in Bargeld 
+umtauschbar ist. Geld in einem Sparguthaben ist sehr liquide,
+während Geld, das in ein Haus angelegt ist, eine geringe Liquidität hat,
+weil es Zeit braucht, ein Haus zu verkaufen.
+
+__Grundkapital__:: Dies ist der ursprüngliche Betrag, der angelegt oder 
+geliehen wurde.
+
+__Realisierter oder nichtrealisierter Gewinn/Verlust__:: Nichtrealisierter Gewinn oder Verlust entsteht, wenn Sie eine Änderung im Wert 
+des Bestandes haben. Sie realisieren Gewinn/Verlust, wenn Sie tatsächlich den Bestand 
+verkaufen. Schauen Sie auch __Kapitalgewinn/-verlust__.
+
+__Ertrag__:: Dies sind die Gesamteinnahmen plus Kapitalgewinn
+oder -verlust einer Kapitalanlage. Schauen Sie auch
+__Rendite__.
+
+__Risiko__:: Dies ist die Wahrscheinlichkeit, dass die Rendite der Kapitalanlage 
+sich von dem unterscheidet, was Sie erwartet haben. Kapitalanlagen sind oft
+in einer Skala von risikoarm (Sparguthaben, Staatsanleihen)
+bis hohes Risiko (Aktienkapital, Risikoanlage) unterteilt. Als eine generelle Regel 
+gilt, je höher das Risiko je größer die mögliche Rendite.
+
+__Aktionär__:: Aktionär ist eine Person, die Aktien an einem 
+Unternehmen hält.
+
+__Aktienstückelung__:: Dies kommt vor, wenn ein Unternehmen anbietet, zusätzliche
+Kapitalanteile für jede existierende Aktie auszugeben.
+Zum Beispiel eine "2 für 1" Aktienstückelung meint, dass wenn 
+Sie 100 Aktienanteile besitzen, Sie weitere 100 ohne Kosten dazu erhalten. 
+Der Stückpreis der Aktien wird angeglichen, damit es keine 
+Nettoänderung im Wert gibt, so wird sich in diesem Beispiel der Preis je Aktie 
+halbieren.
+
+__Wertbestimmung__:: Dies ist der Prozess der Festlegung des Marktwertes 
+oder der Preis, den die Kapitalanlage bei einem Verkauf in einem 
+"zumutbaren Zeitrahmen " erzielen würde.
+
+__Rendite__:: Dies ist der Maßstab für den Geldbetrag, den Sie durch Ihre 
+Kapitalanlage erzielen (Z.B.: Wie viel Einkommen Sie von der Kapitalanlage
+erhalten). Üblicherweise wird dies als Prozentsatz auf das Grundkapital. 
+beschrieben. Die Rendite enthält nicht die Veräußerungsgewinne oder -verluste 
+Z.B: Eine Aktie wird für 100,- € verkauft und gibt 2,- € Dividende pro Jahr, 
+ergibt eine Rendite von 2%.
+
+[[invest_types2]]
+
+==== Arten der Kapitalanlagen
+
+Nachfolgend werden einige verbreitete Arten verfügbarer Anlagen 
+und Beispiele jedes Typs vorgestellt.
+
+
+
+** __Verzinsliche Konten oder Finanzinstrumente__
++
+Diese Art der Kapitalanlage erlaubt Ihnen gewöhnlich direkten 
+Zugriff auf Ihr Geld und wird Ihnen üblicherweise jeden Monat Zinsen 
+abwerfen basierend auf dem Geldbetrag, den Sie hinterlegt haben. 
+Beispiele sind Banksparkonten (und einige verzinzliche Bankkonten) 
+und Bargeldkonten bei einem Makler. Dieses ist eine Kapitalanlage mit 
+geringem Risiko, in den Vereinigten Staaten und in Deutschland sind diese Konten meist 
+gegen Verluste bis zu einer bestimmten Summe versichert.
++
+Manchmal ist ein verzinsliches Finanzinstrument 
+__zeitlich gebunden__. Diese Art der Kapitalanlage 
+erwartet, dass Sie Geld für eine vorgegebene Zeitspanne fest anlegen, 
+in der Sie eine festgesetzte Rendite erhalten. Üblicherweise erhalten  
+Sie um so höhere Renditen, je länger Sie Ihr Geld festlegen. Wenn Sie Ihr 
+Geld vor dem Fälligkeitsdatum zurückziehen, müssen Sie üblicherweise 
+Vorschusszinsen zahlen. Dies ist eine relativ risikoarme Kapitalanlage. 
+Beispiele sind festverzinsliche Wertpapiere oder einige Staatsanleihen. 
+Andere Anleihearten haben eine höhere Rendite beruhend auf einem höheren 
+Risiko basierend von der "Kreditwürdigkeit" des Herausgebers.
+
+** __Aktien und offene Investmentfonds__
++
+Dies ist eine Kapitalanlage, die Sie in ein Unternehmen tätigen, 
+in welchem Sie tatsächlich Miteigentümer werden. Es gibt normalerweise 
+keine zeitliche Bindung für börsennotierte Aktien, jedoch kann es unterschiedliche Steuersätze geben, die Sie auf den Veräußerungsgewinn zahlen,
+je nach dem wie lange Sie die Aktie halten. Somit sind Aktien ziemlich 
+schnell realisierbar, Sie können sehr schnell auf Ihr Geld zugreifen. 
+Diese Kapitalanlage hat ein höheres Risiko, da Sie keine Garantie für 
+den zukünftigen Preis der Aktie haben.
++
+Ein offener Investmentfond ist eine Gemeinschaftskapitalanlage, 
+in welcher Sie sich in viele Aktien gleichzeitig einkaufen. Zum  Beispiel 
+ist ein Indexfond "S&amp;P 500" ein Fond, der alle 500 Aktien, die im 
+"Standard and Poor&rsquo;s"-Index gelistet werden, anschafft. Wenn Sie einen Anteil an diesem Fond kaufen, kaufen Sie 
+tatsächlich einen kleinen Anteil an jeder der 500 Aktien, die in diesem 
+Fond enthalten sind. Offene Investmentfonds werden genauso behandelt 
+wie eine einzelne Aktie sowohl in steuerlicher als auch in 
+buchhalterischer Hinsicht.
+
+** __Sachanlagen__
++
+Güter, deren Wert mit der Zeit wächst, sind eine andere Form der 
+Kapitalanlage. Beispiele sind ein Haus, ein Stück Land oder ein 
+wertvolles Gemälde. Diese Art der Kapitalanlage ist sehr schwierig in 
+der Wertermittlung, bis Sie sie verkaufen. Die steuerlichen Folgen  
+des Verkaufs dieser Gegenstände variieren abhängig vom Gegenstand.
+Zum Beispiel können Sie eine steuerliche Entlastung beim Hausverkauf 
+erhalten, wenn es Ihr Hauptwohnsitz ist, aber Sie erhalten diese 
+Steuererleichterung nicht bei einem teuren Gemälde.
++
+Investitionen in Sachanlagen werden in <<chapter_capgain>> und 
+
+
+++++++++++++++++++++++++++++++++++++++
+<!-- xref linkend="chapter_dep" / Kapitel 11/18 -->
+++++++++++++++++++++++++++++++++++++++
+    
+ diskutiert. Üblicherweise gibt es nicht 
+viel in der Buchhaltung für die Sachanlageninvestitionen zu tun außer die 
+Aufzeichnung der An- und Verkäufe.
+
+
+[[invest_accounts1]]
+
+=== Konten einrichten
+
+Um Konten für die Kapitalanlagen in GnuCash einzurichten, können Sie entweder die 
+vordefinierte Kontenhierarchie für Kapitalanlagen nutzen oder Ihre eigene 
+erstellen. Das Minimum, das Sie benötigen, um die Kapitalanlagen 
+aufzuzeichnen, ist, ein Anlagenkonto für jede Art der Kapitalanlage anzulegen, die Ihnen gehört. Wie wir in den vorherigen Kapiteln gesehen haben,
+ist es jedoch gewöhnlich logischer, eine strukturierte Kontenhierarchie zu erstellen, in der ähnliche Kapitalanlagen zusammengefasst werden. Zum Beispiel 
+möchten Sie alle börsennotierten Aktien unter einem übergeordnete Konto 
+zusammenfassen, das nach der Maklerfirma benannt ist, wo Sie die Aktien 
+kaufen.
+
+
+[NOTE]
+====
+Unabhängig davon, wie Sie Ihre Kontenhierarchie einrichten, denken Sie daran,
+dass Sie später immer Ihre Konten verschieben können (ohne die Arbeit zu verlieren, 
+die Sie in sie gesteckt haben). Daher muss Ihre anfängliche Kontenhierarchie 
+nicht perfekt sein.
+
+====
+
+[[invest_predefined2]]
+
+==== Vorgefertigte Kapitalanlagekonten benutzen
+
+Die Kapitalanlagekontenoption im
+Neuen Kontenplan erstellen-Assistenten erstellt
+automatisch eine grundlegende Kapitalanlagekontenhierarchie für Sie. Um 
+auf die vordefinierte Kapitalanlagekontenhierarchie zuzugreifen, müssen Sie 
+sicherstellen, dass Ihre GnuCash Datei offen ist, 
+Sie zu dem Konten-Reiter wechseln und 
+menu:Aktionen[Neue Kontenhierarchie
+      ] auswählen. Damit wird der Neuen 
+      Kontoplan erstellen-Assistent gestartet und erlaubt Ihnen, 
+zusätzliche Konten auszuwählen und Ihrer Kontenhierarchie hinzuzufügen.
+Wählen Sie die Kapitalanlagekontenoption (zusammen mit 
+beliebig anderen, die Sie interessieren). Wenn nur Kapitalanlagekonten 
+ausgewählt wurden, wird dies eine Kontenhierarchie erzeugen, wie 
+nachfolgend gezeigt.
+
+
+[TIP]
+====
+Sie können auch den Neuen Kontenplan erstellen
+         Assistenten starten, indem Sie eine neue GnuCash Datei erzeugen.
+
+====
+
+[[invest_accountspredef]]
+.Investmentzinsen erstellen
+image::figures/invest_AccountsPredef.png["Dies ist ein Screenshot des Reiters Konten, nachdem eine neue Datei erstellt und nur die Standardkapitalkonten ausgewählt wurden.",width=]
+
+Vermutlich wollen Sie zumindest ein __Bank__konto den Aktiva hinzufügen 
+und vermutlich ein __Eigenkapital:Anfangsbestand__ Konto anlegen,
+wie wir das in einem früheren Kapitel <<chapter_txns>> getan haben. 
+Vergessen Sie nicht, Ihr neues Konto mit einem sprechenden Namen abzuspeichern!
+
+[[invest_creating2]]
+
+==== Kapitalanlagekonto manuell erstellen
+
+Wenn Sie eine eigene Kapitalanlagenkontenhierarchie erstellen wollen,
+dürfen Sie dies natürlich tun. Kapitalanlagen benötigen üblicherweise eine 
+Anzahl von dazugehörigen Konten, die erstellt werden müssen: ein Aktivkonto
+um die Kapitalanlage selbst aufzuzeichnen; ein Ertragskonto, um die 
+Dividendenbuchungen aufzuzeichnen und ein Aufwandskonto, um die  
+Investitionskosten und die Provisionen aufzuzeichnen.
+
+In einer üblichen Kontenstruktur sind Wertpapierkonten Unterkonten des 
+Aktivkontos, das nach dem Konto der Maklerfirma benannt ist. Das Maklerkonto 
+würde in Ihrer lokalen Währung ausgewiesen und würde Unterkonten für jedes Wertpapier 
+entalten, welches Sie dort handeln. 
+
+Die dazugehörigen An- und Verkaufskonten, Ertrags- und Aufwandskonten 
+sollten auch in der gleichen Währung wie das Maklerkonto sein.
+
+
+Die Wertpapierunterkonten würden jeweils eingerichtet werden, um Einheiten 
+eines einzelnen Wertpapieres zu enthalten, welches aus der (nutzerdefinierten) Master-Wertpapierliste 
+ausgewählt wird; es wird erwartet, dass sie die gleiche Währung nutzen wie das Maklerkonto.
+
+
+Wertpapierkurse werden in einem separaten Bereich von GnuCash
+         gehalten (die Kurs-Datenbank - menu:Werkzeuge
+        [Kurs-Editor]). Diese enthält 
+die Kurse für individuelle Wertpapiere (nicht Wertpapierkonten). Alle 
+Kurse für ein individuelles Wertpapier sind ein einer einzelnen Währung. Wenn ein  
+Wertpapier in mehreren Währungen gehandelt wird, dann sollte ein separates Wertpapier 
+und separate Konten für jede Währung eingerichtet werden.
+
+
+[[invest_custom2]]
+
+==== Angepasstes Kontenbeispiel
+
+Das Folgende ist ein  etwas komplizierteres Beispiel, wie GnuCash eingerichtet wird, 
+um Ihre Kapitalanlagen zu verfolgen, welches den Vorteil hat, dass es jede unterschiedliche Kapitalanlage unter der Maklerfirma gruppiert, 
+die mit den Kapitalanlagen handelt. 
+Auf diese Art und Weise ist es einfacher, die Aufstellungen, die Sie von Ihrer Maklerfirma erhalten, mit den Konten zu vergleichen, die Sie 
+in GnuCash haben, und zu erkennen, wo 
+GnuCash von der Aufstellung abweicht. 
+....
+
+ Aktiva
+    Investments
+       Brokerage Accounts
+          I*Trade
+             Stocks
+                ACME Corp
+             Money Market Funds
+                I*Trade Municipal Fund
+             Cash
+          My Stockbroker
+             Money Market Funds
+                Active Assets Fund
+             Government Securities
+                Treas Bond xxx
+                Treas Note yyy
+             Mutual Funds
+                Fund A
+                Fund B
+             Cash
+ Erträge
+    Investments
+       Brokerage Accounts
+          Kapitalerträge
+             I*Trade
+             My Stockbroker
+          Dividende
+             I*Trade
+                Steuerpflichtig
+                Steuerfrei
+             My Stockbroker
+                Steuerpflichtig
+                Steuerfrei
+          Zinseinkünfte
+             I*Trade
+                Steuerpflichtig
+                Steuerfrei
+             My Stockbroker
+                Steuerpflichtig
+                Steuerfrei
+ Aufwendungen
+    Aufwendungen für Investments
+       Commissions
+          I*Trade
+          My Stockbroker
+       Management Fees
+          I*Trade
+          My Stockbroker
+ 
+....
+
+
+
+[TIP]
+====
+Es gibt keinen wirklichen Standardweg, um Ihre Kapitalkontenhierarchie 
+zu erstellen. Spielen Sie herum, probieren Sie verschiedene Layouts aus, bis 
+Sie etwas finden, das Ihre Kapitalanlagenkonten in logische Gruppen teilt, 
+die für Sie sinnvoll sind.
+
+====
+
+[[invest_int1]]
+
+=== Verzinsliche Konten
+
+Kapitalanlagen, die eine feste oder variable Verzinsung haben, sind 
+eine der einfachsten und häufigsten Form der verfügbaren Kapitalanlagen.
+Verzinsliche Kapitalanlagen schließen Ihre Bankkonten, festverzinslichen 
+Wertpapiere oder jede andere Art der Kapitalanlage ein, in welcher Sie Zinsen 
+für das Kapital erhalten. Dieser Abschnitt beschreibt, wie diese Art der 
+Kapitalanlagen in GnuCash gehandhabt werden.
+
+[[invest_intacct2]]
+
+==== Konto einrichten
+
+Wenn Sie verzinsliche Kapitalanlagen kaufen, müssen Sie ein 
+Aktivakonto erstellen, um den Kauf der Kapitalanlage aufzuzeichnen, 
+ein Ertragskonto, um die Einnahmen aus den Zinsen und ein  
+Aufwandskonto, um die Bankgebühren zu verbuchen. Nachstehend folgt ein 
+Beispiel eines Kontenlayouts, in welchem Sie ein verzinsliches 
+Sparkonto und festverzinsliche Wertpapiere bei Ihrer Bank haben.
+
+
+....
+
+Aktiva
+   Bank ABC
+      festverzinsliche Wertpapiere
+      Banksparguthaben
+Aufwendungen
+   Bank ABC
+      Bankgebühren
+Einnahmen
+   Zinseinnahmen
+      festverzinsliche Wertpapiere
+      Banksparguthaben
+  
+....
+Wie üblich stellt diese Kontenhierarchie ein Beispiel dar, 
+Sie sollten Ihre eigenen Konten so darstellen, wie sie am Besten zu 
+Ihrer aktuellen Situation passt.
+
+[[invest-intex2]]
+
+==== Beispiel
+
+Nun lassen Sie uns diese Konten mit realistischen Zahlen bestücken. Lassen 
+Sie uns annehmen, dass Sie mit 10.000,- € auf Ihrem Bankkonto starten,
+welches Ihnen 1 % Zinsen einbringt, und Sie kaufen ein verzinsliches Wertpapier 
+für 5.000,- € mit einem Ablauf in 6 Monaten und einer Rendite von 2 %. 
+Offensichtlich ist es viel besser, Ihr Geld in festverzinslichen 
+Wertpapieren zu halten, als auf einem Sparkonto. Nach dem Erstkauf sollten Ihre Konten wie folgt aussehen:
+
+[[invest-int]]
+.Investmentzinsen einrichten
+image::figures/invest_int1.png["Dies ist ein Bild des Registers Konten nach der Erstellung und der Investition in ein festverzinsliches Wertpapier.",width=]
+
+Nun erhalten Sie während der nächsten 6 Monate monatliche 
+Bankauszüge, die die Vorgänge Ihres Kontos beschreiben. In unserem
+fiktiven Beispiel machen wir nichts mit diesem Geld bei dieser Bank,  
+so dass die einzigen Vorgänge Zinseinkünfte und Bankgebühren sind. 
+Die monatlichen Bankgebühren sind 2,- €. Nach 6 Monaten sollte das 
+Reiterfenster für die festverzinslichen Wertpapiere wie folgt aussehen:
+
+[[invest-int2]]
+.Investmentzinsen einrichten
+image::figures/invest_int2.png["Dies ist ein Bild des Reiters des festverzinsliche Wertpapierkontos nach 6 Monaten.",width=]
+
+[[invest-int2-1]]
+.Investmentzinsen einrichten
+image::figures/invest_int2-1.png["Dies ist das Bild des Reiters Sparkonto nach 6 Monaten.",width=]
+
+Und dies ist das Hauptkontenfenster von GnuCash
+      :
+
+[[invest-int3]]
+.Investmentzinsen einrichten
+image::figures/invest_int3.png["Dies ist ein Bild der Konten nach 6 Monaten.",width=]
+
+Auf dem obigen Bild des Hauptkontenfenster von GnuCash 
+sehen Sie eine schöne Zusammenfassung über das, was mit dieser 
+Kapitalanlage in 6 Monaten passiert. Während die Verzinsung der 
+festverzinslichen Wertpapiere doppelt so hoch ist, wie die des Sparkontos, 
+war der Ertrag des festverzinslichen Wertpapieres 50,21 € gegenüber 13,03 € 
+des Sparkontos oder fast 4 Mal so viel. Warum? Wegen der ärgerlichen 2,- €
+Bankgebühren, die das Sparkonto treffen (welche sich auf 12,- € über 6 Monate aufsummieren).
+
+Nach diesen 6 Monaten läuft das verzinsliche Wertpapier ab, das 
+bedeutet, Sie dürfen es ohne Vorfälligkeitszinsen  verkaufen. Wenn Sie 
+dies tun, werden Ihnen einfach 5.050,21 € auf Ihr Sparkonto übertragen.
+
+[[invest-setup1]]
+
+=== Wertpapierdepot einrichten
+
+Nachdem Sie nun im vorherigen Abschnitt eine Kontenhierarchie erstellt haben, 
+zeigt Ihnen dieser Abschnitt, wie Sie die Konten mit Ihrem Wertpapierbestand 
+erstellen und bestücken. Nach dieser Ersterstellung Ihres Bestandes haben 
+Sie möglicherweise Aktien, die Sie erworben haben, bevor Sie anfingen, 
+GnuCash zu nutzen. Für diese Aktien folgen Sie 
+der Anleitung im folgenden <<invest-buy-stock2,
+    Eingabe vorhandener Aktien>> Abschnitt. Wenn Sie jetzt Aktien erwerben, dann nutzen Sie den <<invest-buy-new2,Neue Aktien Kaufen
+    >> Abschnitt.
+
+[[invest-setup-stockaccounts2]]
+
+==== Konten für Aktien und offene Investmentsfonds einrichten
+
+Dieser Abschnitt zeigt Ihnen, wie Sie Aktien- und 
+Investmentfondskonten in GnuCash einrichten. Hier  nehmen wir an, dass Sie die Basiskonteneinrichtung aus dem früheren Abschnitt nutzen, aber die Verfahren können auf jede Kontenhierarchie angewandt werden.
+
+Sie sollten innerhalb des Aktiva-
+Kontos auf oberster Ebene ein paar Ebenen tiefer ein Konto mit der 
+Bezeichnung Aktie haben. Öffnen Sie den Kontenbaum 
+durch Klicken auf die "mit der Spitze nach rechts zeigende 
+      Dreiecksmarkierungen" neben den Kontennamen bis der Baum bis in die 
+Tiefe des neuen Kontos geöffnet ist. Sie benötigen ein Unterkonto (des Typs
+__Aktie__) unter dem Aktienkonto für jede Aktie, die Sie 
+besitzen. Jede Aktie ist ein separates Konto. Der Name dieses Aktienkontos 
+ist normalerweise das Börsenkürzel, dabei darf der Kontoname alles 
+sein, was für Sie und anderen Nutzer klar ist. So 
+können Sie zum Beispiel Ihre Konten __AMZN__,
+__IBM__ und __NST__ jeweils für Ihre Amazon-,
+IBM- und NSTAR-Aktien nennen. Unten ist eine Vorlage für den Entwurf 
+(zeigt nur die Aktiva Unterkonten).
+
+
+....
+
+ Aktiva
+    Kapitalanlagen
+       Brokerage Accounts
+          Schuldverschreibung
+          offene Investmentfonds
+          Market Index
+          Aktie
+             AMZN
+             IBM
+             NST
+ 
+....
+
+[NOTE]
+====
+Wenn Sie Ihr Einkommen verfolgen wollen (Dividenden/Zinsen/Veräußerungsgewinne)
+auf der Basis einzelner Aktien oder Fonds, müssen Sie ein
+__Erträge:Dividende:STOCKSYMBOL__,
+__Erträge:Cap Gain (Long):STOCKSYMBOL__,
+__Erträge:Cap Gain (Short):STOCKSYMBOL__
+und __Erträge:Zinsen:STOCKSYMBOL__
+Konto für jede Aktie erstellen, die Sie besitzen und die Dividenden 
+oder Zinsen abwirft.
+
+====
+
+[[invest-setup-example2]]
+
+==== Aktienkonto - Beispiel
+
+Als Beispiel lassen Sie uns annehmen, dass Sie derzeit 100 
+Amazon-Aktien besitzen. Zuerst erstellen Sie das Aktienkonto AMZN durch 
+Auswahl des Aktien-Kontos und klicken im Menü
+menu:AktionenNeues Konto...[]. Der Neue 
+Kontendialog erscheint, folgen Sie den Schritten, die nachfolgend 
+beschrieben werden, um ein Aktienkonto anzulegen.
+
+[[invest-newaccount]]
+.Neues Konto Fenster
+image::figures/invest_newaccount.png["Neues Konto Fenster",width=]
+
+
+. __Kontobezeichnung:__ - Üblicherweise das Börsenkürzel, z.B.: "AMZN"
+
+
+. __Kontenplan__ - Optionales Feld, Nutzen Sie CUSIP,
+das Zeitungslistensymbol, Investmentfond Familien ID oder Code, den 
+Sie selber wählen.
+
+
+. __Beschreibung:__ - Optionales Feld für eine 
+ausführliche Beschreibung des Wertpapiers oder der Aktie. Beachten Sie, dass 
+dieses Feld standardmäßig im Konten-Baum 
+angezeigt wird.
+
+
+. __Kontenart__ - Wählen Sie die Art des Kontos, 
+das Sie erstellen, aus der Liste unten links aus.
+
+
+. __Hauptkonto__ - Wählen sie das Hauptkonto für 
+das neu erstelle Konto aus der Liste unten rechts. Erweitern Sie die 
+Liste der Konten, wenn nötig.
+
+
+. __Neues Wertpapier erstellen__ - Um eine neue 
+Aktie zu nutzen, müssen Sie die Aktie als ein neues Wertpapier 
+erstellen.
++
+[NOTE]
+====
+Stellen sie sicher, zuerst den Kontentyp __Aktien__ oder __Investmentfond__ zu wählen, sodass
+die Schaltfläche Auswählen … zur Anzeige einer Liste 
+von Wertpapieren statt Währungen führt.
+
+====
++
+
+
+** __Wertpapier/Währung auswählen__ - Klicken Sie auf 
+die Auswählen…-Schaltfläche neben der
+Wertpapier/Währung-Zeile. Sie müssen das  Wertpapier von der Standardeinstellung (Ihre 
+Standardwährung) für diese bestimmte Aktie ändern. Dies 
+bringt den Wertpapier Auswahl-Dialog 
+hervor.
+
+** __Typ__ - Wählen Sie die Börse, an der das Wertpapier gehandelt wird
+(in diesem Beispiel EUREX).
++
+Wählen Sie die Neu-Schaltfläche  aus, um das Neues Wertpapier-Fenster zu 
+öffnen.
++
+[[invest-selectsecurity]]
+.Wertpapierfenster auswählen
+image::figures/invest_selectsecurity.png["Wertpapierfenster auswählen",width=]
+
+** __Neues Wertpapier erstellen__ - 
+Klicken Sie auf die Neu…-Schaltfläche 
+und geben Sie die passenden Informationen für diese Aktie in das neue Formular Neues Wertpapier ein.
+
+
+++++++++++++++++++++++++++++++++++++++
+<!--  Open inter most loop (#3)
+-->
+++++++++++++++++++++++++++++++++++++++
+    
++
+
+
+** Voller Name: ist
+"Amazon.com".
+
+** Symbol/Abkürzung: ist
+"AMZN". Das Symbol ist das Börsenkürzel, 
+dass in Ihrer Börsenkursquelle unten auf dem Formular genutzt wird. Beachten Sie, dass von verschiedenen 
+Kursquellen für die gleiche Aktie verschiedene Symbole 
+benutzt werden, beispielweise ist Ericsson an der Stockholmer Börse ERIC-B, während bei es bei Yahoo 
+ERRICB.ST ist.
+
+** Der Typ sollte bereits EUREX sein, weil dies das ist, was in der Wertpapierauswahl ausgewählt wurde. 
+Aber Sie können ihn hier ändern und sogar weitere Kategorien hinzufügen.
+
+
+++++++++++++++++++++++++++++++++++++++
+<!-- Mehr Informationen darüber, können Sie in der Hilfe im Abschnitt 7.7, <quote>Security Editor</quote> finden. (die Hilfe wird z.Zt. (09/2015) nicht gepflegt)-->
+++++++++++++++++++++++++++++++++++++++
+    
+
+
+** WKN, ISIN oder anderer Code gibt an, wo Sie andere Codenummern oder -text eingeben können
+(Lassen Sie es in diesem Beispiel leer).
+
+** Die Handelbare Stückelung sollte
+auf die kleinste Stückelung des Wertpapieres eingestellt 
+sein, die gehandelt werden kann, normalerweise 1/100 oder 1/10000.
+
+** Das Kontrollkästchen "Börsenkurse Online abrufen", die Kursabrufquelle und die Zeitzone 
+sollten ausgewählt werden, um die Quellen für die Onlinekursaktualisierung festzulegen. Schauen Sie auch unter
+<<invest-stockprice-auto2,
+                    Aktienkurs automatisch
+                  einrichten>>.
++
+[NOTE]
+====
+Wenn die Börsenkurse Online abrufen-Schaltfläche nicht hervorgehoben ist, und sie 
+nicht angeklickt werden kann, dann ist das Paket Finance::Quote nicht installiert.
+Schauen Sie in den Abschnitt <<invest-stockprice-auto-install3, Installation
+                Finance::Quote>>
+.
+
+====
++
+Nachstehend sehen Sie, wie das Fenster aussieht, 
+wenn es fertig bearbeitet ist: [[invest-newsecurity]]
+.Neues Wertpapierfenster
+image::figures/invest_newsecurity.png["Neues Wertpapierfenster",width=]
+
+
+
+** __Wertpapier speichern__ - Klicken 
+Sie auf die OK Schaltfläche, um das 
+neue Wertpapier zu speichern. Dies schließt das Fenster
+Neues Wertpapier und kehrt zum Neuen Konto Fenster zurück.
+
+
+
+
+++++++++++++++++++++++++++++++++++++++
+<!--  Close inter most loop -->
+++++++++++++++++++++++++++++++++++++++
+    
+
+
+. __Wertpapier auswählen__ - Sie sollten nun die neu 
+erstellenten Wertpapiere als verfügbar im Ausklappmenü für
+Wertpapier/Währung sehen. Wählen Sie eins aus 
+(es ist möglicherweise bereits ausgewählt) und klicken Sie auf  OK.
+
+
+. __Kleinste Stückelung__ - Gibt die kleinste 
+Stückelung des Wertpapieres an, die gehandelt wird.
+
+
+. __Bemerkung__ - Geben Sie irgendeine Notiz 
+oder Nachricht hinsichtlich dieses Wertpapier ein.
+
+
+. __Steuerrelevant__ - Gehen Sie zu  menu:Bearbeiten[Optionen Steuerbericht…], 
+um dieses Kontrollkästchen anzuklicken, wenn die Vorgänge auf diesem Konto einkommensteuerrelevant sind.
+
+
+. __Platzhalter__ - Kontrollkästchen 
+auswählen, wenn dieses Konto ein "Platzhalter" ist, der 
+keine Buchungen enthält.
+
+
+. __Beenden__ - Sie sollten nun   automatisch 
+zum Neuen Konto Dialog zurückkehren, mit der auf 
+"AMZN (Amazon.com)" gesetzten 
+          Symbol/Abkürzung: Zeile. Klicken Sie auf 
+          OK, um dieses Aktienkonto zu speichern.
+
+Sie haben nun das Amazon Aktienkonto erstellt, Ihr Hauptkonto 
+sollte daher wie folgt aussehen (Beachten Sie, dass es einige zusätzliche Konten hier gibt, ein Bankkonto und ein Kapitalkonto):
+
+[[invest-setup-current]]
+.Erstellung eines aktuellen Bestandes
+image::figures/invest_setup_current.png["Dieses Bild zeigt den ersten Aktienkonto (AMZN) nach der Erstellung.",width=]
+
+Öffnen Sie das Buchungsansichtsfenster für dieses AMZN Aktienkonto (Klicken Sie doppelt darauf). 
+Hier sehen Sie nun die **Wertpapier**-Ansicht. 
+Diese gibt Ihnen eine Übersicht über die Buchungen zu diesem Wertpapier einschließlich der Anzahl der Einheiten (Anteile einer Aktie oder eines Investmentfonds), 
+die ge- oder verkauft wurden, den Nettopreis pro 
+Einheit und die Gesamtsumme. Offensichtlich haben wir bis jetzt keine AMZN-Aktien ge- oder verkauft, so dass die Ansicht keine Buchungen enthalten sollte.
+
+[[invest-buy-stock1]]
+
+=== Aktienkauf
+
+[[invest-buy-stock2]]
+
+==== Eingabe vorhandener Aktien
+
+Um die anfänglichen 100 Aktienanteile, die Sie bisher gekauft haben, 
+in die ersten Buchungszeile einzutragen, geben Sie das Kaufdatum ein 
+(z.B.: 01.01.2015), eine Beschreibung (z.B. Ersterwerb), Übertrag von
+__Kapital:Anfangsbestand__, Anteile (z.B.:
+100) und der Preis (z.B.: 20,- €). Sie brauchen die Spalte      
+Kauf nicht auszufüllen, da sie für Sie 
+ausgerechnet wird. Dieses Beispiel setzt voraus, dass es für dieses 
+Geschäft keine Provision gibt, um es zu vereinfachen. Ihre
+AMZN-Wertpapier-Ansicht sollte nun wie folgt aussehen:
+
+[[invest-setup-portfolio1]]
+.Erstellung eines aktuellen Bestandes
+image::figures/invest_setup_portfolio1.png["Dieses Bild zeigt die Buchungsansicht des AMZN-Kontos nach der Buchung des ersten Aktienkaufs.",width=]
+
+Beachten Sie, dass das Saldo in Wertpapiereinheiten 
+(AMZN Anteile) und nicht ein Geldbetrag ist. Daher ist das Saldo
+100 (AMZN Einheiten) anstatt 2.000,- €. Dies ist so, wie es sein sollte.
+
+[[invest-buy-new2]]
+
+==== Neue Aktien kaufen
+
+Der einzige Unterschied zwischen der Erstellung eines neuen Aktienkaufes und die Einrichtung für vorhandene Aktien, wie im 
+vorherigen Abschnitt beschrieben, ist, dass anstatt das Geld, welches für den Kauf der Aktien benötigt wird, vom Konto __Kapital:Eröffnungssaldo__ zu übertragen, Sie das Konto  
+__Aktiva:Girokonto__ nutzen.
+
+Nun werden Sie für 5.000,- € IBM Aktien mit einer Provision von 100,- € 
+erwerben. Der erste Schritt wird sein, ein Aktienkonto für IBM einzurichten. Das existierende 
+__Aufwendungen:Provisionen__-Konto wird genutzt.
+Wenn Sie die Provisionen für die einzelne Aktie verfolgen wollen, wäre ein zusätzliches Unterkonto erforderlich.
+
+In der ersten Buchungszeile geben Sie für die Buchung das 
+Kaufdatum (z.B.: 03.01.2015), eine Beschreibung (z.B.: Ersterwerb IBM), 
+Anteile werden überspringen (werden ausgerechnet), Preis (z.B.: 96,60 €) 
+und Kauf (5.000,- €) ein. Sie brauchen die Spalte Anteile
+       nicht zu füllen, da diese für Sie ausgerechnet wird. Die 
+nächste Zeile in der Splitbuchung wird für __Aufwendungen:Provisionen__ 
+sein und mit Kauf (100,- €) ausgefüllt. 
+Die dritte Zeile enthält die Übertragung von __Aktiva:Bank ABC:Sparkonto__, 5.100,- €, um die Buchung auszugleichen.
+Ihre IBM-Wertpapier-Ansicht sollte nun wie folgt aussehen:
+
+[[invest-setup-portfolio2]]
+.Erstellung eines aktuellen Bestandes
+image::figures/invest_SetupPortfolio2.png["Dieses Bild zeigt die Buchungsansicht des IBM-Kontos nach der Buchung des Kaufes mit einer Provision.",width=]
+
+[[invest-stockprice1]]
+
+=== Börsenkurse einstellen
+
+Der Wert eines Wertpapieres, wie der einer Aktie, muss ausdrücklich eingestellt werden.
+Das Aktienkonto verfolgt die Anzahl der Aktien, die Sie besitzen. Aber der Wert der Aktien wird im __Kurs-Editor__ gespeichert. 
+Die Werte im Wertpapier-Editor können händisch oder 
+automatisch aktualisiert werden.
+
+[[invest-stockprice-initial2]]
+
+==== Starteinrichtung des Kurs-Editors
+
+Um den Kurs-Editor dazu zu nutzen, den Wert der Aktien zu verfolgen, müssen Sie zunächst die Aktie eingeben.  
+Dazu öffnen Sie den Kurs-Editor unter
+(menu:Werkzeuge[Kurs-Datenbank]) und
+klicken auf die Hinzufügen-Schaltfläche. Wenn Sie 
+das erste Mal ein Wertpaper oder eine Aktie eingeben, 
+bleibt das Fenster leer bis auf die Schaltflächen unten. 
+Wählen Sie das entsprechende Wertpapier aus, das Sie in den Kurs-Editor eingeben wollen. 
+Am dieser Stellen können Sie den Preis des Wertpapieres händisch eingeben. 
+Es gibt 6 Felder in dem Neues Wertpapier Fenster:
+
+Namensraum:: Der Devisenmarkt, wo die Wertpapiere gehandelt werden (in 
+diesem Beispiel EUREX)
+
+Wertpapier:: Der Name des Wertpapieres muss im Listenfeld ausgewählt werden.
+
+Währung:: Die Währung, in der der Preis ausgedrückt wird.
+
+Datum:: Datum, wann der Preis gilt
+
+Typ:: Entweder Geldkurs
+(der Ankaufpreis an der Börse), Briefkurs (der 
+Verkaufpreis an der Börse), Vortag (Preis der letzten 
+Buchung), Netto Anteilswert (Preis des 
+Investmentfonds pro Anteil) oder Unbekannt. Für 
+Aktien und Währungen werden die Kurse als Geldkurs, Briefkurs oder 
+vom Vortag angegeben. Bei Investmentfonds wird der Netto Anteilswert 
+angegeben. Für andere Wertpapiere wählen Sie einfach Unbekannt aus. Diese Option ist nur für 
+informatorische Zwecke und wird nicht in GnuCash genutzt.
+
+Preis:: Der Preis einer Einheit dieses Wertpapieres.
+
+Als Beispiel fügen wir das AMZN Wertpapier dem Kurs-Editor 
+mit einem Anfangswert von 40,50 € pro Stück hinzu.
+
+[[invest-peditor]]
+.Kurs-Editor
+image::figures/invest_peditor.png["AMZN Wertpapier dem Kurs-Editor mit einem Anfangswert 40,50 € pro Stück hinzufügen.",width=]
+
+Klicken Sie OK zum Beenden. 
+Wenn Sie diese Anfangseinstellung des Wertpapieres im Kurs-Editor durchgeführt haben,
+müssen Sie diese nicht nochmals durchführen, selbst wenn Sie das gleiche 
+Wertpapier auf einem anderen Konto nutzen.
+
+
+[NOTE]
+====
+Wenn Sie Börsenkurse online abrufen aktiviert haben (siehe <<invest-stockprice-auto2>>), können Sie ein 
+Wertpapier ohne händische Eingabe voreinstellen. Wenn Sie zunächst 
+ein Wertpapier im Wertpapier-Editor hinzufügen, 
+überprüfen Sie Börsenkurse online abrufen und speichern das Wertpapier.
+Nun klicken Sie im Kurs-Editor auf
+Kurse abrufen, und das neue Wertpapier wird 
+in die Preisliste mit dem abgerufenen Preis eingetragen.
+
+====
+
+[[invest-stockprice-manual2]]
+
+==== Aktienpreis händisch einstellen
+
+Wenn sich der Wert des Wertpapieres (Aktie) ändert, können Sie 
+den Wert durch die Eingabe im Kurs-Editor 
+angleichen, indem Sie das Wertpapier auswählen, auf Bearbeiten klicken und den neuen Wert eingeben.
+
+[[invest-peditor2]]
+.Kurs-Editor
+image::figures/invest_peditor2.png["Das Hauptfenster des Kurs-Editor zeigt die Liste der bekannten Wertpapiere .",width=]
+
+[[invest-stockprice-auto2]]
+
+==== Automatische Kursabfragen konfigurieren
+
+Wenn Sie mehr als ein paar Wertpapiere haben, sind Sie es leid, deren Preise ständig aktuell zu halten. 
+Mit GnuCash ist es möglich, automatisch die 
+neuesten Preise Ihrer Wertpapiere über das Internet herunterzuladen. 
+Dies wird durch das Perl-Modul
+Finance::Quote erledigt, welches 
+installiert sein muss, um diese Möglichkeit zu nutzen.
+
+Um zu ermitteln, ob das Perl-Modul Finance::Quote bereits auf Ihrem System 
+installiert ist, tippen Sie __perldoc Finance::Quote__ in ein Terminalfenster und überprüfen, ob dort irgendeine 
+Dokumentation verfügbar ist. Wenn Sie die Dokumentation sehen, dann 
+ist das Modul installiert. Wenn Sie die Dokumentation nicht sehen, ist 
+das Modul nicht installiert.
+
+[[invest-stockprice-auto-install3]]
+
+===== Finance::Quote installieren
+
+**Microsoft Windows:**
+
+** Schließen Sie GnuCash.
+
+** Starten Sie **Install Online Price Retrieval** im GnuCash"Start" Menüeintrag.
+
+
+
+
+**Mac OS X:** Sie müssen XCode 
+installiert haben. XCode ist ein zusätzliches Element auf Ihrer OS X
+Distributions-DVD. Starten Sie die **Finance Quote aktualisieren** App in GnuCash.dmg. 
+Sie können es von dem *.dmg starten oder kopieren es in den gleichen 
+Ordner, in den Sie GnuCash kopiert haben. 
+Es öffnet ein Terminalfenster und startet ein Script 
+für Sie, welches Ihnen viele Fragen stellt.
+Akzeptieren Sie die Voreinstellungen bis Sie wissen, was Sie tun.
+
+
+**Linux:**
+
+** Schließen Sie jede laufende GnuCash-Instanz.
+
+** Finden Sie den Ordner, wo GnuCash 
+installiert ist, indem Sie nach gnc-fq-update suchen.
+
+** Öffnen Sie eine Root-Shell und wechseln in diesen Ordner
+
+** Starten Sie das Kommando __gnc-fq-update__
+
+
+
+Dies führt eine Perl CPAN Sitzung zur 
+Aktualisierung aus, die sich mit dem Internet verbindet und das  
+Finance::Quote-Modul auf Ihrem System 
+installiert. Das gnc-fq-update Programm ist interaktiv, trotzdem könnten Sie auf den meisten Systemen auf die erste Frage mit 
+"Nein" antworten: "Sind Sie bereit für eine 
+        händische Konfiguration [Ja]" und die Aktualisierung wird ab 
+diesem Punkt automatisch fortgesetzt.
+
+Nach der vollständigen Installation sollten Sie das "
+        gnc-fq-dump"-Testprogramm in dem selben Verzeichnis mit
+GnuCash starten, um zu testen, ob  Finance::Quote richtig installiert ist und funktioniert.
+
+
+[NOTE]
+====
+Wenn Sie sich unbehaglich bei der Durchführung der Schritte 
+fühlen, mailen Sie entweder an die GnuCash-user mailing list
+(pass:[<email>gnucash-de@gnucash.org</email>]) und bitten um Hilfe oder 
+kommen in den GnuCash IRC-Kanal auf 
+irc.gnome.org. Sie können diesen Schritt auch auslassen und händisch die Preise der Aktien aktualisieren.
+
+====
+
+[[invest-stockprice-auto-configure3]]
+
+===== Wertpapiere für die Online-Abfrage konfigurieren
+
+Wenn Finance::Quote installiert ist und korrekt arbeitet, müssen Sie Ihre GnuCash
+         Wertpapiere so konfigurieren, dass sie diese Möglichkeit nutzen, die aktuellen Preisinformationen 
+automatisch zu erhalten. Falls Sie neue Wertpapiere erstellen 
+oder Wertpapiere abändern, die bereits erstellt wurden, nutzen 
+Sie menu:Werkzeuge[Wertpapier-Editor], um die Wertpapiere zu bearbeiten und das Börsenkurse online abrufen Kästchen zu überprüfen. Sie sind nun in der Lage, 
+die Optionsfelder für die Art der Kursabruf-Quelle, die Aufklappmenüs, um die genauen Quellen zu bestimmen und die Zeitzone 
+        für diese Quellen zu verändern. Nach dem Ende der Bearbeitung, 
+Schließen Sie den Wertpapier-Editor, um zum 
+        Kurs-Editor zurückzukehren, und klicken auf die Schaltfläche  
+Kurse abrufen, um den Kurs Ihrer Aktien im Internet zu aktualisieren.
+
+Das Kommando __gnucash ––add-price-quotes $HOME/gnucash-filename__ kann dazu genutzt werden, den aktuellen Kurs Ihrer Aktien abzurufen. 
+Die in __$HOME/gnucash-filename__ 
+bestimmte Datei hängt von dem Namen und dem Ort Ihrer Datei ab. 
+Dies kann durch den Namen vor dem "–" ermittelt werden, der im oberen Rahmen des GnuCash-Fenster angezeigt wird.  
+Der Dateiname kann auch unter  in der Liste der 
+Zuletzt geöffneten Dateien gefunden werden; der erste Eintrag mit der Nummer 1 
+ist der Name der aktuell geöffneten Datei.
+
+Dies kann durch das Erstellen eines Eintrages in die crontab automatisiert werden. 
+Beispielweise, wenn Sie Ihre Datei jeden Freitag Abend (16:00), 
+nachdem die maßgeblichen Devisenmärkte schließen (verändern Sie die 
+Zeit entsprechend Ihrer Zeitzone), aktualisieren, können Sie folgendes zu Ihrer persönlichen crontab hinzufügen:
+
+0 16 * * 5 gnucash ––add-price-quotes $HOME/gnucash-filename &gt;
+/dev/null 2&gt;&amp;1
+
+Erinnern Sie sich, dass die "Kurse" der 
+Investmentfonds tatsächlich "NettoAnteilsWerte" 
+und mehrere Stunden nach Schließung der Devisenmärkte verfügbar sind. Wenn die NAWs heruntergeladen werden, bevor 
+die NAWs vom laufenden Tag festgelegt sind, werden die gestrigen NAWs abgerufen.
+
+[[invest-stockprice-view2]]
+
+==== Wert der Aktie anzeigen
+
+Das Hauptfenster zeigt standardmäßig von jedem 
+Wertpapier unter dem Spaltenkopf Summe nur die Anzahl an, das Sie 
+besitzen. Im Falle von Aktien ist dies die Anzahl der Aktien. Immer, 
+wenn sie den Wert Ihrer Aktien sehen wollen, erweitern Sie diese Ansicht um 
+Geldeinheiten. Dies erreichen Sie leicht durch Aufrufen des 
+Hauptfensters, Auswahl des Konten-Reiters, 
+durch Klicken der 
+      Options-Schaltfläche in der __Titelleiste__ (der kleine Pfeil nach unten an der 
+rechten Seite der Titelleiste des Hauptkontenfensters) und
+Wählen der Option zur Anzeige des Gesamtbetragfeldes "Gesamt
+      (EUR)". Sie sehen eine neue Spalte im Hauptfenster mit dem Titel 
+Gesamt (EUR), die den Wert aller Wertpapiere in der Berichtswährung angeben.
+
+[[invest-stockvalue]]
+.Ansicht Aktien Wert
+image::figures/invest_stockvalue.png["Ansicht des Wertes von Wertpapieren im Hauptfenster unter Nutzung der Gesamtbetragsoption in der Berichtswährung.",width=]
+
+[[invest-stockprice-report]]
+
+==== Auswahl der "Kurs-Quellen" im Bericht über den Aktienwert
+
+Die meisten GnuCash Aktienberichte haben Optionen, einige Parameter für den Bericht zu setzen bzw. zu 
+verändern. Das Optionenfenster wird angezeigt, wenn der Reiter Berichte ausgewählt ist und Sie entweder auf das Symbol Optionen
+       in der __Menüleiste__ klicken oder im Menü  menu:Bearbeiten[Berichtsoptionen
+      …] auswählen.  
+Der Reiter Allgemein im darauffolgenden Fenster 
+enthält verschiedene Parameter für den Report. Einer dieser Parameter ist die "Kursquelle", welche drei Möglichkeiten anbietet, Aktienkurse in Berichten zu bestimmen:
+
+
+[NOTE]
+====
+Der Bericht im Beispiel unten ist eine Anpassung an den Bericht
+**Durchschnittlicher Kontostand** 
+in dem Berichteuntermenü Aktiva &amp; Passiva.
+
+====
+
+[[invest-stockvalue-report-options]]
+.Bestimmung des Aktienkurses in Berichten
+image::figures/invest_stockvalue_report_options.png["Bestimmung des Wertes eines Aktienwertpapieres in einem Report durch Setzen der Kursquellenoption.",width=]
+
+
+
+** Gewichteter Durchschnitt - gibt Ihnen ein 
+Diagramm der gewichteten Kurse aller __Buchungen__. 
+Es speichert dies __nicht__ in die Kontenkurse, die im 
+Kurs-Editor definiert wurden.
+
+** Neuester - zeigt den Kurs Ihrer Aktien basierend allein auf dem __Neuesten__
+Kurs, der vom Kurs-Editor bereitgestellt wird. Der Preis, der in Ihren 
+Aktiengeschäften eine Rolle spielt, wird __nicht__ berücksichtigt.
+
+
+** Zeitlich nächster - das Diagramm basiert 
+ausschließlich auf den Kursen, die im Kurs-Editor verfügbar sind. Der 
+Wert Ihrer Aktien wird bei jedem Schritt und Zeitpunkt basierend auf 
+dem nächsten verfügbaren Kurs im Kurs-Editor berechnet.
+
+
+[[invest-stockvalue-report]]
+.Ein Aktiva Balkendiagrammbericht basierend auf die
+                zeitlich nächsten Kursquelle.
+image::figures/invest_stockvalue_report.png["Verfolgt, welchen Wert Ihre Aktien an der Börse haben.",width=]
+
+[[invest-sell1]]
+
+=== Aktienverkauf
+
+Die Eingabe einer Kapitalanlage, die Sie verkaufen, erfolgt in 
+derselben Weise, wie wenn Sie eine kaufen (siehe auch <<invest-buy-new2>>), außer dass die Gesamtkosten des Geschäftes in die 
+__Verkauf__sspalte und die Aktien in die __Aktien__ Spalte als negative Anzahl eingetragen werden. Die Nettoerlöse 
+des Verkaufs sollten vom Aktienkonto auf Ihr Bank- oder Maklerkonto 
+übertragen werden.
+
+Eine angemessenen Aufzeichnung der Aktienverkäufe *muss* mit 
+Teilbuchungen erfolgen. In den Teilbuchungen benötigen Sie ein Konto für den 
+Gewinn (oder Verlust) ausgehend vom Konto __Erträge:Veräußerungsgewinn__ (oder __Aufwendungen: Veräußerungsverlust__). Um die Erträge auszugleichen, benötigen Sie 
+die Eingabe des Aktienbestandes zweimal in der Teilbuchung, einmal, um den 
+aktuellen Verkauf aufzuzeichnen (mit der korrekten Anzahl der Aktien und dem 
+korrekten Preis je Aktie) und einmal, um die Gewinneinkünfte aufzuzeichnen 
+(Anzahl der Aktien und Preis pro Aktie auf O setzen).
+
+
+[NOTE]
+====
+Um GnuCash dazu zu bewegen, diese 
+Null-Aktie und Null-Kurs in die Buchung zu übernehmen, *müssen* Sie mit
+Tab aus der Splitbuchung hinaus. Wenn Sie die Enter Taste nutzen, wandelt GnuCash
+       die Teilbuchung in Wertpapieranteile um.
+
+====
+
+In dem unten dargestellten Schema der Teilbuchungen steht das 
+Kurzzeichen NUM_SHARES für die Anzahl der Aktien, SELL_PRICE ist der Preis, für 
+den Sie die Aktien verkaufen, GROSS_SALE ist der Gesamtpreis, für den Sie 
+die Aktien verkaufen und ist gleich NUM_SHARES * SELL_PRICE. PROFIT ist der 
+Geldbetrag, den Sie für den Verkauf erzielen. COMMISSIONS sind die 
+Maklergebühren. NET_SALE ist der Geldbetrag, den Sie für den Verkauf 
+erhalten. Dies ist gleich GROSS_SALE - COMMISSIONS.
+
+.Verkauf von Aktien in der Teilbuchungsübersicht
+
+|===============
+|__Konto__|__Anzahl der Aktien__|__Aktienkurs__|__Gesamt- ankaufs- preis__|__Gesamt- verkaufs- preis__
+|Aktiva:Bank ABC|||NET_SALE|
+|Aktiva:Aktien:SYMBOL|0|0|PROFIT|(Loss)
+|Aufwendungen:Gebühren|||COMMISSION|
+|Aktiva:Aktien:SYMBOL|-NUM_SHARES|SELL_PRICE||GROSS_SALE
+|Erträge:Veräußerungsgewinn|||(Loss)|PROFIT
+
+|===============
+
+
+Wenn der Verkauf der Aktien als Veräußerungsgewinn (oder -verlust) 
+aufzeichnen wird, schauen Sie bitte unter <<chapter_capgain>> 
+und 
+
+++++++++++++++++++++++++++++++++++++++
+<!-- xref linkend="chapter_dep" / Kapitel 18-->
+++++++++++++++++++++++++++++++++++++++
+    
+für mehr Informationen zu diesem Thema.
+
+[[invest-sellexample2]]
+
+==== Beispiel - Verkauf der Aktien mit Gewinn
+
+Als Beispiel nutzen wir das im vorherigen Abschnitt erstellte AMZN Konto.
+Sie kaufen 100 AMZN Aktien für 20,- € pro Stück, später verkaufen Sie alle 
+für 36,- € pro Stück mit einer Gebühr von 75,- €. In der 
+Teilbuchungsübersicht oben ist PRICEBUY 20,- € (der ursprüngliche Kaufkurs),
+NUM_SHARES ist 100, TOTALBUY ist 2.000,- € (die ursprüngliche Erwerbskosten),
+GROSS_SALE ist 3.600,- € und schließlich ist PROFIT 1.525,- €
+(GROSS_SALE-TOTALBUY-COMMISSION).
+
+.Verkauf von Aktien in der Teilbuchungsübersicht 
+
+|===============
+|__Konto__|__Aktien__|__Kurs__|__Ankauf__|__Verkauf__
+|Aktiva:Bank ABC|||3.525.00|
+|Aktiva:Maklerkonto:Aktie:AMZN|0|0|1.600.00|
+|Aufwendungen:Maklergebühren|||75.00|
+|Aktiva:Maklerkonto:Aktie:AMZN|-100|36.00||3.600.00
+|Erträge:Veräußerungsgewinn (langfristig):AMZN||||1.600.00
+
+|===============
+
+
+[[invest-sellstock]]
+.Beispiel: Aktienverkauf
+image::figures/invest_sellstock.png["Ein Beispiel für den Verkauf von Aktien mit Gewinn. Sie kauften 100 AMZN Aktien für 20,-€ das Stück an und verkauften sie für 36,- €.",width=]
+
+[[invest-sellstock2]]
+.Beispiel: Aktienverkauf
+image::figures/invest_sellstock2.png["Ein Bild vom Kontenbaum nach dem Verkauf der Aktien mit Gewinn.",width=]
+
+[[invest-sellexampleloss]]
+
+==== Beispiel - Verkauf der Aktien mit Verlust
+
+Als Beispiel nutzen wir das IBM Konto, das wir im vorherigen Abschnitt erstellt haben.
+Danach haben Sie 51,7598 Anteile an IBM für 96,6001 € pro Anteil erworben, 
+diese später für 90,- € pro Anteil verkauft. Im unteren Teilbuchungsschema 
+ist PRICEBUY 96,6001 € (der ursprüngliche Kaufkurs),
+NUM_SHARES ist 51,7598, TOTAL_BUY ist 5.000,- € (der ursprüngliche 
+Gesamtpreis),(Loss) ist 341,62 € und schließlich ist GROSS_SALE 4658,38 €. 
+Nehmen Sie an, dass Die Gebühr 100,00 € war..
+
+.Verkauf von Aktien mit Verlust in der Teilbuchungsübersicht
+
+|===============
+|__Konto__|__Aktien__|__Kurs__|__Ankauf__|__Verkauf__
+|Aktiva:Bank ABC|||4.558,38|
+|Aktiva:Maklerkonto:Aktie:IBM|0|0||341,62
+|Aufwendungen:Maklergebühr|||100|
+|Aktiva:Maklerkonto:Akie:IBM|-51,7598|90,00||4.658,38
+|Erträge:Veräußerungsgewinn (langfristig):IBM|||341,62|0
+
+|===============
+
+
+
+[NOTE]
+====
+Entweder Sie tragen den Verlust als positive Zahl in die Spalte 
+"Ankauf" ein oder als negative Zahl in die Spalte "
+      Verkauf", GnuCash wird den "
+      negativen Gewinn" in die andere Spalte verschieben..
+
+====
+
+[[invest-sellstockLoss]]
+.Beispiel: Verkauf von Aktien mit Verlust
+image::figures/invest_sellstockLoss.png["Der obere Screenshot ist ein Beispiel eines Aktienverkaufes. Sie kauften IBM Aktien im Wert von 5.000,-€ bei einem Aktienkurs von 96,6001 € und verkauften sie für 90,- €.",width=]
+
+[[invest-sellstockLoss2]]
+.Beispiel eines Aktienverkaufes mit Verlust
+image::figures/invest_sellstockLoss2.png["Ein Bild mit dem Kontenbaum nach dem Beispielsverkauf der Aktien mit Verlust.",width=]
+
+[[invest-sellLots]]
+
+==== Automatische Kalkulation der Gewinne oder Verluste bei der Nutzung von Losen
+
+[[invest-sellLotsIntro]]
+
+===== Einführung
+
+
+Lose bedeuten hier Quantitäten finanzieller Instrumente
+
+
+GnuCash hat eine eingebaute Los-Management-Einrichtung, 
+die genutzt werden kann, um die Gewinne oder Verluste zu verfolgen, die 
+aus Aktienverkäufen herrühren. An- und Verkaufsbuchungen werden 
+zum Zweck der Berechnung der Kosten der Veräußerung in Losen zusammengefasst.
+Noch genauer wird ein Los dazu benutzt, einzelne Kauf- und Verkaufsteilbuchungen 
+zu verbinden. Lose können automatisch oder händisch erstellt und verbunden 
+werden. Kapitalgewinne oder -verluste können automatisch berechnet und 
+Buchungen für die Unterschiede zwischen dem Veräußerungswerte und den 
+Kosten der verkauften Wertpapiere erstellt werden. 
+GnuCash bezeichnet diesen Prozess als 
+__Aufrümen__.
+
+
+Der Begriff __Aufräumen__ wird genutzt, weil 
+Wertpapierkonten nach Verkäufen bereinigt werden müssen, um sicherzustellen, 
+dass der Unterschied zwischen den Kosten, die für Wertpapiere bezahlt wurden 
+und dem Wert, den man beim Verkauf derselben erlangt hat, wird gebucht als 
+Kapitalgewinn oder -verlust. Wenn die Kapitalerträge oder -verluste nicht 
+korrekt sind, zeigt die Rohbilanz
+(menu:Berichte[Ertrag &amp; Aufwand &gt; Rohbilanz]) im Ergebnis, dass die Gesamtaktiva nicht die Gesamtpassiva 
+ausgleichen.
+
+
+[NOTE]
+====
+Wenn Sie einen Fehler machen, können Sie die Kapitalertrags-
+und -verlustbuchungen und Lose löschen und neu eingeben.
+
+====
+
+
+Wenn Sie mit FIFO, LIFO oder Durchschnittskosten nicht vertraut sind, 
+schauen Sie bitte in der Wikipedia unter link:$$https://de.wikipedia.org/wiki/First_In_-_First_Out$$[ FIFO (First In - First OUT], link:$$https://de.wikipedia.org/wiki/Last_In_-_First_Out$$[ LIFO (Last In - First OUT] und link:$$https://de.wikipedia.org/wiki/Durchschnittskosten$$[ Durchschnitts- oder Stückkosten].
+
+
+
+Wenn Sie mit den Unterschieden zwischen GnuCash
+           Buchungen und Teilbuchungen nicht vertraut sind, 
+schauen Sie bitte unter <<txns-registers-txntypes>>.
+
+
+
+Die GnuCash Los-Management-Einrichtung kann eine 
+nützliche Funktion sein, um die händische Berechnung zu reduzieren, 
+besonders wenn Dividenen über Jahre wiederinvestiert wurden, und viele 
+verschiedene Kosten beteiligt sind. Es können automatisch Kauf- und 
+Verkaufsbuchungen verbunden werden, in dem die FIFO Kostenmethode genutzt 
+wird und man händisch einzelne Kaufbuchungen mit Verkaufsbuchungen verbinden kann, 
+um LIFO zu nutzen.
+Im erweitertes Portfolio Bericht werden Basis und Gewinne oder Verluste mit 
+den Kosten und den Gewinn- oder Verlustbuchungen, die beim Aufräumen 
+erstellt werden, übereinstimmen, wenn entweder die FIFO oder die LIFO 
+Kostenmethode genutz wird.
+
+[[invest-sellLotsWin]]
+
+===== Lose im Kontenfenster
+
+
+Die Lose im Konto SSSS-Fenster, bei dem SSSS das
+Wertpapierkonto ist. Es wird genutzt, um automatisch oder händisch die 
+Wertpapierteilbuchungen mit den Losen zu verbinden und Kapitalertrags- oder 
+verlustbuchunge zu erstellen, die die Difference zwischen den Ankaufkosten 
+eines Wertpapieres und den erhaltenen Wert eim Verkauf auszuweisen.
+
+
+Um das Fenster Posten in &lt;Konto&gt; zu öffnen, 
+öffnen Sie das Kontenblatt Werpapiere und wählen
+menu:Aktionen[Posten anzeigen…].
+
+
+[[tool-lotsInAcct]]
+.Beispiel: Lose im Fenster Posten anzeigen…
+image::figures/investLots2_BeforeScrub1Lot.png["Screenshot vonLose in Fenster Posten anzeigen… .",width=]
+
+[[invest-sellProcedure]]
+
+===== Zusammenfassung des Verfahrens
+
+Die Nutzung des Los-Management-Einrichtung für die automatische 
+Berechnung der Katpialgewinne oder -verluste folgt üblicherweise diesen 
+Schritten: 
+
+
+[CAUTION]
+.Baustelle
+====
+
+Der folgende Teil befindet sich gerade in Bearbeitung.
+
+
+====
+
+[[invest-dividends1]]
+
+=== Dividenden
+
+Einige Unternehmen oder Investmentfonds zahlen periodische Dividenden 
+an ihre Anteilseigner. Dividenden werden üblicherweise auf einer von zwei 
+Arten verteilt, entweder werden Sie automatisch wieder in Wertpapiere 
+investiert oder sie werden in Geld ausgezahlt. Investmentfonds sind meist so 
+gestaltet, dass die Dividenden automatisch wieder investiert werden, während gewöhnliche Aktiendividenden in Geld ausgezahlt werden.
+
+[[invest-dividendcash]]
+
+==== Dividenden in Geld
+
+Wenn die Dividende in Geld angeboten wird, sollten Sie 
+im Aktivakonto buchen, dass Sie das Geld erhalten haben, und zwar als Erträge 
+von __Erträge:Dividende__. Wenn Sie zusätzlich die 
+Dividende in Geld an einen bestimmten Aktienbestand binden wollen, fügen 
+Sie eine Dummy Teilbuchung dem Aktienkonto mit der Anzahl 0, dem Kurs 1 und dem Wert 0 hinzu.
+
+Als Beispiel betrachten Sie folgendes: die Dividenden, eingezahlt in 
+Geld in das __Makler__ Konto mit der Bindung an das 
+Aktienkonto.
+
+[[invest-dividendcash1]]
+.Beispiel einer Buchung einer Dividende in Geld
+image::figures/invest_dividendcash.png["Ein Bild des Makler Kontoreiters nach einer Reihe von Dividenden in Geld.",width=]
+
+
+[NOTE]
+====
+Wenn Sie die Dividenden für jedes Aktienpaket verfolgen, benötigen 
+Sie ein Konto __Erträge:Dividende:AKTIENSYMBOL__ für 
+jedes Ihrer Aktienpakete, die Dividende zahlen.
+
+====
+
+[[invest-dividendreinvest]]
+
+==== Wieder investierte Dividenden
+
+Wenn Sie die Dividende in Form einer automatischen Wiederanlage 
+erhalten, sollte die Buchung dafür im Aktien- oder Investmentfondkonto als 
+Erträge von "Erträge:Dividende" für die entsprechende Zahl 
+der wiederangelegten Anteile behandelt werden. Dieser Typ des Wiederanlagekontos 
+wird meist als DRIP (Dividend Re-Investment Program) bezeichnet.
+
+Als Beispiel betrachten Sie den folgenden Kauf der NSTAR (NST) Aktie 
+mit der Wiederanlage der Dividende in das DRIP Konto. Die Wiederanlage bei 
+Investmentfonds ist entsprechend zu behandeln.
+
+Wir beginnen mit dem Kauf von 100 Anteilen am 03.01.2015, alle 
+Dividenden werden wieder angelegt und ein Konto angelegt, um die 
+Dividenden zu den jeweiligen Aktien zu verfolgen. GnuCash vereinfacht den Eintrag, indem es Berechnungen mit den 
+Zellen der Buchungen zulässt. Wenn die erste Dividende 0,29 € pro Anteil ist, geben Sie 53,28 € (Kaufpreis und Dividende) pro Anteil in der Zelle
+Preis und 100*0,29 in der Zelle Ankauf. GnuCash berechnet die 
+dazugehörige Anzahl von Anteilen.
+
+[[invest-dividendreinvest1]]
+.Beispiel einer Dividende mit Wiederanlagebuchung
+image::figures/invest_dividendreinvest1.png["Ein Bild des NST Aktienkontoreiters nach der Wiederanlage der Dividende.",width=]
+
+[[invest-retofcap]]
+
+=== Kapitalrückzahlung
+
+Dies bezieht sich auf eine Buchung, in der eine Kapitalrückzahlung an die 
+Kapitalgeber erfolgt. Sie  hat keine weiteren buchhalterische Auswirkungen als die Reduzierung 
+der Kostenbasis. Die Zahl der gehaltenen Aktien ändert sich nicht.
+
+
+Eine Buchung der Kapitalrückzahlung kann in das Aktienkontenblatt eingegeben 
+werden, durch Eingabe einer Aktienteilung mit:
+
+
+
+|===============
+|Aktien|0
+|Preis|0
+|Verkauf|Wert der Kapitalrückzahlung
+
+|===============
+
+
+Die andere Seite des Eintrages der doppelten Buchführung wird in der Regel 
+ein Maklerbankkonto (Aufwand) sein. 
+
+[[invest-ret-of-cap]]
+.Beispiel für eine Buchung der Kapitalrückzahlung
+image::figures/invest_ret_of_cap.png["Ein Screenshot des Aktienkontos nach der Kapitalrückzahlung.",width=]
+
+
+[NOTE]
+====
+Es ist nicht möglich, den Asistenten zur Aktienteilung für diese Art der Buchung zu nutzen.
+
+====
+
+
+[TIP]
+====
+Wenn Sie zufällig einen Preis ungleich Null in die Aktienteilung eingeben, wird 
+GnuCash einen unerwünschten Eintrag in die Kurs-Datenbank 
+erstellen, der in fehlerhaften Berichten mündet. Prüfen und entfernen Sie solch einen 
+unerwünschten Eintrag in der Kurs-Datenbank, in dem Sie menu:Werkzeuge
+    [Kurs-Editor] nutzen.
+
+====
+
+[[invest-splitsnmergers1]]
+
+=== Teilen und Verbinden
+
+
+
+Unternehmen können ihre Aktien aus vielerlei Gründen aufteilen. Aber ein Hauptgrund ist, dass der Preis höher gestiegen ist, 
+als dies nach Annahme des Managements ein vernünftiger Preis für viele Investoren ist. 
+Einige dieser Aufteilungen sind einfache Tauschaktionen (z.B. 2 für 1 oder 3 für 2) und einige sind komplexe Tauschaktionen mit Barabfindungen. 
+Aufteilungen können auch zu weniger Anteilen führen, wenn die Tauschquote ein Rücktausch ist (z.B. 1 für 3 oder 0,75 für 1).
+
+
+[[invest-simplesplit]]
+
+==== Einfache Aktienteilungen
+
+Als Beispiel wird hinsichtlich unseres Anteils am NST Grundkapital 
+eine 2 für 1 Aktienteilung zum 06.06.2015 erklärt. 
+Das Verfahren zur Eingabe dieses Geschäftsvorfalls ist: wählen Sie  
+menu:Aktionen[Aktienteilung…] um den Assistenten zu starten.
+
+[[invest-split1]]
+.Aufruf des Assistenten für Aktienteilung. 
+image::figures/invest_split1.png["Auswahl des Assistenten für die Eingabe einer Aktienteilung.",width=]
+
+Der erste Dialog ist eine Einführung, wählen Sie Vor, um die Kontenauswahl des Kontos und der Aktie für die Teilung anzuzeigen. 
+Sie müssen einen Eintrag für jede __Konten:Aktien__ Kombination erstellen, die sie haben.
+
+
+[[invest-split2]]
+.Bild des Assistenten für die Aktienteilung - Schritt 2 - Auswahl des Depots / der Aktie. 
+image::figures/invest_split2.png["Bild des Assistenten für die Aktienteilung - Schritt 2 - Auswahl des Depots / der Aktie.",width=]
+
+Wählen Sie __Aktiva:Investments:DRIPs:NST__ und klicken Sie auf
+Vor.
+
+Der nächste Dialog zeigt im Aktienteilung Details Fenster 5 Felder:
+
+
+
+** Datum - Geben Sie das Datum der Teilung an.
+
+** Anteile -  Die Anzahl der Anteile , die sich im Vorgang erhöhen 
+(oder vermindern).
++
+In unserem Beispiel ist es eine von 2-zu-1-Teilung, so dass die Anzahl der zusätzlichen Anteile der Anzahl 
+der gegenwärtigen eingetragenen Anteile sind.
+
+** Beschreibung - Die Beschreibung sollte eine kurze 
+Erläuterung der Buchung sein.
+
+** Neuer Kurs - Falls erwünscht, kann der neue Kurs der Aktie 
+nach der Teilung eingetragen werden.
+
+** Währung - Es wird die Währung der Buchung benötigt. 
+Diese sollte die gleiche Währung sein, wie die beim Aktienkauf.
+
+
+Klicken Sie auf die Vor Schaltfläche.
+
+[[invest-split3]]
+.Ein Bild des Aktienteilungsassistenten bei Schritt 3 - Aktienteilung Details. 
+image::figures/invest_split3.png["Ein Bild des Aktienteilungsassistenten bei Schritt 3 - Aktienteilung Details.",width=]
+
+Der nächste Dialog wird in diesem Beispiel übersprungen, weil 
+es keinen "Ausgleichsbetrag" gibt.
+
+
+[[invest-split4]]
+.Ein Bild des Aktienteilungsassistenten bei Schritt 4 - Ausgleichsbetrag. 
+image::figures/invest_split4.png["Ein Bild des Aktienteilungsassistenten bei Schritt 4 - Ausgleichsbetrag.",width=]
+
+Der abschließende Schluss-Dialog gibt Ihnen eine letzte Möglichkeit zum: 
+Abbrechen, Zurück, um irgendwelche eingegebenen Daten zu ändern oder 
+Anwenden, um die Aktienteilung mit den eingegebenen Daten fertigzustellen. 
+
+[[invest-simplesplit1]]
+.Beispiel einer einfachen Aktienteilungsbuchung im Register der Aktie
+image::figures/invest_simplesplit1.png["Ein Bild vom Reiter Aktiva:Investments:DRIPs:NST nach einer Buchung einer einfachen Aktienteilung.",width=]
+
+[[invest-merger1]]
+
+==== Mäßig komplizierter Aktienzusammenschluss
+
+Beispielhaft wird angenommen, Sie halten AT&amp;T Aktien während des Zusammenschlusses 
+von SBC mit AT&amp;T am 18. November 2005. 
+Für dieses Beispiel haben Sie AT&amp;T Aktien am 01. April 2005 erworben, alle Dividenen wurden bar ausgezahlt 
+und daher nicht im Reiter AT&amp;T Aktien eingetragen. 
+
+ Die Bedingungen für den Zusammenschluss waren: 0,77942 SBC Aktien stock wurden für jede AT&amp;T Aktien eingetauscht. 
+Die zusammengeschlossene Gesellschaft setze die Nutzung des Aktienkürzel 
+"T" von AT&amp;T fort.
+
+AT&amp;T zahlte eine "Dividende" von 1,20 € pro Aktie an diesem Stichtag,
+aber dies wird nicht auf dem Aktienkonto erscheinen, weil es eine Barauszahlung war.
+
+Der Prozess, diese Buchung einzutragen, ist identisch mit einer einfachen Aktienteilung bis auf den 
+"Detail"-Dialog. Sie benötigen nun einen Eintrag für die Teilung in jeder
+__Investment:Aktie__ Kontokombination, die geteilte Aktien enthält.
+
+[[invest-merge2]]
+.Ein Bild des Aktienteilungs-Assistenten in Schritt 2. 
+image::figures/invest_merge2.png["Ein Bild des Aktienteilungs-Assistenten in Schritt 2 - Auswahl des Kontos / der Aktie (Investment Account:T).",width=]
+
+Wählen Sie __Aktiva:Investments:Brokerage Account:Aktie:T__ und klicken Sie auf
+Weiter.
+
+Der nächste Dialog zeigt die 5 Felder im Aktienteilungsdialog:
+
+
+
+** Datum - Geben Sie das Datum der Teilung an. Hier geben wir den 18. November 2005 ein.
+
+** Aktien - Die Anzahl der Aktien, um die sie sich in der Buchung erhöhen (oder vermindern).
++
+In unserem Beispiel ist es eine 0,77942 zu 1 Teilung, so dass sich die Anzahl der Aktien veringert im Vergleich zur aktuellen Anzahl. Sie dürfen GnuCash&rsquo;s
+Fähigkeit zur Ausführung von Berechnungen in einem Eingabefeld durch die Direkteingabe der Daten nutzen, (Z.B. "(0,77942*100)-100") um die Verminderung der Aktien durch die Teilung zu berechnen.
+
+** Beschreibung - Die Beschreibung sollte eine kurze Erläuterung der Buchung geben.
+
+** Neuer Preis - Wenn erwünscht, kann der neue Preis der Aktie nach der Teilung eingegeben werden.
+
+** Währung - Die Währung der Buchung ist erforderlich. 
+Dies sollte die gleiche Währung sein wie die beim Aktienkauf.
+
+
+Klicken Sie auf die Schaltfläche Weiter.
+
+[[invest-merge3]]
+.Ein Bild des Aktienteilungs-Assistenten in Schritt 3. 
+image::figures/invest_merge3.png["Ein Bild des Aktienteilungs-Assistenten in Schritt 3 - Einzelheiten der Teilung.",width=]
+
+Der nächste Dialog wird in diesem Beispiel übergangen, weil es keinen 
+"Ausgleichsbetrag" gibt.
+
+
+Der abschließende "Schluss"-Dialog gibt Ihnen eine letzte Möglichkeit 
+zukehren, um irgendwelche eingegebene Daten zu ändern oder , 
+um die Aktienteilung mit den eingegebenen Daten fertigzustellen. 
+
+[[invest-stockmerge1]]
+.Beispiel einer mäßig schwierigen Buchung einer Aktienteilung im Reiter Aktien
+image::figures/invest_stockmerge1.png["Ein Bild vom Reiter Investment:T nach der Buchung einer Aktienteilung, welche die Aktien vermindert.",width=]
+

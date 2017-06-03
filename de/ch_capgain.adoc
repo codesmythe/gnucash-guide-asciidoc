@@ -1,0 +1,335 @@
+[[chapter_capgain]]
+
+== Kapitalerträge
+
+Dieses Kapitel zeigt einige genutzte Verfahren, um die realisierten und nichtrealisierten Gewinne und Verluste zu beobachten, 
+besser bekannt als Kapitalerträge oder Kapitalverluste.
+
+[[capgain_concepts1]]
+
+=== Grundlagen
+
+Dieses Kapitel zeigt einige genutzte Verfahren, um die realisierten 
+und nichtrealisierten Gewinne und Verluste zu beobachten, 
+besser bekannt als Kapitalerträge oder Kapitalverluste.
+
+Sicher wiederverkaufbare Anlagen können ihren Wert im Laufe der Zeit ändern, 
+wie zum Beispiel Aktien, Anleihen, Häuser oder Autos. 
+Einige Anlagen (z.B.: eine Aktie) können im Wert steigen, einge (z.B.: ein Auto) können im Wert abnehmen. 
+Es ist wichtig, in der Lage zu sein, einige dieser zeitabhängigen Vermögensbewertungen zu beobachten. 
+Dieses Kapitel zeigt Ihnen, wie das geht.
+
+Vermutlich alles, was Sie besitzen, steigt oder nimmt über die Zeit an Wert ab. 
+So stellt sich die Frage, für welche Anlage Sie die sich ändernden Werte beobachten sollten? 
+Die einfache Antwort ist, dass Sie nur solche Posten verfolgen sollten, die Sie in Zukunft gegen Bargeld verkaufen können oder die die Besteuerung betreffen.
+
+Verbrauchsmaterialien und Wegwerfartikel (z.B.: Lebensmittel, Treibstoffe 
+für Ihr Auto oder Druckpapier) sind offenbar nicht beteiligt. Somit, auch wenn 
+die neue Kleidung, die Sie jüngst gekauft haben, sicherlich an Wert verlieren 
+werden, wollen Sie nicht diesen Wertverlust verfolgen, weil Sie keine Absicht 
+zum Wiederverkauf der Kleidung haben und es keine steuerlichen Auswirkungen des 
+Wertverlustes der Kleidung gibt. So sollte für dieses Beispiel der Kauf von neuer Kleidung 
+als reine Ausgaben aufgezeichnet werden… Sie geben das Geld aus, und es ist weg..
+
+Die Wertsteigerung der Anlage findet statt, wenn etwas, was Sie besitzen, über die Zeit im Wert ansteigt. 
+Wenn Sie eine Anlage besitzen, die im Wert angestiegen ist, wird die Differenz 
+zwischen dem Originalkaufpreis und dem neuen Wert als 
+__nichtrealisierter Gewinn__ bezeichnet. Wenn Sie diese Anlage verkaufen,
+wird der Gewinn, den Sie erzielen, als __realisierter Gewinn__ oder
+__Kapitalertrag__ bezeichnet. Ein Beispiel einer Anlage, von der Sie nichtrealisierte Gewinne und eventuell Kapitalerträge haben können, ist eine Aktie eines 
+börsennotierten Unternehmens.
+
+[[capgain_value1]]
+
+=== Bewertung des Schätzwertes 
+
+Wie in der Einleitung zu diesem Kapitel erwähnt, sind Kapitalerträge 
+der Gewinn, den Sie durch den Verkauf einer Anlage erhalten. Dieser Abschnitt beschreibt, 
+wie Sie die Kapitalerträge in GnuCash aufzeichnen.
+
+Die Kontoführung für die Behandlung einer Wertsteigerung der Anlage unterscheidet sich 
+ein wenig von einer Abschreibung, weil Sie sich normalerweisee mit dem Moment des Verkaufs der 
+Anlage und der Realisierung des Kapitalertrages beschäftigen. Dies steht im Gegensatz zur 
+stetigen Natur der aufgezeichneten Abschreibung. Kapitalerträge
+sind ein wichtiges Thema in der Welt der Besteuerung, weil die Regierungen dazu
+neigen, sich durchaus dafür zu interessieren, Kapitalerträge auf die eine oder andere Weise 
+zu besteuern.
+
+
+[NOTE]
+====
+Wie immer gibt es Ausnahmen. Wenn Sie eine Anleihe halten, die Ihnen 
+all ihre Zinsen bei Fälligkeit zahlt, verstehen die Steuerbehörden 
+dies oft so, als ob Sie diese Zinsen jedes Jahr erhalten und 
+verweigern Ihnen die Behandlung als Kapitalzuwachs. 
+Schlagen Sie in den anwendbaren Steuergesetzen nach, um die 
+bevorzugte Behandlung für jede von Ihnen gehaltene Anlagenart 
+festzustellen, welche von Kapitalertragssteuern betroffen sein können.
+
+====
+
+Die Berechnung der Wertsteigerung der Anlagen ist grundsätzlich 
+nicht einfach, weil es oft schwierig ist, den genauen Wert zu kennen, 
+bis zu dem Moment ihres Verkaufes.
+
+Wertpapiere, die täglich in offenen Märkten, wie Börsen, gehandelt werden, 
+sind möglicherweise die einfachste Anlagenart, um davon den Wert zu bestimmen. Der 
+Verkauf einer Anlage zum Marktpreis kann so einfach sein, wie einen Börsenmakler zu 
+beauftragen und ihm einen Börsenauftrag zu erteilen. 
+Auf der anderen Seite ist die Berechnung des Wertes eines Hauses schwieriger.
+Häuser werden seltener als Aktien verkauft und die Verkäufer neigen dazu,  
+erhebliche Anstrengungen und Verhandlungen einzubeziehen, was bedeutet, 
+das die Berechnungen wahrscheinlich weniger genau sind. Ein 
+gebrauchtes Auto zu verkaufen, bedeutet in ähnlicher Weise einen 
+Verhandlungsprozess, der den Preis weniger vorhersehbar macht.
+
+Werte von Sammlerstücken wie Schmuck, Kunstwerke, Baseballkarten 
+und "Beanie Babies" sind noch schwieriger zu bestimmen. Die
+Märkte für solche Objekte sind viel weniger offen als die Wertpapiermärkte 
+und weniger offen als der Immobilienmarkt. Schlechter sind noch Unikat-Anlagen. 
+Fabriken enthalten oft Pressen und Pressformen, die dazu angepasst sind, 
+ein sehr spezielles Produkt zu bauen und die zehn- oder hunderttausende Euros kosten;
+diese Ausrüstung kann außerhalb dieses speziellen Zusammenhangs wertlos sein. 
+In diesen Fällen können verschiedene widersprüchliche Werte mit der Anlage 
+verbunden sein, von denen keiner eindeutig richtig ist.
+
+Eine generelle Faustregel für die Bewertung nichtrealisierter Gewinne 
+(oder Verluste) ist in der Buchhaltung, dass man nur Anlagen wie Aktien 
+neubewerten sollte, welche schnell verkäuflich sind und für die es eine sehr gute 
+Schätzung des Wertes gibt. Für alle anderen Anlagen ist es besser, einfach zu 
+warten, bis man sie verkauft, da man zu diesem Zeitpunkt den Kapitalertrag genau 
+bestimmen kann. Natürlich gibt es dafür keine strenge Regel, und tatsächlich mögen 
+dies verschiedene Buchhalter verschieden handhaben.
+
+[[capgain_accounts1]]
+
+=== Einrichten der Konten
+
+Wie bei den meisten buchhalterischen Methoden gibt es eine Vielzahl 
+verschiedener Wege, um Kapitalertragskonten einzurichten. Wir wollen hier 
+eine allgemeine Methode darstellen, die flexible genug ist, die meisten Situationen zu bewältigen. 
+Das erste Konto, das Sie benötigen, ist ein Konto __Anschaffungskosten__ 
+(GnuCash Kontenart Anlagen), 
+das einfach ein Platz ist, wo Sie den Erwerb der Anlage aufzeichnen. 
+Üblicherweise kommt der Erwerb durch einen Geschäftsvorfall mit Ihrem Bankkonto zustande.
+
+Um die Wertschätzung der Anlage zu beobachten, benötigen Sie drei Konten. 
+Das Erste ist ein Aktivakonto __Nichtrealisierte Gewinne__, 
+auf welchem Sie die Summe aller Wertschätzung sammeln. 
+Das Aktivakonto __Nichtrealisierte Gewinne__ wird durch das Ertragskonto __Nichtrealiserte Gewinne__ ausgeglichen, 
+von welchem alle regelmäßigen Wertschätzungserträge aufgezeichnet werden. 
+Schließlich wird ein weiteres Ertragskonto benötigt, __Realisierte Gewinne__ 
+genannt, auf welchem Sie die aktuellen Kapitalgewinne aus den Verkauf der Anlage aufzeichnen.
+
+Nachstehend ist eine allgemeine Kontenhierarchie, um die Wertschätzung von 2 
+Anlagen zu beobachten, __ITEM1__ and __ITEM2__. 
+Die Konten __Aktiva:Sachanlagen:ITEM1:Kosten__ werden durch das Konto 
+__Aktiva:Barvermögen:Sparkonto__ ausgeglichen, 
+die Konten __Aktiva:Sachanlagen:ITEM1:Nichtrealisierte Gewinne__
+werden durch __Erträge:Nichtrealisierte Gewinne__ ausgeglichen (ähnlich wie __ITEM2__).
+
+
+....
+
+-Aktiva
+    -Barvermögen
+        -Sparkonto
+    -Sachanlage
+        -ITEM1 
+            -Kosten
+            -Nichtrealisierte Gewinne
+        -ITEM2
+            -Kosten
+            -Nichtrealisierte Gewinne
+-Erträge
+    -Realisierte Gewinne
+    -Nichtrealisierte Gewinne
+  
+....
+[[capgain_example1]]
+
+=== Beispiel
+
+Lassen Sie uns annehmen, Sie kaufen eine Anlage in der Erwartung, dass sie im Wert ansteigt,
+wie das Degas Gemälde, und wollen dies beobachten. 
+(Die Versicherungsgesellschaft wird sich dafür interessieren, auch wenn es sonst keinen interessiert.)
+
+Starten Sie mit einer Kontenhierarchie wie sie ähnlich in 
+<<capgain_accounts1>> gezeigt wird, aber ersetzen Sie "ITEM1" mit "Degas" 
+und Sie können die Konten "ITEM2" entfernen. Wir nehmen an, dass das Degas Gemälde 
+einen Anfangswert von hunderttausend Euro hat. Beginnen Sie, in dem Sie selbst die 
+100.000,- € auf Ihr Bankkonto einzahlen und übertragen Sie diesen Betrag dann von Ihrem Bankkonto 
+auf Ihr Konto __Aktiva:Sachanlagen:Degas:Kosten__ 
+(der Vorgang zum Anlagenerwerb). Sie sollten nun ein 
+Hauptkontenfenster haben, das wie folgt aussieht:
+
+[[capgain_appmain]]
+.Hauptfenster mit der Wertsteigerung der Anlagen
+image::figures/capgain_appmain.png["Wertsteigerung der Anlagen - Bespielfenster",width=]
+
+[[capgain_exampleunrealized2]]
+
+==== Nichtrealisierte Gewinne
+
+Einen Monat später haben Sie einen Grund anzunehmen, dass sich 
+der Wert des Gemäldes um 10.000,- € erhöht hat (ein nichtrealisierter Gewinn). 
+Um dies aufzuzeichnen, übertragen Sie 10.000,- € von Ihrem Ertragskonto __Angewachsene Gewinne__ 
+(__Ertrag:Nichtrealisierter Gewinn__) auf Ihr Anlagenkonto __Nichtrealisierte Gewinne__ 
+(__Aktiva:Sachanlage:Degas:Nichtrealisierter Gewinn__). Ihr 
+Hauptfenster sieht so ähnlich aus:
+
+[[capgain_app2main]]
+.Hauptfenster mit der Wertsteigerung der Anlagen
+image::figures/capgain_app2main.png["Kontenplan nach Nichtrealisierten Gewinnen",width=]
+
+[[capgain_examplesell2]]
+
+==== Verkaufen
+
+Nehmen wir an, einen weiteren Monat später sind die Preise für Degas Gemälde etwas gestiegen, 
+in diesem Fall nach Ihrer Schätzung um 20.000,- €. Sie zeichnen ordnungsgemäß die 
+20.000,- € als nichtrealisierter Ertrag wie oben auf und beschließen dann, das Gemälde zu verkaufen.
+
+Es ergeben sich drei Möglichkeiten. Sie können den nichtrealiserten Gewinn __genau geschätzt__, ihn 
+__unterschätzt__ oder
+__überschätzt__ haben.
+
+
+. __Genaue Schätzung__ des Nichtrealisierten Gewinns.
++
+Ihre optimistische Schätzung des Wertes des Gemäldes war zutreffend.
+Zuerst müssen Sie aufzeichnen, dass die erzielten Gewinne nun 
+realisierte und nicht nichtrelisierte Gewinne sind. 
+Sie machen dies durch die Übertragung des Ertrags vom Konto 
+__Ertrag:Nichtrealisierte Gewinne__ auf das Konto  
+__Ertrag:Realisierte Gewinne__.
++
+Sie müssen zweitens Ihrem Bankkonto den Verkaufspreis des Gemäldes zuschreiben. 
+Dieses Geld kommt direkt von Ihrem Unterkonten 
+__Aktiva:Sachanlagen:Degas__. Übertragen Sie den ganzen Wert des Kontos 
+__Aktiva:Sachanlagen:Degas:Kosten__ nach 
+__Aktiva:Barvermögen:Sparkonten__ und den ganzen Betrag von 
+__Aktiva:Sachanlagen:Degas:Nichtrealisiter Gewinn__ nach  
+__Aktiva:Barvermögen:Sparkonten__.
++
+Diese Buchungen sollten wie folgt angezeigt werden:
++
+.Umwandlung eines angewachsenen Gewinns in einen realisierten Gewinn
+
+|===============
+|__Konto__|__Übertragen nach__|__Buchungsbetrag__|__Gesamtbetrag__
+|Ertrag:Nichtrealisierte Gewinne|Ertrag:Realisierte Gewinne|30.000,- €|0,- €
+|Aktiva:Sachanlagen:Degas:Kosten|Aktiva:Barvermögen:Sparkonto|100.000,- €|0,- €
+|Aktiva:Sachanlagen:Degas:Nichtrealisierte Gewinne|Aktiva:Barvermögen:Sparkonto|30.000,- €|0,- €
+
+|===============
+
++
+Dies hinterlässt das Konto __Aktiva:Barvermögen:Sparkonto__ 
+mit einem Gesamtbetrag von 130.000,- € und  das Konto __Ertrag:Realisierte Gewinne__ mit einem 
+Gesamtbetrag von 30.000,- €.
++
+[[capgain_app3main]]
+.Hauptfenster mit der Wertsteigerung der Anlagen
+image::figures/capgain_app3main.png["Kontenansicht nach realisiertem Gewinn",width=]
+
+
+. __Überschätzung__ des nichtrealisierten 
+Gewinns.
++
+Sie waren überoptimistisch hinsichtlich des Wertes des Gemäldes.
+Anstelle der 130.000,- €, die als Wert des Gemäldes annahmen, werden Ihnen
+nur 120.000,- € geboten. Dennoch entscheiden Sie sich immer noch zum Verkauf, denn Sie schätzen 
+120.000,- € mehr als das Gemälde. Die Zahlen ändern sich ein wenig, 
+aber nicht zu dramatisch.
++
+Die Buchungen sollten nun wie folgt erscheinen (beachten Sie die 
+letzte Buchung, die die Konten __Nichtrealisierte Gewinne__
+ausgleicht):
++
+.Umwandlung eines angewachsenen Gewinns in einen realisierten Gewinn
+
+|===============
+|__Konto__|__Übertragen nach__|__Buchungsbetrag__|__Gesamtbetrag__
+|Ertrag:Nichtrealisierte Gewinne|Ertrag:Nichtrealisierte Gewinne|20.000,- €|10.000,- €
+|Aktiva:Sachanlagen:Degas:Kosten|Aktiva:Barvermögen:Sparkonto|100.000,- €|0,- €
+|Aktiva:Sachanlagen:Degas:Nichtrealisierte Gewinne|Aktiva:Barvermögen:Sparkonto|20.000,- €|10.000,- €
+|Aktiva:Sachanlagen:Degas:Nichtrealisierte Gewinne|Ertrag:Nichtrealisierte Gewinne|10.000,- €|0,- €
+
+|===============
+
++
+Dies hinterlässt das Konto __Aktiva:Barvermögen:Sparkonto__ 
+mit einem Gesamtbetrag von 120.000,- € und das Konto __Ertrag:Realisierte Gewinne__ mit einem 
+Gesamtbetrag von
+20.000,- €.
+
+
+. __Unterschätzung__ des nichtrealisierten 
+Gewinns.
++
+Sie schaffen es, Ihr Gemälde zu einem Preis zu verkaufen, der höher ist, als in Ihren wildesten Träumen  
+(150.000,- €). Der zusätzliche Wert ist wieder als Gewinn d.h. als Ertrag aufzuzeichen.
++
+Die Buchungen sollten nun wie folgt erscheinen  (beachten Sie die 
+letzte Buchung, die die Konten __Nichtrealisierte Gewinne__
+ausgleicht):
++
+.Umwandlung eines angewachsenen Gewinns in einen realisierten Gewinn
+
+|===============
+|__Konto__|__Übertragen nach__|__Buchungsbetrag__|__Gesamtbetrag__
+|Ertrag:Nichtrealisierte Gewinne|Ertrag:Realisierte Gewinne|50.000,- €|-20.000,- €
+|Aktiva:Sachanlagen:Degas:Kosten|Aktiva:Barvermögen:Sparkonto|100.000,- €|0,- €
+|Aktiva:Sachanlagen:Degas:Nichtrealisierter Gewinn|Aktiva:Barvermögen:Sparkonten|50.000,- €|-20.000,- €
+|Ertrag:Nichtrealisierter Gewinn|Aktiva:Sachanlagen:Degas:Nichtrealisierter Gewinn|20.000,- €|0,- €
+
+|===============
+
++
+Dies hinterlässt das Konto __Aktiva:Barvermögen:Sparkonto__ 
+mit einem Gesamtbetrag von 150.000,- € und das Konto __Ertrag:Realisierte Gewinne__ mit einem 
+Gesamtbetrag von 
+50.000,- €.
+
+[[capgain_examplecaution2]]
+
+==== Vorsicht bei der Bewertung
+
+Wie Sie in diesem Beispiel sehen, mag es für Nichtfinanzanlagen schwierig sein, den 
+"wahren" Wert einer Anlage richtig einzuschätzen. 
+Es ist ziemlich einfach, sich selbst durch fragwürdige 
+Schätzungen reich zu rechnen, welche kein "Geld auf der Bank" widerspiegeln.
+
+Beim Umgang mit der Wertsteigerung von Anlagen,
+
+
+
+** Seien Sie vorsichtig mit Ihrer Schätzung von Werten. 
+Geben Sie Ihrem Wunschdenken nicht nach.
+
+** Verlassen Sie sich niemals auf Geld, dass Sie nicht auf Ihrer Bank oder als Bargeld haben. 
+Bis Sie tatsächlich Ihre Anlage verkauft und das Geld erhalten haben, 
+sind alle Zahlen auf Papier (oder magnetische Muster auf Ihrer Festplatte) nur genau das. 
+Wenn Sie einen Bankier davon überzeugen können, Ihnen Geld 
+mit den Anlagen als Sicherheit zu leihen, ist dies ein 
+ziemlich vernünftiger Beweis, dass die Anlagen wertvoll sind, 
+da Darlehensgeber beruflich misstrauisch gegenüber fragwürdigen Überschätzungen des Wertes sind. 
+Seien Sie vorsichtig: viel zu viele Gesellschaften, die auf dem Papier "profitabel" erscheinen, haben den Geschäftsbetrieb eingestellt, weil Ihnen das Geld ausgegangen ist, genau weil "wertvolle 
+          Anlagen" nicht dasselbe sind, wie Bargeld.
+
+
+[[capgain_tax1]]
+
+=== Besteuerung
+
+Die Besteuerungsgrundsätze variieren wesentlich zwischen den Staaten. Daher ist es nahezu unmöglich, 
+etwas zu sagen, das universell nützlich sein wird. 
+Es ist dem Einkommen, welches durch Kapitalgewinne erzeugt wird, 
+gemein, nicht besteuert zu werden bis zu dem Tag, an dem die Anlage 
+tatsächlich verkauft wird und manchmal nicht einmal dann. 
+Nordamerikanische Hauseigentümer merken dies gewöhnlich, wenn sie ihren persönlichen Wohnsitz verkaufen, 
+dass dabei entstehende Kapitalgewinne von der Besteuerung ausgenommen sind. 
+Es scheint so, dass andere Länder Hausverkäufe anders behandeln und solche Gewinne besteuern. 
+Beispielsweise besteuern deutsche Behörden solche Gewinne nur dann, wenn man das Eigentum weniger als zehn Jahre innehatte.
+

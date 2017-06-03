@@ -1,0 +1,293 @@
+[[glossary]]
+== Glossar
+
+[glossary]
+[[aqbanking]]
+AqBanking::
+   AqBanking ist eine freie Bibliothek für Online-Banking und der Nachfolger von OpenHBCI2. 
+AqBanking bietet laut Entwicklerangaben eine Schnittstelle zu:
+
+
+
+[options="compact"]
+** allgemeinen Aufgaben des Online-Bankings (Umsatz- und Saldenabruf, Überweisungen und Lastschriften etc)
+
+** Bankinformationen für Deutschland, USA, Österreich und die Schweiz
+
+** Länder- und Währungsinformationen (ISO-Codes etc)
+
+
+
++
+See Also 
+
+[[bayes]]
+Bayes Algorithmus::
+   Algorithmus zur Berechnung bedingter
+Wahrscheinlichkeiten.  Wird unter anderem benutzt, um lernfähige
+Filter zur Vermeidung von Spam zu erstellen.
+
++
+See Also 
+
+[[bookkeeping]]
+Buchführung::
+   Buchführung bezeichnet die in Zahlenwerten vorgenommene planmäßige, lückenlose, zeitliche und sachlich geordnete Aufzeichnung aller Geschäftsvorgänge in einer Unternehmung auf Grund von Belegen. Sie ist das zahlenmäßige Spiegelbild einer Unternehmung und wichtige Informationsquelle für den Unternehmer und dient außerdem dazu, den gesetzlich fixierten Informationsanforderungen von Behörden nachzukommen.
++
+See Also 
+
+[[accounting]]
+Buchhaltung::
+   
+Buchhaltung ist die Organisationseinheit eines Unternehmens, die die Buchführung erstellt. Die Begriffe Buchhaltung und Buchführung werden umgangssprachlich häufig synonym verwendet. In der Betriebswirtschaftslehre bezeichnet der Begriff Buchführung nur die Methodik oder Tätigkeit.
+
++
+See Also 
+
+[[simple-transaction]]
+Buchung::
+   [[transaction]]
+Buchungssatz::
+   Ein Buchungssatz ist der kleinste vollständige
+Buchungsvorgang in der doppelten Buchführung und entspricht
+einem Geschäftsvorfall.  An einem einfachen Buchungssatz sind
+nur zwei Konten beteiligt.  Sind mehr als zwei Konten beteiligt,
+spricht man von einem zusammengesetzen Buchungssatz.  In
+allgemeinem Sinn wird Buchungssatz in diesem Text vereinfachend
+auch nur als Buchung bezeichnet.
+
+
+[[csv]]
+Comma Separated Values::
+   CSV ist ein einfaches Format zur Darstellung gleichförmiger Daten in Textdateien.  
+Diese sind als Tabellen mit Zeilen einer festen Anzahl von Spalten organisiert, die durch ein Trennzeichen
+(zum Beispiel ein Komma) getrennt sind. 
+Programme, die das CSV-Format lesen können, können meist auch Tabellen mit fester Spaltenbreite verarbeiten.
+
+[[xml]]
+Extensible Markup Language::
+   Die Extensible Markup Language (engl. für "erweiterbare
+        Auszeichnungssprache"), dient der Darstellung hierarchisch strukturierter Daten in Form von 
+Textdaten. Diese sind menschenlesbar und mit einem Texteditor zu bearbeiten. 
+XML wird u. a. für den plattform- und implementationsunabhängigen Austausch 
+von Daten zwischen Computersystemen eingesetzt, insbesondere über das Internet.
+XML ist das originäre Speicherformat von GnuCash und in jedes beliebige andere Format konvertierbar.
+
+
+[[fints]]
+Financial Transaction Services::
+   FinTS ist die Weiterentwicklung des 1996 erstmals vom ZKA (Zentraler
+Kreditausschuss) veröffentlichten deutschen Online-Banking Standards HBCI und löste dieses 2004 ab.
+
++
+See Also 
++
+See Also Home Banking Computer Interface
+
+[[fsf]]
+Free Software Foundation::
+   Die FSF eine ist eine amerikanische Stiftung, die als gemeinnützige Organisation 1985 von Richard Stallman 
+mit dem Zweck gegründet wurde, freie Software zu fördern. Haupt Projekte sind das GNU/Linux Operating System und der GNOME Desktop.
+
++
+See Also 
+
+[[checking-account]]
+Girokonto::
+   Konto zur Abwicklung des bargeldlosen Zahlungsverkehrs.
+
+
+[[gnome]]
+GNU Network Object Model Environment::
+   Benutzerfreundliche und komplett freie Arbeitsumgebung, geschrieben in C und basierend auf dem GIMP Toolkit. 
+Spezielle Richtlinien zur Software-Ergonomie sollen Zugangsbarrieren minimieren.
++
+See Also 
++
+See Also GNU is not Unix
+
+[[gnu]]
+GNU is not Unix::
+   Das GNU-Projekt wurde 1984 aus der Taufe gehoben, um ein komplettes, unixartiges Betriebssystem zu entwickeln.
+Haupt Sponsor ist die Free Software Foundation.
++
+See Also Free Software Foundation
++
+See Also 
+
+[[gtkhtml]]
+GtkHTML::
+   GtkHTML ist eine freie HTML-Rendering-Engine, die das GIMP-Toolkit benutzt und in C geschrieben ist.
+
+[[hbci]]
+Home Banking Computer Interface::
+   HBCI ist ein offener Standard für den Bereich Electronic Banking und
+Kundenselbstbedienung. Er wurde von verschiedenen
+Bankengruppen in Deutschland entwickelt und vom Zentralen
+Kreditausschuss (ZKA) beschlossen. HBCI ist eine
+standardisierte Schnittstelle für das Homebanking. Dabei
+werden Übertragungsprotokolle, Nachrichtenformate und
+Sicherheitsverfahren definiert.
++
+See Also Financial Transaction Services
++
+See Also AqBanking
+
+[[chart-of-accounts]]
+Kontenplan::
+   In GnuCash Gesamtheit aller in einer Datei enthaltenen
+Konten, wie sie in Form der Kontenhierarchie im Kontenfenster
+angezeigt wird.
+
++
+See Also Kontenrahmen
++
+See Also 
+
+[[account-hierarchy]]
+Kontenrahmen::
+   Der Kontenrahmen ist ein systematisches Verzeichnis
+aller Konten für die Buchführung in einem Wirtschaftszweig.
+Durch Anpassung an die speziellen Gegebenheiten eines
+Unternehmens entsteht daraus der Kontenplan.
+
++
+See Also Kontenplan
++
+See Also Standardkontorahmen
++
+See Also 
+
+[[account]]
+Konto::
+   Zentrale Datenstruktur in der Buchführung und GnuCash.  
+Ein Konto ist ein u.U. abstrakter Ort, an dem Zahlenwerte notiert und verrechnet werden. 
+Neben Geldkonten findet man Punktekonten, Urlaubskonten, Arbeitszeitkonten, Meilenkonten, Stückkonten etc.
+
++
+
+In GnuCash dient ein Konto primär zur Verwaltung von Geldbeträgen und Wertpapierbeständen.
+
++
+See Also 
+
+[[register]]
+Kontobuch::
+   Das elektronische Kontobuch von GnuCash.  Hier geben Sie Ihre Buchungen ein.  Auch als Register bezeichnet.
+
+[[mailing-list]]
+Mailingliste::
+   Eine Mailingliste bietet einer geschlossenen Gruppe von
+Menschen die Möglichkeit zum elektronischen
+Nachrichtenaustausch in Briefform.  Dieser
+Nachrichtenaustausch ist innerhalb der Gruppe öffentlich.
+
+
+[[mysql]]
+MySQL::
+   Der MySQL Server ist ein relationales Datenbankverwaltungssystem. 
+Es ist als Open-Source-Software sowie als kommerzielle Enterpriseversion für 
+verschiedene Betriebssysteme verfügbar und bildet die Grundlage für viele dynamische Webauftritte. 
+Laut wiki ist MySQL mit mehr als 6 Millionen Installationen und über 35.000 Downloads pro Tag das 
+populärste Open-Source-Datenbankverwaltungssystem der Welt.
+
++
+See Also 
++
+See Also 
+
+[[ofx]]
+Open Financial Exchange::
+   Open Financial Exchange (engl. für "offenes Format zum Austausch
+        von Finanzdaten") ist ein offener Standard zum elektronischen
+Austausch von Finanzdaten zwischen Geldinstituten, Betrieben
+und Verbrauchern über das Internet.  
+Es hat mittlerweile das QIF-Format als wichtigstes Format abgelöst.
+
++
+See Also 
++
+See Also Quicken Interchange Format
+
+[[openhbci]]
+OpenHBCI::
+   
+OpenHBCI ist eine Open-Source-Implementierung des deutschen HBCI Protokolls. 
+Die Entwicklung wurde im Jahre 2004 eingestellt.  Nachfolger ist AqBanking
++
+See Also 
+
+[[postgresql]]
+PostgreSQL::
+   Sehr komplexes und leistungsfähiges Open-Source-Datenbanksystem. 
+Es unterstützt die SQL92 und SQL99 Standards und darüberhinaus bietet es eine Reihe eigener Erweiterungen an.
+
++
+See Also 
++
+See Also 
++
+See Also Structured Query Language
+
+[[qif]]
+Quicken Interchange Format::
+   Quicken Interchange Format ist ein offenes Format der amerikanischen Firma Intuit, 
+die mit der Finanzsoftware Quicken 1988 eine marktbeherrschende Stellung erlangte.
+Galt QIF längere Zeit aus Quasi Standard, wird es seit 2005 von Quicken nicht mehr 
+unterstützt und von OFX abgelöst. 
+
++
+
+QIF-Dateien enthalten u.a. unzureichende Konto Informationen
+und können zu doppelten Transaktionen führen.
+
++
+See Also 
++
+See Also Open Financial Exchange
+
+[[balance]]
+Saldo::
+   Der Saldo ist die Diffenenz zwischen Soll- und Habenseite eines Kontos.  
+Auch als Kontostand bezeichnet.
+
+
+[[skr]]
+Standardkontorahmen::
+   Für verschiedene Branchen von Industrieverbänden oder der DATEV herausgegebene Kontenrahmen.
+
+[[savings-account]]
+Sparkonto::
+   Ein Konto auf dem Sie Zinsen für ein Guthaben
+bekommen.  Das Ansparen der Zinsen ist der Hauptzweck des Sparkontos.
+
+[[sqlite]]
+SQLite3::
+   
+Kompakte Open-Source C-Programmbibliothek, die ein relationales Datenbanksystem enthält. 
+SQLite3 unterstützt einen Großteil der im SQL-92-Standard festgelegten SQL-Sprachbefehle.
+SQLite speichert seine Daten in einer einzigen portablen Datei. 
+SQLite benötigt keine Konfiguration, keine Benutzerverwaltung und keinen Server.
+
++
+See Also 
+
+[[sql]]
+Structured Query Language::
+   SQL ist eine Datenbanksprache zur Definition, Abfrage und Manipulation von Daten in relationalen Datenbanken, 
+die sich an die englische Sprache anlehnt.
+SQL ist von ANSI und ISO standardisiert und wird von fast allen gängigen Datenbanksystemen unterstützt.
++
+See Also SQLite3
++
+See Also MySQL
++
+See Also PostgreSQL
++
+See Also 
+
+[[webkit]]
+WebKit::
+   Moderne Hypertext Darstellungstechnologie, die auch in Google Chrome
+unter Windows und Apple Safari zum Einsatz kommt.
+

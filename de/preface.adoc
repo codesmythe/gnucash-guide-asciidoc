@@ -1,0 +1,53 @@
+[preface]
+[]
+== Über die Verfasser
+
+
+Das Dokumentationsteam von GnuCash ist eine selbsternannte Gruppe von GnuCash-Nutzern 
+und -Entwicklern, die sich angeboten haben, diese Dokumentation zu schreiben, 
+zum Wohle der breiten Nutzerschaft. Menschen, die daran intressiert sind,
+dieser Gruppe bezutreten, werden ermutigt, ihr Interesse auf der $app;
+Mailinglisten (gnucash-de@gnucash.org und gnucash-devel@gnucash.org) 
+für weitere Anleitungen kundzu tuen.
+
+
+Beitragende im Team sind bisher:
+Yawar Amin,
+J. Alex Aycinena,
+Tom Bullock,
+Carol Champagne,
+Frank Ellenberger,
+Mike Evans,
+Chris Good,
+Dave Herman,
+Geert Janssens,
+Jon Lapham,
+Chris Lyttle,
+Martin Mainka,
+Cristian Marchi,
+John Ralls,
+Robert Ratliff,
+Mechtilde Stehmann,
+Christian Stimming,
+Bengt Thuree, and
+David T..
+
+
+++++++++++++++++++++++++++++++++++++++
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <author role="translator">
+        <firstname>Latin</firstname>
+        <surname>Translator 1</surname>
+        <affiliation>
+          <orgname>Latin Translation Team</orgname>
+          <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+        <email>email@address.com</email>
+      </author>
+-->
+++++++++++++++++++++++++++++++++++++++
+    
+
+

@@ -1,0 +1,578 @@
+[[chapter_accts]]
+
+== Konten
+
+
+Dieses Kapitel behandelt nützliche Konzepte für die Verwaltung Ihrer Konten.
+Da GnuCash Ihnen keinen speziellen Kontenrahmen aufdrängt,
+sind Sie frei, Ihre Kontenhierarchie in jeder gewünschten Weise zu gestalten.
+Es gibt jedoch einige grundsätzliche Buchführungskonzepte, die Sie
+bei der Gestaltung Ihrer Kontenhierarchie wahrscheinlich berücksichtigen wollen,
+um ihre Brauchbarkeit zu maximieren.
+
+[[accts-concepts1]]
+
+=== Buchhaltungsgrundsätze
+
+Wie wir im vorigen Kapitel gesehen haben, basiert die Buchführung auf fünf grundlegenden
+Kontenarten: Aktiva, Fremdkapital, 
+Eigenkapital, Ertrag und Aufwand. 
+Wir erweitern nun unser Verständnis dieser Kontentypen und zeigen, wie sie in 
+GnuCash dargestellt werden.
+Zuerst aber wollen wir die Kontenarten in zwei Gruppen aufteilen: 
+die Bestandskonten, deren Zusammenfassung die
+__Bilanz zu einem bestimmten Zeitpunkt__ ist,
+und die Erfolgskonten, welche mit Aufwand und
+Ertrag die wertmäßigen __Veränderungen in einem Zeitraum__ wie dem Wirtschaftsjahr darstellen.
+
+Bevor wir uns näher mit jedem Kontentyp befassen, lassen Sie uns noch einmal
+zur Erinnerung die Buchhaltungsgleichung 
+(__Aktiva - Fremdkapital = Eigenkapital + (Ertrag - Aufwand)__)
+betrachten.
+
+[[accts-AccountRelationships]]
+.Die Grundkonten
+image::figures/basics_AccountRelationships.png figures/basics_AccountRelationships.svg["Graphische Darstellung der Beziehungen der 5 Grundkonten zueinander. Das Reinvermögen (Eigenkapital) erhöht sich durch Erträge und vermindert sich durch Aufwendungen. Die Pfeile repräsentieren die Wertbewegungen.",width=]
+
+[[accts-bsa2]]
+
+==== Bestandskonten
+
+Die drei sogenannten __Bestandskonten__ sind 
+Aktiva, Fremdkapital, und
+Eigenkapital. Bestandskonten werden benutzt, um über 
+Ihren Besitz und Ihre Schulden Buch zu führen.
+
+Aktiva bezeichnet den Bereich Ihres Besitzes.
+Aktiva können zum Beispiel ein Auto, Bargeld, ein Haus, Aktien und alles andere 
+sein, was einen konvertiblen Wert besitzt. Konvertibler Wert bedeutet, dass Sie 
+diesen Besitz zumindest theoretisch für Geld verkaufen können.
+
+Fremdkapital bezeichnet den Bereich Ihrer Schulden.
+Fremdkapital können zum Beispiel ein Autokredit, ein Studiendarlehen,
+ein Hypothekendarlehen, ein Überziehungskredit und alles Andere sein, was Sie
+zu einem späteren Zeitpunkt zurückzahlen müssen.
+
+Eigenkapital ist dasselbe wie "Reinvermögen".
+Es stellt dar, was übrig bleibt, wenn Sie Ihr Fremdkapital von Ihren Aktiva
+abziehen. Es kann als der Teil Ihrer Aktiva betrachtet werden, den Sie
+ohne irgendwelche Schulden besitzen.
+
+[[accts-ie2]]
+
+==== Erfolgskonten
+
+Die zwei Kontentypen Ertrag und Aufwand 
+werden benutzt, um den Wert Ihrer Bestandskonten zu erhöhen oder zu vermindern. 
+Somit erlauben Ihnen Ertrags- und Aufwandskonten, den Wert der Bestandskonten zu  
+__ändern__, während die Bestandskonten selbst nur den Wert des 
+Besitzes, oder des Darlehens __erfassen__.
+
+
+Ertrag ist die Bezahlung, die Sie für Ihre Zeit,
+Ihre Dienstleistungen, oder den Gebrauch Ihres Geldes erhalten. Wenn Sie 
+Ihr Gehalt erhalten, dann ist das zum Beispiel die Bezahlung für
+die Arbeit, die Sie für Ihren Arbeitgeber verrichtet haben. Andere Beispiele
+für Erträge sind Kommissionen, Trinkgelder, Dividenden Ihrer Aktien und Zinsen
+Ihrer Bankkonten. Erträge erhöhen immer den Wert Ihrer Aktiva und somit des 
+Eigenkapitals.
+
+Aufwand
+bezieht sich auf Geld, welches Sie ausgeben, um Dinge oder
+Dienstleistungen eines anderen
+__zum baldigen Verbrauch__
+zu erwerben. Beispiele von Aufwendungen sind ein Essen in
+einem Restaurant, Mietzahlungen, Lebensmitteleinkäufe,
+Treibstoff für Ihr Auto oder Eintrittskarten für ein
+Fußballspiel. Aufwendungen verringern immer Ihr Eigenkapital.
+Wenn Sie für die Aufwendungen direkt bezahlen, dann verringern
+Sie damit Ihre Aktiva, wenn Sie dagegen Aufwendungen über
+einen Kredit begleichen, dann erhöhen Sie Ihr Fremdkapital.
+
+
+Aufwands- und Ertragskonten lassen sich unter dem Oberbegriff 
+__Erfolgskonten__ zusammenfassen.
+
+[[accts-types1]]
+
+=== GnuCash-Konten
+
+Dieser Abschnitt beschreibt, wie die GnuCash-Definition 
+eines Kontos mit den grundlegenden 5 Kontentypen zusammenpasst.
+
+Lassen Sie uns zuerst mit der Definition eines Kontos
+in GnuCash anfangen. Ein GnuCash-Konto ist ein Objekt, welches andere Unterkonten oder 
+Buchungen enthält. Da ein Konto andere Konten beinhalten kann,
+sehen Sie oft Konten-Bäume in GnuCash,
+bei denen sinngemäß zusammenhängende Konten unter einem gemeinsamen Oberkonto
+zu einer Gruppe zusammengefasst werden.
+
+
+Ein GnuCash Konto muss einen eindeutigen Namen haben 
+(den Sie zuweisen) und eine der vorgegebenen GnuCash-
+"Kontenarten". Es gibt insgesamt 12 Kontenarten in 
+GnuCash. 
+Diese 12 Kontenarten basieren auf den fünf grundlegenden Kontentypen; Grund für 
+die höhere Anzahl an GnuCash-Kontenarten ist, dass
+GnuCash dadurch für diese Konten eine besondere Erfassung und 
+Behandlung von Buchungsvorgängen ermöglicht. 
+Es gibt 6 Aktiva-Kontenarten (__Bargeld__, 
+__Bank__, __Aktienkonto__, 
+__Investmentfonds__, __Forderungen__, 
+und __Sonstige Aktiva__), 3 Fremdkapital-Kontenarten 
+(__Kreditkarte__, __Verbindlichkeiten__, 
+und __Fremdkapital__),
+1 Eigenkapital-Kontoart (__Eigenkapital__), 1 Ertrags-Kontoart
+(__Ertrag__), und eine Aufwands-Kontoart
+(__Aufwand__).
+
+Diese GnuCash Kontenarten werden weiter unten 
+genauer dargestellt.
+
+[[accts-gc-bsa2]]
+
+==== Bestandskonten
+
+Das erste Bestandskonto, das wir untersuchen werden, ist das Konto
+__Aktiva__, welches sich, wie Sie sich sicherlich erinnern,
+auf Ihren Besitz bezieht.
+
+Um Ihnen zu helfen, Ihre Aktiva zu organisieren und um die Eingabe von Buchungen
+zu vereinfachen, unterstützt GnuCash verschiedene Typen 
+von Aktiva-Konten:
+
+
+. Bargeld: Benutzen Sie diese Kontoart, um
+die Geldbeträge zu verfolgen, welche Sie in der Hand, Ihrer Geldbörse,
+Ihrem Sparschwein, unter Ihrer Matratze oder an einem anderen 
+Platz aufbewahren, um direkten Zugriff darauf zu haben. Das sind 
+die am leichtesten __verfügbaren__ oder 
+__liquiden__ Geldmittel.
+
+
+. Bank: Benutzen Sie diese Kontoart, um Ihre
+Guthaben bei Institutionen, wie zum Beispiel Banken, Bausparkassen
+oder Maklerfirmen (wo jemand anders Ihr Geld absichert), zu verfolgen. 
+Das sind die am zweit leichtesten verfügbaren Geldmittel, da sie leicht
+in Bargeld umgewandelt werden können.
+
+
+. Aktienkonto: Benutzen Sie diesen Kontentyp, um
+die Entwicklung Ihrer persönlichen Aktien und Rentenpapiere zu verfolgen.
+Die Buchungsansicht dieses Kontentyps stellt Ihnen zusätzliche Spalten für die 
+Eingabe der Anzahl der Aktien und ihres Preises zur Verfügung. Diese Art
+von Vermögen können Sie nicht so einfach in Bargeld umwandeln, es sei denn,
+Sie finden einen Käufer. Sie bekommen auch nicht unbedingt den selben
+Geldbetrag, den Sie beim Kauf der Aktien und Rentenpapiere bezahlt haben.
+
+
+. Investmentfonds: Dieser Kontentyp ist dem
+Aktienkonto ähnlich, außer dass er dazu benutzt wird, die Entwicklung von Investmentfonds 
+zu verfolgen. Die Buchungsansicht stellt Ihnen dieselben zusätzlichen Spalten für
+die Eingabe der Anzahl der Fondsanteile und ihres Preises zur Verfügung wie beim
+Aktienkonto. Investmentfonds stellen einen Miteigentumsanteil für eine Vielzahl 
+von Geldanlagen dar, und wie Aktien garantieren sie keinen festen Geldwert.
++
+GnuCash behandelt die Kontentypen 
+Aktien und Investmentfonds auf die gleiche Weise. 
+
+
+. Forderungen: Dieser Kontentyp wird normalerweise
+nur im Geschäftsleben verwendet, da Sie hier noch nicht eingegangene
+Zahlungen für von Ihnen erbrachte Leistungen oder gelieferte Produkte verwalten.
+Diese Beträge werden schon als Vermögen betrachtet, weil Sie normalerweise 
+damit rechnen können, dass diese geschuldeten Geldbeträge bei Ihnen eintreffen.
+
+
+. Vermögen: Unabhängig davon, wie unterschiedlich
+dieses Vermögen ist, kann GnuCash einfach viele
+unterschiedliche Situationen verwalten. Der Kontentyp "Vermögen"
+deckt alle Aktiva ab, die oben noch nicht aufgezählt wurden.
++
+GnuCash behandelt die Kontentypen Barvermögen, 
+Bank und Aktiva auf die gleiche Weise.
+
++
+Konten sind Informationsspeicher, die dazu benutzt werden, um
+die Art von auftretenden Vorgängen aufzuzeichnen oder zu verfolgen,
+für die das Konto eingerichtet wurde.
++
+Im Wirtschaftsleben sind häufig die Vorgänge, die aufgezeichnet und verfolgt 
+werden, feiner aufgeteilt als wir sie bisher betrachtet haben. Für eine fortgeschrittene
+Behandlung der Möglichkeiten lesen Sie bitte die Beschreibung in Kapitel
+<<chapter_other_assets>> in diesem Kurs.
++
+Für Ihre persönlichen Finanzen können Sie die in der Wirtschaft verwendeten
+Kontenrahmen benutzen oder nicht, je nachdem, ob sie Ihnen für die Erfassung, Verfolgung
+und den Bericht der auftretenden Vorgänge bei der Verwaltung Ihrer persönlichen Finanzen
+nützlich erscheinen. Zusätzliche Informationen finden Sie unter
+<<chapter_other_assets>> in diesem Leitfaden.
+
+Das zweite Bestandskonto ist das Konto
+__Fremdkapital__, welches sich, wie Sie sich sicherlich erinnern,
+auf Ihre Schulden bezieht, also auf Geld, welches Sie geliehen haben
+und zu einem späteren Zeitpunkt zurückzahlen müssen. Dies stellt das Recht
+Ihrer Geldgeber dar, von Ihnen eine Rückzahlung zu erhalten. Die Beobachtung
+Ihres Fremdkapitals zeigt Ihnen, wie viele Schulden Sie zu einem bestimmten
+Zeitpunkt haben.
+
+GnuCash bietet drei Kontentypen für Fremdkapital:
+
+
+. Kreditkarte: Nutzen Sie diese Kontoart, um
+Ihre Zahlungen mit der Kreditkarte zu verwalten und mit der Abrechnung
+der Kreditkartengesellschaft abzugleichen. Kreditkarten stellen ein 
+Kurzzeit-Darlehen dar, und Sie sind verpflichtet den Betrag an die 
+Kreditkartengesellschaft zurückzuzahlen. Dieser Kontentyp kann auch für 
+andere Kurzzeit-Darlehen benutzt werden, wie zum Beispiel einen
+Überziehungskredit Ihrer Bank.
+
+
+. Verbindlichkeiten: Diese Kontoart wird
+normalerweise nur im Geschäftsleben verwendet, da Sie hier eingegangene,
+aber noch nicht bezahlte Rechnungen für Waren und Dienstleistungen 
+anderer verwalten. Diese Beträge werden als Darlehen betrachtet, weil 
+Sie diese geschuldeten Geldbeträge zum Fälligkeitsdatum bezahlen müssen.
+
+
+. Fremdkapital: Nutzen Sie diese Kontoart für 
+alle anderen Darlehen. Das sind normalerweise langfristige Darlehen wie
+Immobiliendarlehen oder Autokredite. Dieser Kontentyp hilft Ihnen
+dabei, die Übersicht darüber zu behalten, wie viel Sie anderen noch 
+schulden und wie viel Sie bereits zurückgezahlt haben.
++
+GnuCash behandelt die Kontentypen Kreditkarte und 
+Verbindlichkeiten auf die gleiche Weise.
+
+
+[TIP]
+====
+Fremdkapital hat in der Buchführung den gegenteiligen Effekt
+wie Aktiva: __Haben__ (Einträge in der rechten Spalte) 
+erhöhen die Kontenstände der Darlehnskonten und __Soll__ 
+(Einträge in der linken Spalte) vermindern sie (siehe Anmerkung
+weiter unten in diesem Kapitel).
+
+====
+
+Die letzte Bestandskontoart ist __Eigenkapital__,
+was auch gleichbedeutend ist mit "Reinvermögen".
+Es stellt dar, was übrig bleibt, wenn Sie Ihr Fremdkapital von Ihren Aktiva
+abziehen. Es kann als der Teil Ihrer Aktiva betrachtet werden, den Sie
+ohne irgendwelche Schulden besitzen. Nutzen Sie diese Kontoart in
+GnuCash als Quelle für die Eröffnungsbuchungen, 
+die Erfassung der Anfangsbestände Ihrer Konten, 
+da deren Summe Ihrem anfänglichen Nettowert oder Reinvermögen entspricht.
+
+Es gibt normalerweise nur ein GnuCash Eigenkapitalkonto,
+welches logischerweise auch Eigenkapital genannt wird. 
+Bei Firmen, AGs usw. kann aber pro Teilhaber ein Unterkonto angelegt werden.
+
+
+[TIP]
+====
+
+In Eigenkapitalkonten erhöhen Haben-Buchungen die Kontenstände und Soll-Buchungen
+verringern sie (mehr dazu später in diesem Kapitel).
+
+====
+
+
+[NOTE]
+====
+Die Gleichung, die die Bestandskontentypen verbindet ist
+Aktiva = Darlehen + Eigenkapital oder auch umgestellt 
+Aktiva - Darlehen = Eigenkapital. Umgangssprachlich, die 
+__Dinge, die Sie besitzen__, minus die __Dinge, die Sie schulden__,
+ist gleich dem __Reinvermögen__.
+
+====
+
+[[accts-gc-ie2]]
+
+==== Erfolgskonten
+
+__Ertrag__ ist die Zahlung, die Sie für Ihre bereitgestellte Zeit,
+für von Ihnen erbrachte Dienstleistungen oder für die Nutzung Ihres
+Geldes erhalten. Nutzen Sie ein Konto vom Typ Ertrag , 
+um diese Zahlungen in GnuCash zu verfolgen.
+
+
+[TIP]
+====
+Haben-Buchungen erhöhen den Kontostand eines Ertragskontos und Soll-Buchungen
+vermindern ihn. Wie in <<basics-accounting1>> beschrieben, 
+repräsentieren Haben-Buchungen Geld, welches __von__ einem 
+Konto genommen wird. Speziell für Ertragskonten gilt, wenn Sie Geld __von__ 
+diesem Konto (Haben) zu einem anderen Konto transferieren, __erhöht__ 
+sich der Kontostand des Ertragskontos. Wenn Sie zum Beispiel eine Gehaltsbuchung
+als Transaktionen von einem Ertragskonto zu Ihrem Bankkonto eingeben,
+erhöht sich der Kontostand beider Konten.
+
+====
+
+__Aufwand__ bezieht sich auf Geld, welches Sie ausgeben, 
+um Waren und Dienstleistungen eines Anderen zu erwerben. Benutzen Sie in
+GnuCash ein Konto vom Typ Aufwand,
+um Ihre Aufwendungen zu erfassen.
+
+
+[TIP]
+====
+Soll-Buchungen erhöhen den Kontostand von Aufwandskonten und
+Haben-Buchungen vermindern den Kontostand (siehe unten).
+
+====
+
+
+[NOTE]
+====
+Wenn Sie für eine bestimmte Zeit Ihre gesamten Aufwendungen von 
+Ihren gesamten Erträge abziehen, erhalten Sie Ihren Nettoertrag. Dieser 
+Nettoertrag wird in der Bilanz als einbehaltener Gewinn aufgeführt,
+woraus mit Abschluss des Wirtschaftsjahres
+Eigenkapital wird.
+
+====
+
+Unten sehen Sie Ertrags- und
+Aufwands-Konten nach der Auswahl von 
+Allgemeine Konten 
+im Assistenten für die Erstellung eines neuen Kontenplans
+(menu:Aktionen[Kontenhierarchie hinzufügen...]).
+
+
+[[accts-DefaultIncomeAccounts]]
+.vorgegebene Ertragskonten
+image::figures/accts_DefaultIncomeAccounts.png["Dieses Bild zeigt die allgemeinen Ertrags-Konten",width=]
+
+[[accts-DefaultExpenseAccounts]]
+.Einige vorgegebene Aufwandskonten
+image::figures/accts_DefaultExpenseAccounts.png["Dieses Bild zeigt einige allgemeine Aufwands-Konten",width=]
+
+[[accts-other-types]]
+
+==== Weitere Kontentypen
+
+Es gibt einige weitere Kontentypen.
+
+Der __Handel__ mit verschiedenen Währungen wird auf Wunsch in 
+"Handels-"konten protokolliert, um den Rechnungsabschluss 
+sowohl in jeder Währung als auch im Gesamtwert zu erstellen. Mehr Informationen unter
+<<chapter_currency>>
+
+__Money Market__ und __Credit Line__
+werden nur vom OFX-Importmodul verwendet, offensichtlich aus Gründen der
+Vollständigkeit der Spezifikation.
+
+
+[[accts-examples1]]
+
+=== Alles zusammensetzen
+
+Wir wollen jetzt mithilfe des in diesem Kapitel Gelernten einen 
+allgemeinen persönlichen __Kontenplan__ aufbauen. Ein 
+Kontenplan ist einfach eine neue GnuCash-Datei,
+in der Sie Ihre Konten angelegt haben, um Ihre Finanzen zu verfolgen. 
+Beim Aufbau dieses Kontenplans ist die erste Aufgabe, die zu verfolgenden 
+Posten den grundlegenden Kontentypen zuzuordnen. Das ist ziemlich einfach,
+wie wir in folgendem Beispiel sehen können.
+
+[[accts-examples-situation2]]
+
+==== Einfaches Beispiel
+
+Wir wollen annehmen, dass Sie ein Girokonto und ein Sparkonto 
+bei der Bank haben, dass Sie angestellt sind und deshalb Gehaltszahlungen
+empfangen. Sie haben eine Kreditkarte (Visa) und zahlen monatlich
+Miete, Telefon und Strom. Natürlich brauchen Sie auch Bargeld
+für den Einkauf von Lebensmitteln. Vorerst kümmern wir uns noch nicht darum, 
+wie viel Geld Sie auf Ihren Bankkonten haben, oder wie viele offene Rechnungen
+Ihre Kreditkarte aufweist usw. wir wollen nur das Grundgerüst für diesen 
+Kontenplan erzeugen.
+
+Ihre Aktiva sind das Sparkonto und das Girokonto.
+Ihr Fremdkapital ist die Kreditkarte und Ihr 
+Eigenkapital sind die Anfangskontostände Ihrer Bankkonten
+und der Kreditkarte (auch wenn wir diese noch nicht kennen, so wissen wir doch,
+dass es sie gibt). Sie haben Erträge in Form Ihres Arbeitslohns
+und Aufwendungen in Form der Lebensmitteleinkäufe, der Miete,
+der Strom- und Telefonrechnung, und Steuern und Sozialabgaben auf Ihr Einkommen.
+
+[[accts-examples-toplevel2]]
+
+==== Grundlegende Konten der obersten Ebene
+
+Jetzt müssen Sie sich entscheiden, wie Sie Ihre Konten gruppieren wollen. 
+Höchstwahrscheinlich wollen Sie jeweils Ihre __Aktiva__, 
+Ihr __Fremdkapital__, Ihr __Eigenkapital__,
+Ihre __Erträge__ und Ihre __Aufwendungen__ 
+zusammenfassen. Das ist die normale Art und Weise, einen GnuCash
+-Kontenplan aufzubauen. Es wird im hohen Maße empfohlen, dass Sie immer auf 
+diese Art und Weise anfangen.
+
+Durch Betätigen von 
+menu:Datei[Neue Datei]
+fangen Sie mit einer leeren GnuCash-Datei an. Den 
+Assistenten zum Aufbau eines Kontenplans verlassen Sie bitte durch Druck
+auf die Taste Abbrechen, da wir diesmal nicht einen der 
+vorgefertigten Kontenrahmen benutzen wollen. Stattdessen werden wir
+ganz von vorne anfangen, und die grundlegenden Kontenstrukturen selber aufbauen.
+Im leeren GnuCash-Fenster wählen Sie bitte 
+menu:Ansicht[Neue Kontenhierarchie]
+aus dem Menü: 
+Die Konten-Seite öffnet sich. Zuletzt wählen Sie 
+menu:Aktionen[Neues Konto...].
+
+
+Jetzt sind Sie bereit, den grundlegenden Kontenplan aufzubauen.
+
+
+. Kontobezeichnung Aktiva (Kontoart
+Aktiva, Hauptkonto Neues Konto der 
+          obersten Ebene)
++
+[[accts-CreateAssetsAccounts]]
+.Erstellung eines Aktivakontos
+image::figures/accts_CreateAssetsAccount.png["Dieses Bild zeigt den Dialog bei der Erstellung eines Aktivakontos.",width=]
+
+
+. Kontobezeichnung Fremdkapital (Kontoart
+Fremdkapital, Hauptkonto Neues Konto der 
+            obersten Ebene)
+
+
+. Kontobezeichnung Eigenkapital (Kontoart
+Eigenkapital, Hauptkonto Neues Konto der 
+            obersten Ebene)
+
+
+. Kontobezeichnung Ertrag (Kontoart
+Ertrag, Hauptkonto Neues Konto der 
+            obersten Ebene)
+
+
+. Kontobezeichnung Aufwand (Kontoart
+Aufwand, Hauptkonto Neues Konto der
+              obersten Ebene
+            )
+
+Nachdem Sie die Konten der obersten Ebene angelegt haben, sollte die Konto-Seite
+in GnuCash folgendermaßen aussehen:
+
+[[accts-toplevel]]
+.Die grundlegenden Konten der obersten Ebene
+image::figures/accts_toplevel.png["Dieses Bild zeigt die grundlegenden Konten der obersten Ebene",width=]
+
+[[accts-examples-organization2]]
+
+==== Unterkonten anlegen
+
+Den Konten der obersten Ebene können Sie jetzt Unterkonten hinzufügen,
+die für die tatsächlichen Buchungen gedacht sind. Beachten Sie, dass die
+Abgabenkonten unterhalb eines Unterkontos mit Namen __Steuer__ 
+angelegt werden. Sie können Unterkonten innerhalb von Unterkonten anlegen. 
+Dies wird normalerweise für eine Gruppe zusammenhängender Konten getan, den 
+Abgabenkonten in unserem Beispiel.
+
+
+[TIP]
+====
+Statt 
+menu:Aktionen[Neues Konto...]
+aus dem Menü zu wählen, können Sie alternativ ein Unterkonto durch einen Rechtsklick
+auf den Namen des übergeordneten Kontos und anschließender Auswahl des 
+Eintrags Neues Konto... erzeugen.
+Es wird ein Dialog ähnlich dem unter <<accts-examples-toplevel2>>
+dargestellten Dialog geöffnet, mit dem Unterschied, dass in diesem Dialog
+das übergeordnete Konto bereits als Hauptkonto des neuen Kontos eingetragen ist.
+
+====
+
+
+. 
+Kontobezeichnung Bargeld (Kontoart
+Bargeld, Hauptkonto
+__Aktiva__)
+
+
+
+. Kontobezeichnung Girokonto (Kontoart
+Bank, Hauptkonto
+__Aktiva__)
+
+
+. Kontobezeichnung Sparkonto (Kontoart
+Bank, Hauptkonto
+__Aktiva__)
+
+
+. Kontobezeichnung Visa (Kontoart
+Kreditkarte, Hauptkonto
+__Fremdkapital__)
+
+
+. Kontobezeichnung Gehalt (Kontoart
+Ertrag, Hauptkonto
+__Ertrag__)
+
+
+. Kontobezeichnung Telefon (Kontoart
+Aufwand, Hauptkonto
+__Aufwand__)
+
+
+. Kontobezeichnung Strom (Kontoart
+Aufwand, Hauptkonto
+__Aufwand__)
+
+
+. Kontobezeichnung Miete (Kontoart
+Aufwand, Hauptkonto
+__Aufwand__)
+
+
+. Kontobezeichnung Lebensmittel (Kontoart
+Aufwand, Hauptkonto
+__Aufwand__)
+
+
+. Kontobezeichnung Steuern (Kontoart
+Aufwand, Hauptkonto
+__Aufwand__)
+
+
+. Kontobezeichnung Einkommenssteuer (Kontoart
+Aufwand, Hauptkonto
+__Aufwand:Steuer__)
+
+
+. Kontobezeichnung Rentenversicherung (Kontoart
+Aufwand, Hauptkonto
+__Aufwand:Steuer__)
+
+
+. Kontobezeichnung Krankenversicherung (Kontoart
+Aufwand, Hauptkonto
+__Aufwand:Steuer__)
+
+
+. Kontobezeichnung Anfangsbestand (Kontoart
+Eigenkapital, Hauptkonto
+__Eigenkapital__)
+
+Nachdem Sie diese zusätzlichen Unterkonten erzeugt haben, sollte das 
+Resultat folgendermaßen aussehen:
+
+[[accts-tree]]
+.Der grundlegende Kontenplan
+image::figures/accts_tree.png["Dieses Beispiel zeigt einen einfachen Kontenplan.",width=]
+
+Speichern Sie diesen Kontenplan unter dem Namen
+__$$gcashdata_3$$__, und auch unter __$$gcashdata_3emptyAccts$$__,
+da wir ihn in späteren Kapiteln weiterbenutzt werden.
+
+Sie haben jetzt einen Kontenplan erzeugt, um ein einfaches Haushalts-Budget zu verfolgen.
+Mit diesem Grundgerüst an Konten können wir nun anfangen, die Konten mit Buchungen zu füllen.
+Dieses Thema wird im nächsten Kapitel detailliert beschrieben.
+

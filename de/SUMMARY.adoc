@@ -1,0 +1,85 @@
+= GnuCash Kurs und Konzepte
+
+
+
+. link:preface.adoc[Über die Verfasser]
+
+
+== Einführung
+
+
+
+. link:ch_oview.adoc[Übersicht]
+
+. link:ch_basics.adoc[Die Grundlagen]
+
+. link:ch_accts.adoc[Konten]
+
+. link:ch_txns.adoc[Buchungen]
+
+
+== Persönliche Finanzen handhaben
+
+
+
+. link:ch_cbook.adoc[Girokonto]
+
+. link:ch_expenses.adoc[Aufwandskonten]
+
+. link:ch_cc.adoc[Kreditkarten]
+
+. link:ch_loans.adoc[Darlehen]
+
+. link:ch_invest.adoc[Kapitalanlagen]
+
+. link:ch_capgain.adoc[Kapitalerträge]
+
+. link:ch_currency.adoc[Verschiedene Währungen]
+
+
+== Geschäftliche Finanzen handhaben
+
+
+
+. link:ch_bus_intro.adoc[Vorstellung für Geschäftsleute]
+
+. link:ch_bus_setup.adoc[Einrichtung der geschäftlichen Buchhaltung]
+
+. link:ch_bus_ar.adoc[Debitorenbuchhaltung]
+
+. link:ch_bus_ap.adoc[Kreditorenbuchhaltung]
+
+. link:ch_bus_pay.adoc[Payroll]
+
+. link:ch_budgets.adoc[Budgets]
+
+. link:ch_oth_assets.adoc[Andere Aktiva]
+
+. link:ch_dep.adoc[Depreciation]
+
+. link:ch_python_bindings.adoc[Python Bindings]
+
+. link:ch_import_business_data.adoc[Importing Business Data]
+
+
+== Anhänge
+
+. link:glossary.adoc[Glossary]
+
+. link:appendixa.adoc[Appendix A: Migration Guide]
+
+. link:appendixb.adoc[Appendix B: Frequently Asked Questions]
+
+. link:appendixc.adoc[Appendix C: Contributed Account Trees]
+
+. link:appendixd.adoc[Appendix D: Auxiliary File Formats]
+
+. link:fdl-appendix.adoc[Appendix E: Kommandozeilen Optionen]
+
+. link:appendixf.adoc[GNU Free Documentation License]
+
+
+
+
+
+

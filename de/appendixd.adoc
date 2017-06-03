@@ -1,0 +1,10 @@
+[[appendixd]]
+
+[appendix]
+== Auxiliary File Formats
+
+Geehrte Leser, leider hat bisher niemand eine Übersetzung
+der folgenden Teile erstellt. Falls Sie uns dabei helfen möchten, folgen Sie
+bitte der Anleitung in link:$$http://wiki.gnucash.org/wiki/Translation#How_to_translate_the_GnuCash_guide_and.2For_help_files$$[ Gnucash wiki: How to translate the GnuCash guide and/or help files].
+Fragen können auf der deutschsprachigen Mailingliste gnucash-de@gnucash.org diskutiert werden.
+

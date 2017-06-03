@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="510"
+   height="150"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="basics_AccountRelationships.svg"
+   inkscape:export-filename="/home/janssege/Development/gnucash/docs-git/guide/C/figures/basics_AccountRelationships.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path4261"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path4046"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path4034"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path4025"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4034-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4034-1"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="246.35986"
+     inkscape:cy="90.461506"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="748"
+     inkscape:window-x="-3"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="false"
+     inkscape:snap-grids="true"
+     inkscape:snap-global="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-902.36218)">
+    <g
+       id="g3228"
+       transform="translate(-3.187496,1.5708008e-5)">
+      <path
+         inkscape:connector-curvature="0"
+         id="rect5340"
+         d="m 56.51743,940.79072 0,14.09375 c -0.03254,-7.3e-4 -0.06442,0 -0.0971,0 l -47.7954629,0 c -3.0123036,0 -5.4373711,3.122 -5.4373711,7 l 0,28.8125 c 0,3.878 2.4250675,7 5.4373711,7 l 47.7954629,0 c 0.03268,0 0.06456,7.3e-4 0.0971,0 l 0,14.09373 31.507623,-35.49998 -31.507623,-35.5 z"
+         style="fill:#87ff87;fill-opacity:1;fill-rule:nonzero;stroke:#00bc00;stroke-width:1.76268804;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997"
+         y="982.15399"
+         x="8.0281496"
+         style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="982.15399"
+           x="8.0281496"
+           id="tspan2999"
+           sodipodi:role="line">Erträge</tspan></text>
+    </g>
+    <g
+       id="g3233"
+       transform="matrix(0.87977403,0,0,1,17.832587,1.5708008e-5)">
+      <path
+         id="rect5340-9"
+         d="m 499.63099,940.79072 0,14.0937 c -0.0619,-7e-4 -0.12235,0 -0.18426,0 l -90.70423,0 c -5.71662,0 -10.31881,3.122 -10.31881,7 l 0,28.81253 c 0,3.878 4.60219,7 10.31881,7 l 90.70423,0 c 0.0619,0 0.12235,8e-4 0.18426,0 l 0,14.09375 59.79381,-35.49998 -59.79381,-35.5 z"
+         style="fill:#ff7d69;fill-opacity:1;fill-rule:nonzero;stroke:#bc1600;stroke-width:2.42826295;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:connector-curvature="0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3001"
+         y="982.15399"
+         x="400.88116"
+         style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="982.15399"
+           x="400.88116"
+           id="tspan3003"
+           sodipodi:role="line">Aufwendungen</tspan></text>
+    </g>
+    <rect
+       style="fill:#cfcfcf;fill-opacity:1;fill-rule:nonzero;stroke:#8a8a8a;stroke-width:2.0724678;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985"
+       width="279.18311"
+       height="132.14285"
+       x="86.509117"
+       y="910.2193"
+       rx="7.516468"
+       ry="7" />
+    <g
+       id="g3033"
+       transform="translate(-243.24393,-54.406259)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2989"
+         y="993.79077"
+         x="412.5282"
+         style="font-size:22px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="993.79077"
+           x="412.5282"
+           id="tspan2991"
+           sodipodi:role="line">Eigenkapital</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text2993"
+         y="1010.5051"
+         x="384.42859"
+         style="font-size:14px;font-style:oblique;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Oblique"
+         xml:space="preserve"><tspan
+           y="1010.5051"
+           x="384.42859"
+           id="tspan2995"
+           sodipodi:role="line">( Aktiva - Fremdkapital )</tspan></text>
+    </g>
+    <g
+       id="g3220"
+       transform="matrix(1.0721558,0,0,1,-48.492261,0)">
+      <rect
+         ry="7"
+         rx="6.2610602"
+         y="970.05463"
+         x="130.23643"
+         height="58.857143"
+         width="105.03248"
+         id="rect2987"
+         style="fill:#87ff87;fill-opacity:1;fill-rule:nonzero;stroke:#00bc00;stroke-width:1.8914938;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <g
+         id="g3185"
+         transform="translate(-12.950176,-5.1430094)">
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:oblique;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Oblique"
+           x="145.19894"
+           y="1021.5493"
+           id="text3005"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3007"
+             x="145.19894"
+             y="1021.5493">Positive Werte</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:22px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           x="162.09592"
+           y="1004.2197"
+           id="text3013"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3015"
+             x="162.09592"
+             y="1004.2197">Aktiva</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3212"
+       transform="matrix(1.0721558,0,0,1,-54.76444,0)">
+      <rect
+         ry="7"
+         rx="8.6108694"
+         y="970.05463"
+         x="244.66965"
+         height="58.857143"
+         width="144.45172"
+         id="rect2987-3"
+         style="fill:#ff7d69;fill-opacity:1;fill-rule:nonzero;stroke:#bc1600;stroke-width:2.21821952;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <g
+         transform="translate(-20.992286,-1.3571339)"
+         id="g3165">
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:oblique;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Oblique"
+           x="283.20029"
+           y="1016.0989"
+           id="text3009"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3157"
+             sodipodi:role="line"
+             x="283.20029"
+             y="1016.0989">Negative Werte</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:22px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           x="266.4415"
+           y="999.38452"
+           id="text3017"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3019"
+             x="266.4415"
+             y="999.38452">Fremdkapital</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

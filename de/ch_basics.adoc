@@ -1,0 +1,1065 @@
+[[chapter_basics]]
+
+== Die Grundlagen
+
+Dieses Kapitel stellt einige der Grundlagen von GnuCash vor. Es
+wird empfohlen, dieses Kapitel zu lesen, bevor Sie ernsthaft mit der
+Arbeit mit GnuCash beginnen. In den nachfolgenden Kapiteln werden
+konkrete Beispiele eingeführt.
+
+[[basics-accounting1]]
+
+=== Grundlagen der Buchführung
+
+((("Buchführung", "Grundlagen")))GnuCash ist so einfach zu bedienen, dass Sie keine umfassenden
+Buchführungskenntnisse benötigen, um das Programm sinnvoll
+einsetzen zu können. Allerdings werden Sie feststellen, dass
+sich die Kenntnis einiger grundlegender Prinzipien der 
+Buchführung
+als von unschätzbarer Wert erweisen wird, da GnuCash nach Vorlage
+dieser Prinzipien entwickelt wurde. Es ist daher höchst
+empfehlenswert, dass Sie diesen Abschnitt verstehen, bevor Sie
+fortfahren.
+
+[[basics-accounting52]]
+
+==== Die 5 grundlegenden Kontoarten
+
+Elementare Buchführungsregeln gruppieren alle finanziellen
+Dinge in 5 fundamentalen Arten von "Konten". Das
+heißt, dass alles, womit sich Buchführung befasst, einem
+dieser 5 Konten zugeordnet werden kann:
+
+__Aktiva__::  - was Sie besitzen.
+
+__Fremdkapital__::  - was Sie schulden.
+
+__Eigenkapital__::  - Reinvermögen insgesamt.
+
+__Erträge__::  - erhöhen den Wert Ihrer Konten.
+
+__Aufwendungen__::  - vermindern den Wert Ihrer Konten.
+
+Als Grundsatz gilt, dass sich Ihre finanzielle Welt in
+diese 5 Gruppen einteilen lässt. Zum Beispiel gehört das
+Guthaben auf Ihrem Bankkonto zu den Aktiva, Ihre Hypothek zum
+Fremdkapital, Ihre Gehaltszahlung zu den Erträgen und die
+Kosten für das gestrige Abendessen zu den Aufwendungen.
+
+[[basics-accountingequation2]]
+
+==== Bilanzgleichung
+
+Nachdem die 5 Grundkonten definiert sind, wie stehen sie
+in Beziehung zueinander? Wie beeinflusst ein Konto die
+anderen? Erstens, das Eigenkapital ist durch Aktiva und
+Fremdkapital definiert. Das heißt, Ihr Reinvermögen wird berechnet
+durch Subtraktion Ihrer Schulden von dem, was Sie
+besitzen:
+
+__Aktiva - Fremdkapital = Eigenkapital__
+
+Darüber hinaus können Sie Ihr Eigenkapital durch Erträge
+vermehren und durch Aufwendungen vermindern. Das macht
+natürlich Sinn. Denn wenn man eine Gehaltszahlung bekommt, wird
+man "reicher" und wenn man Geld ausgibt, wird
+man "ärmer". Mathematisch wird dies durch die so
+genannte Bilanzgleichung ausgedrückt:
+
+__Aktiva - Fremdkapital = Eigenkapital + (Erträge - Aufwendungen)__
+
+Diese Gleichung muss immer ausgeglichen sein, eine
+Bedingung, die nur dann erfüllt sein kann, wenn Sie Werte in
+mehrere Konten eingeben. Zum Beispiel: wenn Sie Geld in Form
+von Erträgen erhalten, dann müssen Sie den gleichen Anstieg in
+Ihren Aktiva haben. Als ein weiteres Beispiel könnten Sie
+einen Anstieg der Aktiva haben, wenn Sie einen parallelen
+Anstieg bei den Verbindlichkeiten haben.
+
+[[basics-AccountRelationships]]
+.Die Beziehungen der Grundkonten
+image::figures/basics_AccountRelationships.svg["Graphische Darstellung der Beziehungen der 5 Grundkonten zueinander. Das Reinvermögen (Eigenkapital) erhöht sich durch Erträge und vermindert sich durch Aufwendungen. Die Pfeile repräsentieren die Wertbewegungen.",width=]
+
+[[basics-accountingdouble2]]
+
+==== Doppelte Buchführung
+
+Die Bilanzgleichung ist das Kernstück der Doppelten
+Buchführung. Für jede Veränderung im Wert eines Kontos muss es
+eine ausgleichende Buchung in einem anderen Konto geben. Dieses
+Konzept ist bekannt als das __Prinzip des ausgeglichenen Saldos__ und ist von fundamentaler Bedeutung für das
+Verständnis von GnuCash und anderen Systemen zur Doppelten
+Buchführung. Wenn Sie mit GnuCash arbeiten, werden Sie immer mit
+mindestens 2 Konten zu tun haben, damit die Bilanzgleichung
+ausgeglichen bleibt.
+
+Bilanzielle Änderungen (oder Überweisungen von Geld) zwischen Konten 
+erfolgen durch Belastung des einen Kontos und eine gleichzeitige 
+Entlastung eines anderen.
+Das Buchen von Soll und
+Haben bedeutet nicht "vermindern"
+und "erhöhen". Soll und Haben erhöhen jeweils bestimmte 
+Kontenarten und vermindern andere. In Aktiva- und Aufwandskonten 
+erhöhen Sollbuchungen die Bilanz und Habenbuchungen vermindern sie.
+Bei Verbindlichkeits-, Eigenkapital- und Ertragskonten erhöhen Habenbuchungen die Bilanz und Sollbuchungen vermindern sie.
+
+In der herkömmlichen Doppelten Buchführung wird die linke Spalte 
+einer Tabelle für die Sollbuchungen genutzt, während die rechte Spalte 
+für Habenbuchungen genutzt wird. Buchhalter zeichnen Erhöhungen in 
+Aktiva- und Aufwandskonten auf der Soll- (linken) Seite auf und 
+Erhöhungen in Verbindlichkeits-, Ertrags- und Eigenkapitalkonten auf 
+der Haben- (rechten) Seite.
+GnuCash folgt dieser Vereinbarung in der Tabelle.
+
+
+[NOTE]
+====
+
+Die Bezeichnung __doppelte__ Buchführung ist für neue Nutzer etwas
+irreführend, weil GnuCash Ihnen 
+erlaubt die allgemeinen Begriffe Einzahlung und 
+Auszahlung zu nutzen. Wenn Sie die formalen Buchhaltungsausdrücke vorziehen, 
+können Sie die Kopfzeilen der Kontenansicht ändern, indem sie Buchungsüberschriften aus dem Rechnungswesen  
+auf dem Konten-Reiter unter menu:Bearbeiten[Eigenschaften] markieren.
+
+====
+
+
+[WARNING]
+====
+Die gemeine Nutzung der Worte __Soll__ und __Haben__ stimmt nicht
+damit überein, wie Buchhalter diese Worte nutzen. Im Allgemeinen ist es angenehmer,
+etwas zu __haben__ als etwas zu __sollen__;
+der Kaufmann hingegen verkürzt hier "Wir __haben__ zu zahlen" (ist der Creditor)
+oder "Sie __sollen__ zahlen (ist der Debitor)".
+
+Praktisch hat __Haben__ in der Buchhaltung
+die Bedeutung __auf der rechten Seite eines Kontos buchen__,
+was dann eine Abnahme bei den Aktiva und Aufwandskonten,
+aber einer Zunahme bei den Ertragskonten und Passiva
+(Fremd- und des Eigenkapitalkonten) bewirkt.
+
+Für mehr Informationen schauen Sie unter link:$$http://de.wikipedia.org/wiki/Soll$$[] und link:$$http://de.wikipedia.org/wiki/Haben$$[.]
+
+====
+
+[[basics-entry1]]
+
+=== Konzepte der Dateneingabe
+
+Wenn Sie Daten in GnuCash eingeben, sollten Sie sich der 3
+Organisationsebenen bewusst sein, in die GnuCash Ihre Daten
+unterteilt: Dateien, Konten und Buchungen. Diese Ebenen werden
+nach Komplexität geordnet vorgestellt. Eine Datei enthält viele
+Konten und ein Konto enthält viele Buchungen. Diese Unterteilung
+ist fundamental, um zu verstehen, wie GnuCash benutzt wird.
+
+[[basics-files2]]
+
+==== Dateien
+
+GnuCash speichert Informationen auf höchster 
+Ebene in Dateien. Eine Datei kann auf Ihrem Computer sowohl als 
+eine einzelne XML-Datei (in allen Versionen von 
+GnuCash) oder in einer SQL
+-Datenbank (in GnuCash Version 2.4 und höher).
+
+
+[NOTE]
+====
+SQL wird "sequel" ausgesprochen,
+so dass wir in der gesprochenen und geschriebenen Sprache  "eine SQL-Datenbank" sagen.
+
+====
+
+Mit dem XML-Dateiformat, speichert 
+GnuCash Ihre Dateien in einer XML
+-Datendatei, üblicherweise in einem komprimierten Format 
+(obgleich Sie dies im Reiter Allgemein in den Eigenschaften 
+von GnuCash ändern können).
+
+Mit SQL-Speichern speichert GnuCash 
+Ihre Daten in eine SQL-Datenbank unter der 
+Datenbankanwendung ab, die Sie ausgewählt haben 
+(SQLite3, MySQL oder PostgreSQL).
+
+Sie benötigen eine Hauptdatei oder Datenbank für jeden 
+Kontensatz, den Sie pflegen. Um zu lernen, wie Sie 
+GnuCash-Dateien erstellen und verwalten, schauen Sie in <<basics-files1>>.
+
+
+[NOTE]
+====
+Wenn Sie denken, Sie benötigen mehr als einen Kontensatz, 
+sollten Sie einen erfahren Buchhalter hinzuziehen, bevor Sie 
+fortfahren. Die meisten Nutzer nutzen nur eine Datendatei.
+
+====
+
+Sicherungs- und Protokolldateien werden automatisch 
+von GnuCash erstellt, wenn es zweckdienlich ist.
+Die Sicherungs- und Protokolldateien sind in <<basics-backup1>> beschrieben.
+
+[[basics-accounts2]]
+
+==== Konten
+
+Ein Konto zeichnet auf, was Sie 
+besitzen, schulden, ausgeben oder erhalten. Jede GnuCash-Datei 
+kann eine beliebige Anzahl von Konten enthalten, und jedes Konto kann viele Unterkonten in beliebigen Ebenen haben. Diese einfache Eigenschaft 
+macht GnuCash zu einem mächtigen Werkzeug, Ihre 
+Finanzen zu verwalten, wie Sie in den nächsten Kapiteln sehen werden.
+
+ Beispiele von Konten schließen ein: Girokonto, 
+Sparkonto, 
+Kreditkartenkono, Hypotheken und Darlehen. Jedes GnuCash zeichnet die Aktivitäten für dieses tatsächliche Konto auf und informiert Sie über seinen Stand.
+
+
+In GnuCash werden Konten auch genutzt, um Gelder, die Sie
+erhalten oder ausgeben, zu klassifizieren. Zum Beispiel können Sie
+ein Aufwandskonto erstellen, um das Geld zu verfolgen, dass Sie für 
+nützliche Einrichtungen und Lebensmittel bezahlen. Obgleich es 
+keine Konten sind, über die Sie Bankauszüge erhalten, erlauben 
+sie Ihnen festzustellen, wie viel Geld Sie in jedem dieser 
+Bereiche ausgegeben haben.
+
+Konten werden detaillierter in <<chapter_accts>> besprochen.
+
+[[basics-transactions2]]
+
+==== Buchungen
+
+Eine Buchung stellt eine Bewegung von Geld zwischen Konten dar. Immer, wenn Sie Geld ausgeben oder einnehmen oder von zwischen Konten übertragen, ist dies eine Buchung.
+
+Beispiele für Buchungen sind: Bezahlen einer Telefonrechnung, 
+Geld von einem Sparbuch Verbuchen einer Gehaltszahlung. <<chapter_txns>> 
+geht mehr in die Tiefe, wie Sie Buchungen eingeben.
+
+In der <<basics-accountingdouble2,Doppelten 
+      Buchführung>>, erfolgen die Buchungen immer auf zwei Konten - 
+einem Quellkonto und einem Zielkonto. 
+GnuCash verwaltet dies durch Einfügen einer Zeile in die Buchung für jedes Konto, das betroffen ist und zeichnet
+den betreffenden Betrag in jede Zeile. Eine Zeile innerhalb einer Buchung, in der das Konto und der Geldbetrag eingetragen wird, nennt man Splitbuchung. Eine Buchung kann eine beliebige Anzahl von Splitbuchungen enthalten.
+
+
+[NOTE]
+====
+Aufteilungen von Buchungen werden hier <<txns-registers-multiaccount2>> beschrieben.
+
+====
+
+[[basics-interface1]]
+
+=== Die GnuCash Benutzeroberfläche
+
+((("Benutzeroberfläche")))
+Wenn Sie GnuCash zum ersten Mal starten, öffnet sich
+das Willkommen in GnuCash! Fenster. Dort bietet
+GnuCash Ihnen weitere Hilfe an, damit Sie schnell an Ihr Ziel
+gelangen. Lassen Sie uns einen Blick auf einen der Bildschirm-Assistenten
+und häufig vorkommende Dialogfenster werfen.
+
+
+[[gnc-welcome]]
+.Das Willkommen in GnuCash Dialogfenster
+image::figures/gnc_welcome.png["Die Abbildung zeigt das Willkommen in GnuCash! Dialogfenster.",width=]
+
+
+
+[[basics-tip2]]
+
+==== Tipp des Tages
+
+((("Benutzeroberfläche", "Tipp des Tages")))GnuCash bietet einen Tipp des Tages Dialog
+an, um nützliche Hinweise für die Benutzung des Programms zu
+geben:
+[[basics-TipOfDay]]
+.Der Tipp des Tages
+image::figures/basics_TipOfDay.png["Die Abbildung zeigt einen Tipp des Tages.",width=]
+
+
+
+
+Die Tipps sind hauptsächlich für Einsteiger hilfreich. Um
+mehr Tipps zu sehen, klicken Sie
+auf Vor, um zu dem Nächsten zu kommen.
+Wenn Sie es nicht wünschen, diesen Dialog beim Programmstart
+zu sehen, entfernen Sie das Häkchen aus dem Auswahlkästchen
+Tipps beim Programmstart anzeigen. Wenn
+Sie genug von den hilfreichen Tipps gesehen haben, klicken
+Sie Schließen, um das Dialogfenster zu
+schließen.
+
+
+[[basics-main2]]
+
+==== Hauptfenster mit Kontenübersicht
+
+((("Benutzeroberfläche", "Kontenübersicht")))Sie sollten nun das Hauptfenster mit der Kontenübersicht
+sehen, wie es unten wiedergegeben ist. Das genaue Layout der
+Kontenübersicht hängt davon ab, welche Konten Sie während
+des "Neuen Kontenrahmen erstellen Assistenten"
+ausgewählt haben.  
+Dieses Beispiel zeigt die Auswahl "allgemeine Konten".
+
+
+[[basics-Accounts]]
+.Das Hauptfenster mit Kontenübersicht
+image::figures/basics_Accounts.png["Die Abbildung zeigt das Hauptfenster mit der Kontenübersicht.",width=]
+
+
+
+Die Kontenübersicht zeigt alle Konten, die in der
+aktuellen Datei enthalten sind (dem
+Kontenplan). Es
+gibt einen Überblick über die Konten und den aktuellen
+Kontostand.
+
+ Von diesem Fenster aus können Sie jedes der
+Konten öffnen, indem Sie entweder auf den Kontennamen doppelklicken oder 
+mit der rechten Maustaste auf den Kontennamen klicken und 
+        Konto öffnen aus dem Kontextmenu auswählen, oder Sie nutzen das Öffnen-Symbol in der Werkzeugleiste. 
+GnuCash erlaubt es Ihnen, so viele Konten geöffnet zu
+haben, wie Sie wollen. Mehr Informationen erhalten Sie unter <<basics-register2>>
+
+
+[TIP]
+====
+Durch Klicken auf das kleine Dreieck links von den Konten, die Unterkonten haben, können Sie eine Baumansicht aufklappen, um alle Unterkonten zu sehen.
+
+====
+
+Ganz oben im Fenster ist die __Titelleiste__, die den Namen
+der Datei oder Datenbank anzeigt (sobald Sie die Datei einmal
+gespeichert haben). Darunter befindet sich die __Menüleiste__ Sie können auf die Menüoptionen entweder durch Klicken auf die Menünamen oder durch Nutzen der Tastenkürzel zugreifen (siehe auch <<basics-shortcut2>>).
+Als nächstes kommt die __Werkzeugleiste__, die die Knöpfe für die häufigsten
+Funktionen enthält.
+
+Die hierarchische Kontenliste erscheint unterhalb der __Werkzeugleiste__.  
+Sobald Sie Konten angelegt haben, erscheinen
+diese in der Liste. Wird vor dem Kontonamen ein Abwärts-Pfeil
+angezeigt, so enthält das Konto Unterkonten, die durch Klicken des
+Pfeils angezeigt werden.
+
+Unten ist die __Zusammenfassungsleiste__, die Ihnen Informationen über Ihr Eigenkapital und Ihren Gewinn gibt.
+
+[[basics-register2]]
+
+==== Hauptfenster mit Buchungsansicht
+
+((("Benutzeroberfläche", "Buchungsansicht")))Die Buchungsansicht dient zum Eingeben und Korrigieren Ihrer
+Buchungsdaten. Wie der Name andeutet, ähnelt die Ansicht
+einem Kontobuch. 
+
+[[basics-CheckAccount]]
+.Buchungsansicht des Girokontos mit mehreren Buchungen
+image::figures/basics_CheckAccount.png["Die Abbildung zeigt die Buchungsansicht des Girokontos mit mehreren Buchungen.",width=]
+
+
+
+<<chapter_txns>> geht genauer auf die
+Buchungsansicht und wie man Daten eingibt ein. Vorerst beachten Sie, dass die Teile des Kontenansichtsfenster ähnlich aussehen wie Teile des Kontenbaumfensters, wie bereits beschrieben.   
+Die __Titelleiste__ oben enthält den Namen des Kontos.  
+Darunter die __Menüleiste__ enthält die Menüoptionen bezogen auf die Kontenansicht. Die __Werkzeugleisten__-Schaltflächen vereinfachen die allgemeinen Dateneingabefunktionen. Die
+__Zusammenfassungsleiste__ unten zeigt einige  
+Kontostände, wie in <<chapter_txns>>. Unten in der 
+Kontenansicht erscheinen Informationen über den aktuellen Standort des Cursors.
+
+
+[NOTE]
+====
+Im Tabellenfenster können Sie die Breite aller Spalten der 
+Tabelle verändern, die  GnuCash anzeigt. __Aber beachten Sie, dass sich die Spalten Beschreibung und Saldo anders als die anderen Spalten verhalten__.
+
+Die Spalte Beschreibung passt sich automatisch an,
+um den freien Platz zu füllen. Sie sollten daher die Breite aller
+anderen Spalten zuerst anpassen, bevor Sie die Spaltenbeite der Beschreibung anpassen. 
+
+Die Spalte Saldo muss dann durch Doppelklicken
+der Trennlinie die Spalte angepasst werden.
+
+
+====
+
+[[basics-toolbar2]]
+
+==== Werkzeugleiste
+
+((("Benutzeroberfläche", "Werkzeugleiste")))
+Sowohl die Kontenübersicht als auch die Buchungsansicht enthalten eine 
+__Werkzeugleiste__. Diese Schaltflächen der Werkzeugleiste ermöglichen einen schnellen Zugang zu häufig genutzten Funktionen
+wie Speichern
+und Öffnen im Fenster Kontenübersicht und
+Eingeben
+und Löschen in der Buchungsansicht. Wenn
+Sie sich nicht sicher sind, was ein Knopf macht, bewegen Sie den
+Mauszeiger über den Knopf. Es sollte ein Erklärungstext erscheinen.
+
+
+
+Hier ist eine Zusammenfassung der Knöpfe in der Kontenübersicht:
+
+
+Speichern:: Speicher die aktuelle Datei. Nutzen Sie diese
+Funktion oft, um die aktuelle Datei zu speichern. Haben
+Sie eine Datenbank als Speicher gewählt, ist der Knopf
+deaktiviert, da die Daten automatisch nach jeder Änderung
+sofort in der Datenbank gespeichert werden.
+
+
+Schließen:: Schließt die aktuelle Seite Buchungen.
+
+Öffnen, Bearbeiten, Neu
+              und Löschen:: Diese Funktionen beziehen sich auf Konten. Sie werden im
+Kapitel <<chapter_accts>> näher
+besprochen. 
+
+Die Knöpfe der Buchungsansicht werden
+in <<chapter_txns>> diskutiert.
+
+[[basics-tabbar]]
+
+==== Reiterleiste
+
+GnuCash nutzt ein Reitermodell, dass 
+es Ihnen erlaubt, viele Kontenverzeichnisse zu öffnen und parallel 
+anzusehen. Jedes offene Fenster (welches Kontenverzeichnisse, 
+Berichte oder terminierte Buchungen enthalten kann) gibt ein 
+Reiter in dieser Leiste, den Sie anklicken können, um das Fenster 
+anzusehen. Die Reitern können in den Einstellungen gestaltet 
+werden, damit sie auf jeder Seite des GnuCash
+      -Fenster erscheinen.
+
+Um den vollen Namen des Reiters zu sehen, führen Sie den 
+Mauszeiger über einen Kontenfensterreiter.
+
+Wenn mehr Reiter offen sind, als auf dem Bildschirm angezeigt 
+werden können, werden einige Reiter nicht dargestellt. Sie können 
+durch alle Reiter bewegen, indem Sie die Pfeile an beiden Enden der 
+Reiterleiste. Eine vollständige Liste der Reiter durch Rechtsklicken 
+der Reiterleiste angesehen werden und jeder Reiter kann durch 
+Anklicken desselben ausgewählt werden.
+
+[[basics-options2]]
+
+==== Menüeinträge
+
+((("Benutzeroberfläche", "Menüleiste")))Sowohl das Kontenbaumfenster als auch die Kontenansicht 
+enthalten Menütitel in der __Menüleiste__. Das 
+Klicken auf einen Menütitel bringt die Menüeinträge hervor.
+
+
+Sie können auf den Kontenbaumtitel klicken und dann den Mauszeiger über die Menüeinträge bewegen,
+um zu sehen, was diese machen. Sowie sich der Zeiger über die
+Menüeinträge bewegt, wird eine Beschreibung des Eintrages in der Statusleiste am
+untersten Rand des Fensters angezeigt (innerhalb der __Statusleiste__). Klicken Sie auf den Menüeintrag, um ihn auszuwählen.
+
+
+Sie können die meisten Menüeinträge auch aufrufen, indem Sie
+mit der rechten Maustaste irgendwo in das Fenster klicken. Im Kontenbaumfenster wird eine Liste der Konteneinträge angezeigt. Im Kontenansichtsfenster wird eine Liste der Buchungseinträge angezeigt.
+
+
+
+Schließlich kann man Menüeinträge über die Tastatur durch Eingeben 
+der Kurzwahl Tastenkombinationen aufrufen,
+wie später in diesem Kapitel beschrieben.
+
+[[basics-shortcut2]]
+
+==== Menü Kurzwahl Tastenkombinationen
+
+((("Benutzeroberfläche", "Kurzwahl Tastenkombinationen")))
+Die meisten Menüeinträge können über Tastenkombinationen aufgerufen werden, die den
+unterstrichenen Buchstaben in den Menünamen entsprechen. Drücken der Alt 
+Taste zusammen mit der unterstrichenen Taste aus dem Menünamen klappt das Untermenü
+auf. Sobald diese angezeigt werden, drücken Sie die unterstrichene Taste in dem Untermenüeintrag, 
+um ihn zu aktivieren. Zum Beispiel, ruft das Eintippen
+von AltD
+in dem Hauptfenster das 
+Untermenü auf, eintippen von S speichert die
+Datei. Diese Tastenkombinationen sind fixiert und können vom
+Benutzer nicht verändert werden.
+
+
+Einige der häufiger genutzten Untermenüeinträge reagieren auf
+Tastenkombinationen, die das Kommando direkt aufrufen, ohne dass Sie
+sich durch die Menüstruktur hangeln müssen. Diese
+Tastenkombinationen nutzen typischerweise die Strg
+Taste, können aber beliebige Tastenkombinationen sein.
+Tastenkombinationen werden am Ende des jeweiligen Untermenüeintrags
+angezeigt.
+
+[[basics-help1]]
+
+=== Hilfe bekommen
+
+((("Hilfe bekommen")))GnuCash bietet Hilfe auf vielerlei Weise an. Wir haben bereits
+den <<basics-tip2,Tipp des Tages >>Dialog behandelt, der
+hilfreiche Tipps beim Start von GnuCash liefert. 
+
+++++++++++++++++++++++++++++++++++++++
+<!-- not very good in German <application>&app;</application> hat auch ein ausführliches Hilfe Manual.-->
+++++++++++++++++++++++++++++++++++++++
+    
+
+
+[[basics-manual2]]
+
+==== Hilfe-Menü
+
+((("Hilfe bekommen", "Menüleiste")))
+Sobald Sie GnuCash geöffnet haben, sehen Sie das 
+Kontenbaum-Fenster den  
+Menüeintrag, welcher das Hilfemanual öffnet. Das Hilfemanual ist 
+nach Themen gegliedert und Sie können jedes Thema in seine 
+Unterthemen ausweiten.
+
+Die Themen sind an der linken Seite aufgelistet. Um ein Thema 
+oder Unterthema auszuwählen,klicken Sie es an, worauf der Text rechts 
+angezeigt wird. Nutzen Sie die Pfeiltasten
+und Hypertext-Links zur Navigation.
+Mit menu:Datei[Seite
+        drucken] drucken Sie die aktuelle
+Seite.
+
+[[basics-web2]]
+
+==== Internetzugang
+
+((("Hilfe bekommen", "Internetzugang")))Das GnuCash Hilfe-Fenster benimmt sich wie 
+ein einfacher Webbrowser, Sie können eine Webseite für zusätzliche 
+Informationen aufrufen. Sie können jede Webseite in diesem Fenster 
+öffnen durch Klicken auf die Öffnen__Werkzeugleisten__-Schaltfläche und Eingeben einer URL.
+Nutzen Sie die Zurück-, Vorwärts-,
+Neuladen-, Stopp- und
+Drucken-Schaltfläche wie in einem Standard- Web-Browser.
+
+
+Die link:$$http://www.gnucash.org$$[GnuCash]
+Website enthält hilfreiche Informationen über das Programm und
+über mögliche Aktualisierungen. Sie enthält ferner
+Verknüpfungen zu
+den link:$$https://lists.gnucash.org/mailman/listinfo$$[GnuCash
+        Mailinglisten] für Entwickler und Nutzer und Sie können
+die link:$$http://lists.gnucash.org/pipermail/gnucash-de/$$[Archive
+        der deutschsprachigen GnuCash Mailinglisten] nach Diskussionen
+über bestimmte Themen durchsuchen. Falls Sie keine Antwort
+auf Ihre Frage finden, können Sie diese an die
+englischsprachige
+link:$$https://lists.gnucash.org/mailman/listinfo/gnucash-user$$[GnuCash-user]
+oder die deutschsprachige
+link:$$https://lists.gnucash.org/mailman/listinfo/gnucash-de$$[GnuCash-de]
+Mailingliste richten, und jemand von der Liste wird versuchen,
+Ihnen eine Antwort zu geben.
+
+
+
+Die aktuellste GnuCash FAQ befindet sich
+auf der
+link:$$http://wiki.gnucash.org/wiki/FAQ$$[GnuCash
+        FAQ Website] und enthält Antworten auf die
+häufigsten Fragen. Auch eine link:$$http://wiki.gnucash.org/wiki/De/GnuCash$$[deutschsprachige
+        Wiki] gibt es.
+
+[[basics-topic2]]
+
+==== Themen suchen
+
+((("Hilfe bekommen", "Themen suchen")))
+Das Hilfe Fenster bietet ferner eine Suchfunktion. Um nach
+einem bestimmten Thema zu suchen, geben Sie dieses in das
+Eingabefeld im oberen Bereich des Fensters ein und drücken
+die Eingabetaste, um die Suche zu
+starten. Eine Liste mit Treffern sollte erscheinen, aus der
+Sie die Themen durch anklicken aufrufen können. 
+
+[[basics-files1]]
+
+=== Speichern Ihrer Finanzdaten
+
+((("Dateien")))GnuCash kann Ihre Finanzdaten in Dateien 
+oder SQL-Datenbanken <<basics-store-data,speichern>>, 
+so dass sie zu einem späteren Zeitpunkt <<basics-file-open-data,geöffnet>> 
+und verändert werden können. Aber sollten Sie einen Container für Ihre 
+Daten <<basics-create-data,erstellen>>.
+
+[[basics-create-data]]
+
+==== Eine Datei erstellen
+
+Eine GnuCash-Datei wird wie folgt erstellt:
+
+
+. In der GnuCash__Menüleiste__ wählen Sie menu:Datei[Neue Datei]. Der Neue Kontenhierarchie erstellen
+Assistent startet.
++
+[NOTE]
+====
+Wenn Sie GnuCash zum ersten Mal starten, erscheint es mit dem Willkommen bei GnuCash!-Fenster. Dieses Fenster ist genauer im 
+GnuCash Manual beschrieben.
+
+====
+
+
+. Setzen Sie Ihre Einstellungen im Assistenten und bewegen sich durch die Fenster mit den 
+Vorwärts-, Abbrechen- und Zurück-Schaltflächen.
+
+[[basics-store-data]]
+
+==== Daten speichern
+
+Folgen Sie diesen Schritten, um die Datei unter den von Ihnen bevorzugten Namen zu speichern:
+
+
+. Wählen Sie menu:Datei[Speichern unter...] in der __Menüleiste__ oder wählen Sie die 
+Speichern-__Symbolleisten__-Schaltfläche. 
+GnuCash zeigt den Speicherndialog an.
+
+
+. Wählen Sie das Datenformat für die Datei, die Sie speichern, aus dem Listenfeld aus. 
+Die Standardauswahl ist XML, aber wenn Sie einen Datenbankserver aufgesetzt haben, 
+können dieses Format entsprechend wechseln.
++
+Abhängig vom ausgewählten Datenformat können Sie das Fenster wechseln, wie im Folgenden beschrieben.
+
+
+. &#160;
++
+
+
+** Wenn Sie XML oder sqlite3 auswählen, sehen Sie folgende Ansicht:
++
+[[basics-SaveXML]]
+.Der Speichern Dialog
+image::figures/basics_SaveXML.png["Dieses Bild zeigt den Speichern Dialog, wenn das gewählte DatenformatXML ist.",width=]
+
++
+Geben Sie den gewählten Dateinamen in 
+das Namens-Feld ein. Es ist nicht notwendig, eine 
+Erweiterung zu benennen, wenn Sie den Dateinamen schreiben. GnuCash 
+wird die Erweiterung __.gnucash__ automatisch 
+der Datei hinzufügen.
++
+[NOTE]
+====
+Die __.gnucash__ Erweiterung wurde in der 2.3er Serie von GnuCash eingeführt.
+Für bereits vorhandene Dateien wird die Erweiterung nicht geändert. Wenn Sie eine vorhandene Datei mit Namen  
+__MeineAlteDatei__ öffnen, wird dieser Name nicht geändert, wenn Sie diese Datei speichern. Sie müssen   
+Speichern unter... &gt;  benutzen und der Datei einen neuen Namen geben, damit dieser mit der Erweiterung __.gnucash__ gespeichert wird.
+
+====
++
+Wählen Sie den Pfad, wo die Datei gespeichert wird.
++
+[TIP]
+====
+Klicken Sie auf die Ordner anlegen-Schaltfläche, um einen neuen Ordner mit einem gewöhnlichen Namen in dem ausgewählten Pfad.
+
+====
+
+** Wenn Sie das mysql- oder postgres-
+Datenformat auswählen, sehen Sie einen ähnlichen Dialog wie folgt:
++
+[[basics-SaveSQL]]
+.De rSpeicherndialog
+image::figures/basics_SaveSQL.png["Dieses Bild zeigt den Speichern-Dialog, wenn als Datenformatmysql oder postgres ausgewählt ist.",width=]
+
++
+Geben Sie in dieses Fenster die Informationen für die Datenbankverbindung ein:
+Datenbankserver, Datenbank, Benutzername 
+und Passwort.
++
+[WARNING]
+====
+Speichern in eine mysql- oder postgres-Datenbank benötigt die entsprechenden Berechtigungen in dieser 
+Datenbank, Sie benötigen die Berechtigung eine neue Datenbank mit einem eigenen Namen anzulegen oder schreibenden Zugriff auf eine vorhandene Datenbank.
+
+====
+
+
+
+. Klicken Sie die Speichern unter-Schaltfläche, um die Datei zu speichern.
+
+Wenn Sie nur mit den Finanzdaten eines einzelnen Haushalts arbeiten, genügt 
+eine Datei. Wenn Sie aber auch Ihre Geschäftskonten führen, oder aus anderen Gründen 
+bestimmte Daten getrennt halten wollen, benötigen Sie mehr als eine Datei.
+
+Bevor Sie eine GnuCash-Sitzung beenden, sollten Sie unbedingt
+Ihre Daten mit menu:Datei[Speichern] oder dem Speichern-Symbol in der __Werkzeugleiste__
+sichern.
+[NOTE]
+====
+Da es sehr wichtig ist, Ihre Daten häufig zu sichern, um zu verhindern, die aus welchem Grund auch immer zu verlieren, kann 
+GnuCash die geöffnete Datei automatisch in bestimmten Zeitabständen speichern.
+Dieser Zeitabstand kann in dem Reiter Allgemein unter 
+menu:Bearbeiten[Einstellungen]
+(menu:GnuCash[Einstellungen] unter Mac OS X)eingestellt werden.
+Berücksichtigen Sie bitte, dass diese Möglichkeit nur beim Speichern im XML-Format relevant ist.
+Wenn Sie mit einer Datenbank arbeiten, ist das Speichern-Symbol und der Menüeintrag Speichern ausgegraut, weil die Änderungen direkt gespeichert werden.
+
+====
+
+
+
+[[basics-file-open-data]]
+
+==== Datei öffnen
+
+((("Dateien", "Öffnen")))Um eine existierende Datei zu öffnen, wählen
+Sie menu:Datei[Öffnen] aus dem Menü. In dem Fenster, dass 
+sich dann öffnet, wählen Sie das Datenformat. Wenn Sie Datei ausgewählt haben, wählen Sie die Datei, die Sie öffnen wollen. Andernfalls geben Sie die benötigten Informationen zur Datenbankverbindung an.
+
+
+[TIP]
+====
+GnuCash hält eine Liste der zuletzt geöffneten Dateien bereit. Öffnen Sie das Menü Datei,
+und Sie sehen die Namen der zuletzt geöffneten Dateien aufgelistet. Klicken Sie auf diejenige, die Sie öffnen wollen.
+
+====
+
+[[basics-expt-acct]]
+
+==== Kopieren einer Kontenhierarchie
+
+In einigen Fällen ist es nützlich, die Struktur der vorhandenen Datendatei in eine neue Datei zu kopieren. 
+Zum Beispiel wollen Sie ein neues Abrechnungsverfahren testen, ohne Ihre aktuelle Abrechnungsdaten zu zerstören, oder Sie müssen den 
+Buchführungsrichtlinien folgen, die Sie benötigen, um Ihren Buchungsabschluss am Ende des Jahres durchzuführen und im neuen Jahr mit einem neuen Buch zu beginnen
+
+GnuCash erlaubt Ihnen, einfach eine leere Kopie Ihrer Kontenpläne zu erstellen, durch Auswahl von
+menu:Datei[Exportieren &gt; Konten exportieren...].
+Wenn Sie dieses Kommando auswählen, werden Sie gefragt, den neuen Namen für die neue leere Datei einzugeben, und GnuCash
+erstellt eine neue Datendatei, die nur Ihre Kontenhierarchie (also ohne Buchungsdaten). Einmal gespeichert kann die neue Datei wie jede andere GnuCash Datendatei geöffnet werden, wie oben beschreiben.
+
+[[basics-backup1]]
+
+=== Datensicherung und –wiederherstellung
+
+((("Datensicherung")))GnuCash erzeugt verschiedene Arten von Dateien um
+sicherzustellen, dass Ihre Daten nicht verloren gehen. In dem Ordner Ihrer gespeicherten Daten, sehen Sie GnuCash Dateien mit den folgenden Dateinamenserweiterungen
+__.gnucash__,
+__.log__, __.LCK__, __.LNK__ in demselben Ordner wie ihre primäre Datei.
+Was es mit diesen Dateien für eine Bewandtnis hat, ist im
+folgenden Abschnitt beschrieben.
+
+
+----
+
+gcashdata.gnucash gcashdata.gnucash.20150414185747.gnucash
+gcashdata.gnucash.20150414223248.log
+gcashdata.gnucash.20150415114340.gnucash
+gcashdata.gnucash.20150415154508.log
+gcashdata.gnucash.20150415173322.gnucash
+gcashdata.gnucash.20150415194251.log
+gcashdata.gnucash.7f0982.12093.LNK gcashdata.gnucash.LCK
+
+----
+
+[[basics-backupxac2]]
+
+==== Sicherungsdatei
+
+((("Datensicherung", "Sicherungsdatei")))Jedes mal, wenn Sie ihre Datei speichern, wird gleichzeitig eine 
+Sicherungsdatei mit der Dateinamensendung jjjjMMtthhmmss.gnucash gespeichert. 
+Diese Sicherungsdatei ist eine vollständige Kopie Ihrer Datendatei. Die         Dateinamensendung gibt Jahr, Monat, Tag und Zeit der Sicherung an. 
+Zum Beispiel bedeutet der Dateiname __gcashdata.gnucash.20010404185747.gnucash__,
+dass die Sicherungskopie der Datei gcashdata.gnucash am 4. April 2015 um 18:57:47 Uhr erfolgte.
+
+Um eine alte Sicherungsdatei wiederherzustellen, öffnen Sie
+einfach die __.JJJJMMTTHHMMSS.gnucash__-Datei mit dem Datum, zu dem Sie zurückkehren wollen. 
+Achten Sie unbedingt darauf, dass Sie die Datei unter einem anderen Namen speichern!
+
+
+
+[NOTE]
+====
+__.JJJJMMTTHHMMSS.xac__ anstelle der aktuellen Datei-Erweiterung __.JJJJMMTTHHMMSS.gnucash__. 
+Wenn Sie von der 2.2er Serie auf die 2.4er Serie und neuer aktualisieren, haben Sie am Ende beide Sicherungsdateien __.JJJJMMTTHHMMSS.xac__ 
+und __.JJJJMMTTHHMMSS.gnucash__ in Ihrem Verzeichnis.
+
+
+====
+
+[[basics-backuplog2]]
+
+==== Logdatei (.log)
+
+((("Datensicherung", "Logdatei")))Jedes mal wenn Sie eine Datei in GnuCash öffnen, erstellt GnuCash eine .log Datei der 
+Änderungen, die Sie an der Datendatei gemacht haben. 
+Die Logdatei nutzt ein ähnliches Namensformat wie die Sicherungsdatei:
+__.JJJJMMTTHHMMSS.log__. Logdateien sind keine vollständige
+Sicherung Ihrer Daten - sie sind lediglich eine Aufzeichnung
+der Veränderungen, die sie in der aktuellen GnuCash Sitzung
+vorgenommen haben.
+
+In dem Fall, dass Sie GnuCash versehentlich beenden, zum
+Beispiel durch einen Stromausfall oder einen Systemabsturz, ist es möglich, 
+den größten Teil Ihrer Arbeit seit dem letzten Speichern Ihrer 
+GnuCash-Datei durch Einspielen dieser Logdatei wieder herzustellen. Dies ist das Verfahren:
+
+
+. Öffnen Sie die zuletzt gespeicherte GnuCash-Datei.
+
+
+. Gehen Sie zu menu:Datei[Importieren &gt; Einträge aus Logdatei wieder einspielen…]
+und wählen Sie genau diejenige Logdatei mit demselben Datum, wie es die 
+soeben geöffnete Datei trug. Stellen Sie sicher, dass Sie wirklich die 
+richtige Logdatei benutzen, da Sie andernfalls schweren Schaden in Ihren 
+Konten anrichten können!
+
+Das Einspielen der Logdatei wird alle Buchungen wiederherstellen, die 
+das Saldo seit dem letzten Speichern verändert haben, einschließlich derjenigen 
+aus terminierten Buchungen und Geschäftsvorfällen (Rechnungen und
+Forderungen, etc.). 
+
+
+[WARNING]
+====
+Änderungen in den terminierten Buchungen, oder den eigentlichen Rechnungsbelegen 
+werden NICHT wiederhergestellt und die zugehörigen Buchungen, auch wenn 
+Sie wiederhergestellt wurden, werden möglicherweise nicht korrekt
+zugeordnet und sollten daher besonders überprüft werden. Insbesondere bei 
+geschäftlichen Buchungsvorgängen kann es erforderlich sein, dass Sie einige 
+löschen und erneut eingeben müssen. Tun Sie dies nicht, kann es sein, dass 
+trotz korrekten Saldos einige Berichte falsch sind.
+
+====
+
+[[basics-backuplock2]]
+
+==== Blockdateien (.LNK und .LCK)
+
+((("Datensicherung", "Blockdateien")))Gelegentlich werden Sie .LNK und .LCK Dateien auftauchen sehen. 
+Diese speichern keine Daten, sondern werden erzeugt, um zu verhindern, dass 
+mehrere Benutzer dieselbe Datei gleichzeitig öffnen können. Diese Dateien 
+werden automatisch erzeugt, sobald Sie Ihre eigene Datei öffnen, damit niemand 
+sonst darauf zugreifen kann. Wenn Sie Ihre GnuCash Sitzung 
+beenden oder eine andere Datei öffnen, wird GnuCash die Blockade
+der ersten Datei aufheben, indem es die LCK und LNK Dateien löscht. 
+
+Wenn GnuCash nicht ordnungsgemäß beendet wird, während Sie eine
+Datei geöffnet haben, werden die __.LCK__ und __.LNK__ Dateien nicht
+gelöscht. Beim nächsten Start von GnuCash, werden Sie eine
+Warnmeldung erhalten, dass die Datei blockiert ist. Die Warnmeldung erscheint, 
+weil die __.LNK__ und __.LCK__  Dateien in
+Ihrem Ordner gefunden wurden. Es ist sicher, Trotzdem öffnen zu wählen, aber
+Sie sollten die __.LNK__ und __.LCK__Dateien löschen (von der
+Kommandozeile oder mit dem Dateimanager). Sobald die Dateien entfernt sind, wird die Warnmeldung nicht mehr erscheinen,
+sofern GnuCash nicht wieder abstürzt.
+
+
+[[basics-lock]]
+.Warnmeldung, dass Blockdateien gefunden werden
+image::figures/basics_lock.png["Die Abbildung zeigt die Warnung, dass Blockdateien gefunden werden.",width=]
+
+[[basics-backupmanage2]]
+
+==== Dateimanagement
+
+((("Datensicherung", "Dateimanagement")))Welche Dateien sollten Sie also aufbewahren? Behalten müssen Sie 
+natürlich Ihre Datendatei. Es ist eine gute Idee, einige __.JJJJMMTTHHMMSS.gnucash__Datensicherungen neueren Datums aufzubewahren, aber Sie können sicher die __.log__-Dateien löschen, weil sie keine kompletten Kopien Ihrer Daten sind. 
+
+
+[NOTE]
+====
+Wenn Sie von einer GnuCash Version vor 2.4 aktualisieren, haben Sie die Sicherungsdateien in dem alten __.xac__ 
+-Format. Für diese Dateien können Sie die gleichen Verfahren anwenden, wie oben für __.JJJJMMTTHHMMSS.gnucash__ Sicherungsdateien beschrieben. 
+
+====
+
+Sie sollten ebenfalls alle __.LCK__ und __.LNK__ Dateien löschen, die
+Sie nach dem Beenden von GnuCash noch finden. Wenn Sie Ihre Daten manuell in einem anderen Ordner sichern wollen, müssen
+sie nur Ihre Datendatei kopieren - nicht die __.JJJJMMTTHHMMSS.gnucash__-Sicherungsdatei.
+
+
+[NOTE]
+====
+GnuCash löscht automatisch alle __.log__ und __.JJJJMMTTHHMMSS.gnucash__-Dateien, 
+die älter als 30 Tage sind. Sie können dieses Verhalten in den
+GnuCash Einstellungen in dem Reiter Allgemeines unter menu:Bearbeiten[Einstellungen]
+(menu:GnuCash[Einstellungen] unter Mac OS X).
+
+====
+
+[[basics-migrate-settings]]
+
+=== Übertragung der GnuCash Daten
+
+Manchmal haben Sie das Bedürfnis, Ihre Finanzdaten und Ihre GnuCash Einstellungen auf eine andere Maschine zu übertragen.
+Übliche Anwendungsfälle sind, wenn Sie einen neuen Computer kaufen 
+oder wenn Sie die gleichen Einstellungen auf verschiedenen 
+Betriebssystemen in einer Dualbootkonfiguration nutzen wollen.
+
+[[migrate-financial]]
+
+==== Übertragung der Finanzdaten
+
+Übertragung der GnuCash Finanzdaten ist so einfach wie das Kopieren der __.gnucash__-Datei  
+mit dem Dateimanager, wenn Sie wissen, wo diese gespeichert sind. 
+Wenn Sie sich nicht erinnern, wo eine Datei gespeichert ist, aber Sie 
+können es direkt in GnuCash aufrufen, speichern es in dem gewünschten Pfad mit GnuCash.
+
+Alle anderen Dateien in dem Ordner sind entweder Sicherungs- oder Logdateien. Es schadet nicht, sie auch zu kopieren, es ist nicht wahrscheinlich es zu tun.
+
+[[migrate-prefs]]
+
+==== Übertragung der Einstellungsdaten
+
+Einstellungen werden in drei verschiedenen Orten gespeichert: Eine für die GnuCash-Einstellungen,
+eine für Berichte und eine für die Einstellungen des Online-Banking. Einstellungen werden durch die gsettings, 
+Berichte durch GnuCash selbst und Online 
+Banking durch aqbanking gehandhabt. Wenn Sie kein Online Banking nutzen,
+werden Sie diesen Ordner nicht auf Ihre Maschine haben.
+
+Wo die GnuCash Einstellungen gespeichert sind, variiert abhängig von Ihrem Betriebssystem (siehe auch <<App-sett-loc>>, <<Report-loc>> und 
+<<OB-sett-loc>>). Um Ihre Installation zu sichern und zu übertragen, müssen Sie diese Einstellungen auch kopieren.
+
+[[App-sett-loc]]
+.Ort der Einstellungen
+[options="header"]
+|===============
+|Betriebssystem|Ordner
+|Unix|GnuCash Einstellungen sind in dconf gespeichert.
+            Sie können das Kommando ++dconf dump /org/gnucash/++ auf der alten Maschine nutzen 
+            und ++dconf load /org/gnucash/++ auf der neuen  Maschine nutzen, um die Einstellungen zu übertragen.
+|MacOSX|Die Einstellungen sind unter __$$~/Library/Preferences/gnucash.plist$$__ gespeichert.
+|Windows|Die Einstellungen sind in der Windows Registry unter __$$HKEY_CURRENT_USER/software/GSettings$$__ gespeichert.
+
+|===============
+
+
+[[Report-loc]]
+.Ort der gespeicherten Berichte
+[options="header"]
+|===============
+|Betriebssystem|Ordner
+|Unix|__$$~/.gnucash$$__
+|Mac OSX|__$$~/Library/Application Support/gnucash$$__
+|Windows|__Dokumente und Einstellungen/Username/.gnucash__ oder
+                     __Benutzer/Username/.gnucash__
+
+|===============
+
+
+[[OB-sett-loc]]
+.Ort der Online-Banking-Einstellungen
+[options="header"]
+|===============
+|Betriebssystem|Ordner
+|Unix|__$$~/.aqbanking$$__
+|Mac OSX|__$$~/.aqbanking$$__
+|Windows|__Dokumente und Einstellungen/Username/.aqbanking__
+
+|===============
+
+
+
+[NOTE]
+====
+Unter Unix und MacOSX werden diese Ordner normalerweise im Dateimanager nicht angezeigt. 
+Sie müssen im Dateimanager einstellen, dass die versteckten Dateien und Ordner angezeigt werden, um diese zu sehen.
+
+====
+
+
+[TIP]
+====
+Unter Unix und MacOSX bedeutet das ~ Zeichen den __Home__-Ordner.
+
+====
+
+[[basics-together1]]
+
+=== Alles Zusammensetzen
+
+((("Alles Zusammensetzen", "Grundlagen")))
+[NOTE]
+====
+ Mit diesem Abschnitt beginnt eine Anleitung, die sich durch das
+ganze Buch fortsetzen wird. Am Ende jedes Kapitels werden Sie
+einen Abschnitt Alles Zusammensetzen
+finden, der Sie schrittweise durch Beispiele führen wird, um
+die im Kapitel behandelten Konzepte zu veranschaulichen.
+Jeder Alles Zusammensetzen Abschnitt baut
+auf dem vorangehenden auf. Benutzen Sie also die
+vorgeschlagenen Namen und speichern Sie die Dateien.
+
+====
+
+
+Los geht's!
+
+
+
+. Lassen Sie uns als erstes eine Datei anlegen, die später
+Ihre privaten Kontodaten speichern soll.
+Öffnen Sie GnuCash und wählen Sie menu:Datei[Neue Datei]
+aus der __Menüleiste__. Dieses startet den  Neuen Kontenrahmen
+          erstellen Assistenten, der es Ihnen erlaubt, mehrere Konten auf einmal zu erstellen.
++
+[NOTE]
+====
+Wenn dies der allererste Start von GnuCash ist,
+gelangen Sie automatisch zu dem Neuen Kontenrahmen erstellen Assistenten.
+
+====
++
+[[basics-NewAccountHierarchySetup]]
+.Der Neuen Kontenrahmen erstellen Assistent
+image::figures/basics_NewAccountHierarchySetup.png["Die Abbildung zeigt den ersten Bildschirm des Neuen Kontenrahmen erstellen Assistenten.",width=]
++
+Das erste Bild des Assistenten gibt Ihnen eine Beschreibung, was der Assistent tut.
+Klicken Sie auf die Vor-Schaltfläche, um zum nächsten Bild zu kommen.
+
+
+. Im zweiten Bild wählen Sie die Währung im Listenfeld aus,die Sie für die neuen Konten nutzen möchten.
+Dann drücken Sie die Vor-Schaltfläche.
++
+[NOTE]
+====
+Die ausgewählte Währung wird auf allen Konten angewendet, die mit dem Assistenten erstellt werden.
+
+====
++
+[[basics-NewAccountHierarchySetup-currency]]
+.Der Neuen Kontenrahmen erstellen Assistent - Währung
+image::figures/basics_NewAccountHierarchySetup_currency.png["Die Abbildung zeigt den zweiten Bildschirm des Neuen Kontenrahmen erstellen Assistenten, in dem Sie die Währung auswählen können.",width=]
+
+
+. Im dritten Bild wählen Sie die Gruppe Allgemeine Konten in der 
+Kategorien-Fenster. Dann drücken Sie die  Vor-Schaltfläche, um fortzufahren.
++
+[NOTE]
+====
+Wenn Sie wollen, können Sie eine oder mehrere der vordefinierten Kontengruppen hier auswählen. Für mehr Informationen über die Kontenarten, sehen Sie in <<accts-types1>>.
+
+====
++
+[[basics-NewAccountHierarchySetup-Accounts]]
+.Der Neuen Kontenrahmen erstellen Assistent - Konten
+image::figures/basics_NewAccountHierarchySetup_Accounts.png["Die Abbildung zeigt den dritten Bildschirm des Neuen Kontenrahmen erstellen Assistenten, in dem Sie die verschiedenen Konten auswählen können.",width=]
+
+
+. Im vierten Bild können Sie einen Anfangsbestand für jedes Konto angeben, was auch angezeigt ist, wenn das Konto ein Platzhalter sein sollte. Da diese Funktionen im nächsten Kapitel beschreiben werden, lassen Sie alles wie von GnuCash eingerichtet und klicken Vor, um das letzte Bild des Assistenten zu öffnen.
++
+[[basics-NewAccountHierarchySetup-Setup]]
+.Der Neuen Kontenrahmen erstellen Assistent - Konten einrichten
+image::figures/basics_NewAccountHierarchySetup_Setup.png["Die Abbildung zeigt den vierten Bildschirm des Neuen Kontenrahmen erstellen Assistenten, in dem Sie die ausgewählten Konten einrichten können.",width=]
+
+
+. Im letzten Bild des Assistenten klicken Sie auf Anwenden, um alle Konten zu erstellen und den Assistenten zu verlassen.
++
+[[basics-NewAccountHierarchySetup-Finish]]
+.Der Neuen Kontenrahmen erstellen Assistent - Beenden
+image::figures/basics_NewAccountHierarchySetup_Finish.png["Die Abbildung zeigt den letzten Bildschirm des Neuen Kontenrahmen erstellen Assistenten.",width=]
+
+
+. Nach dem Drücken von Anwenden im vorherigen Fenster, erhalten Sie den Speicherndialog. Wählen Sie das XMLDatenformat, geben bei 
+Name den Dateiname __test__ ein, wählen den Ordner, wohin die Datei gespeichert werden soll (denken Sie daran, dass diese Datei in allen Anleitungen in diesem Handbuch benutzt werden), 
+und drücken schließlich die Speichern unter Schaltfläche.
++
+Ihr Hauptfenster sollte nun wie folgt aussehen:
++
+[[basics-EmptyAccounts]]
+.Hauptfenster mit der Testdatei
+image::figures/basics_EmptyAccounts.png["",width=]
+

@@ -1,0 +1,267 @@
+[[chapter_bus_ap]]
+
+== Kreditorenbuchhaltung
+
+Die Kreditorenbuchhaltung bezieht sich auf Lieferungen und Leistungen, die ein Unternehmen gekauft hat und nun bezahlen muss.
+
+[[bus_ap_setup1]]
+
+=== Starteinrichtung
+
+Die Durchführung der Einrichtung ist in  <<chapter_bus_setup>> 
+beschrieben.
+
+
+[[bus-ap-components1]]
+
+=== Systemkomponenten
+
+GnuCash hat eine integrierte Kreditorenbuchhaltung. 
+Die von der Kreditorenbuchhaltung erzeugten Geschäftsvorfälle werden im 
+Konto Verbindlichkeiten aus Lieferung und Leistung aufgezeichnet. 
+In der Regel arbeiten Sie nicht direkt mit diesem Konto, sondern nutzen 
+die vier integierten GnuCash Passiva-Anwendungsbestandteile.
+Die Passiva-Anwendungsbestandteile sind im Umtermenü menu:Geschäft[Kunden] erreichbar. Diese 
+Passiva-Anwendungsbestandteile sind :
+
+
+
+** Lieferanten sind Personen oder Unternehmen, von denen Sie 
+Produkte oder Leistungen auf Kredit gekauft haben.
+
+** Lieferantenrechnungen  bilden die materiellen 
+Rechnungen ab, die Lieferanten senden, um von Ihnen Zahlungen zu erhalten. 
+Eine Rechnung enthält eine aufgegliederte Liste der Waren und Leistungen, 
+die Sie gekauft haben.
++
+Zusätzlich unterstützt GnuCash auch 
+Gutschriften,
+welche die Umkehrung der Rechnung bilden. Eine Gutschrift erhält man 
+gewöhnlich vom Lieferanten, um Posten zu korrigieren, die irrtümlich 
+in Rechnung gestellt oder zurückgesandt wurden..
++
+Beide Dokumentenarten werden mit den gleichen Menüpunkten eingerichtet.
+
+** Unter Aufträge (optional) können Sie Lieferantenaufträge 
+eintragen. Aufträge sind eine Einrichtung, mit der Sie mehrere Rechnungen 
+eines einzelnen Lieferanten gruppieren kann.
+
+** Unter Zahlung verarbeiten… können Sie Zahlungen 
+an einen Lieferanten aufzeichnen, dem Sie Geld schulden.
+
+
+Die folgenden Abschnitte führen in die einzelnen Passiva-Anwendungsbestandteile ein.
+
+[[bus-ap-vendors1]]
+
+=== Lieferanten
+
+Ein Lieferant ist eine Gesellschaft oder eine Person, von der Sie 
+Waren oder Leistungen beziehen. Lieferanten müssen im Passiva-System 
+registiert sein.
+
+[[bus-ap-vendornew2]]
+
+==== Neuer Lieferant
+
+Um einen neuen Lieferanten zu registrieren, wählen Sie den Menüeintrag 
+menu:Geschäft[Lieferant &gt; Neuer Lieferant…]. 
+Geben Sie die allgemeinen Informationen über den Lieferanten, wie Firmenname, 
+Adresse, Telefon- und Faxnummer etc ein. Unten finden Sie eine Liste 
+weiterer Optionen: 
+
+So sieht das Registrierungsfenster für einen neuen Lieferanten aus:
+
+[[bus-ap-vendornew]]
+.Registrierungsfenster - Neuer Lieferant
+image::figures/bus_ap_vendornew.png["Registrierungsfenster - Neuer Lieferant",width=]
+
+[[bus-ap-vendorfind2]]
+
+==== Lieferant suchen
+
+Um einen existierenden Lieferanten zu suchen, nutzen Sie das Fenster
+menu:Geschäft[Lieferant &gt; Lieferanten suchen…]. 
+Sie wählen einen Lieferanten mit Lieferant anzeigen/bearbeiten 
+aus den Suchergebnissen aus. Dieses Fenster wird auch benutzt, um einen 
+Lieferanten zu suchen, wenn Rechnungen eingehen und Zahlungen geleistet werden.
+
+[[bus-ar-vendorfind]]
+.Fenster - Lieferanten suchen
+image::figures/bus_ap_vendorfind.png["Lieferanten suchen",width=]
+
+Wenn viele Lieferanten den Suchkriterien entsprechen, kann die 
+gewählte Suche durch eine zusätzliche Suche in den aktuellen Suchergebnissen 
+verfeinert werden. Das aktuelle Ergebnis wird durchsucht, wenn der 
+Radiobutton Verfeinern der aktuellen Suche ausgewählt 
+ist. Tatsächlich wählt GnuCash diese Option 
+für Sie, nachdem Sie die anfängliche Suche haben laufen lassen.
+
+Wenn der Lieferant, den Sie suchen, nicht den gewählten 
+Suchkriterien entspricht, können Sie die Suchkriterien durch Klicken 
+des Radiobutton Neue
+      Suche und dann der Schaltfläche Suchen
+ändern. Der wichtige Schritt ist die Auswahl Neue Suche. 
+Wenn der Lieferant nicht im Ergebnis der ursprünglichen Suche ist 
+und Sie nur in diesem Ergebnissatz suchen, kann der Lieferant trotz 
+neuer Suchkriterien nicht gefunden werden.
+
+
+[NOTE]
+====
+Um eine Liste aller registrierten aktiven Lieferanten zu erhalten, 
+setzen Sie das Suchkriterium auf entspricht regulärem Ausdruck 
+und setzen einen einzelnen Punkt "." in  das Texteingabefeld. 
+Stellen Sie sicher, dass Nur aktive Daten durchsuchen 
+ausgewählt ist. Dann klicken Sie Suchen. Der reguläre 
+Ausdruck "." findet alles.
+
+====
+
+[[bus-ap-bills1]]
+
+=== Lieferantenrechnung
+
+Eine Lieferantenrechnung ist eine Zahlungsaufforderung von einem 
+Lieferanten. GnuCash kann Rechnungen verfolgen.
+
+Eine Gutschrift ist ein Dokument, dass Sie vom Lieferanten erhalten, 
+um geleistete Lieferungen oder Leistungen zu berichtigen, die in einer 
+Rechnung falsch berechnet wurden. GnuCash kann 
+Gutschriften durch dieselben Menüeinträge wie bei Rechnungen erzeugen und verfolgen .
+
+
+[NOTE]
+====
+Dieser Abschnitt trifft sowohl auf Rechnungen als auch auf 
+Gutschriften zu. Um Wiederholungen zu vermeiden und den Text 
+leichter lesbar zu halten, wird er sich nur auf Rechnungen beziehen. Sie können ihn 
+genauso auf Gutschriften anwenden. Nur wo sich das Verhalten der Gutschriften von 
+den Rechnungen unterscheidet, wird dies ausdrücklich angesprochen.
+
+====
+
+[[bus-ap-billnew2]]
+
+==== Neu
+
+Wenn Sie eine Rechnung von einem Lieferanten erhalten und diese 
+in GnuCash eingeben wollen, müssen Sie eine 
+neue Rechnung erstellen. Um eine neue Rechnung zu erstellen, nutzen Sie 
+den Menüeintrag menu:Geschäft[Lieferant &gt; Neue Rechnung], und füllen das 
+erscheinende Fenster entsprechend aus.
+
+[[bus-ap-billnew]]
+.Registrierungsfenster: Neue Rechnung
+image::figures/bus_ap_billnew.png["Registrierungsfenster: Neue Rechnung",width=]
+
+Wenn Sie nun auf OK klicken, öffnet sich 
+Neue Lieferantenrechnung bearbeiten.
+
+[[bus-ap-billedit2]]
+
+==== Neue Lieferantenrechnung bearbeiten
+
+Im Fenster Neue Lieferantenrechnung bearbeiten können Sie eine 
+aufgeschlüsselte Liste der Waren und Leistungen, die Sie erworben haben, 
+in ähnlicher Weise wie die Kontenregistrierung eingeben. Für Gutschriften 
+geben Sie stattdessen eine aufgeschlüsselte Liste der Waren und Leistungen 
+ein, die der Lieferant erstattet.
+
+[[bus-ap-billedit]]
+.Neue Lieferantenrechnung bearbeiten
+image::figures/bus_ap_billedit.png["Neue Lieferantenrechnung bearbeiten",width=]
+
+Wenn Sie die Eingabe aller Elemente beendet haben, müssen Sie  
+      diese Rechnung in Ihre Konten buchen. 
+
+[[bus-ap-billpost2]]
+
+==== Diese Rechnung in Ihre Konten buchen
+
+Wenn Sie die Eingabe einer Rechnung beendet haben, müssen Sie 
+diese Rechnung in Ihre Konten buchen. Sie müssen 
+nicht sofort die Rechnung in die Konten buchen; Sie können das Fenster 
+schließen und später dahin zurückkehren. In diesem Fall müssen Sie dann 
+noch die Rechnung buchen. Erst das Buchen der Rechnung stellt ihre 
+Geschäftsvorfälle in ein Verbindlichkeitskonto ein.
+Das Buchungsfenster erscheint und fordert von Ihnen, Informationen einzugeben:
+
+[[bus-ap-billpost]]
+.Buchungsfenster
+image::figures/bus_ap_billpost.png["Buchungsfenster",width=]
+
+[[bus-ap-billfind2]]
+
+==== Suchen
+
+Um eine vorhandene Rechnung zu suchen, nutzen Sie den Menüeintrag 
+menu:Geschäft[Lieferant &gt; Lieferantenrechnung suchen…]. 
+Von den Suchergebnissen können Sie eine Rechnung zur Bearbeitung oder 
+zur Ansicht auswählen.
+
+
+[NOTE]
+====
+Bevor Sie eine gebuchte Rechnung bearbeiten können, müssen Sie 
+die Rechnungsbuchung rückgängig machen.
+
+====
+
+
+[NOTE]
+====
+Es gibt andere Wege, auf eine vorhandene Rechnung zuzugreifen. 
+Diese sind ähnlich wie der Zugriff auf Ausgangsrechnungen für Ihre 
+Kunden. Siehe auch <<bus-ar-invoicefind2>> für mehr Informationen.
+
+====
+
+[[bus-ap-jobs1]]
+
+=== Lieferantenaufträge
+
+Lieferantenaufträge werden benutzt, um mehrere Rechnungen und 
+Gutschriften von einem einzelnen Lieferanten zusammenzufassen. Die Nutzung 
+dieser Funktion ist freigestellt. Die Funktion ist nützlich, wenn Sie 
+mehrere Aufträge für denselben Lieferanten haben 
+und alle Rechnungen und Gutschriften für einen einzelnen Auftrag anschauen 
+wollen.
+
+Um Aufträge zu nutzen, müssen Sie diese unter menu:
+    Geschäft[Lieferant &gt; Neuer Auftrag
+    ] erstellen. Sie werden nun das Fenster 
+Neuer Auftrag sehen.
+
+[[bus-ap-jobnew]]
+.Neuer Lieferantenauftrag
+image::figures/bus_ap_jobnew.png["Neuer Lieferantenauftrag",width=]
+
+Um einen vorhandenen Lieferantenauftrag zu bearbeiten, nutzen 
+Sie den Menüeintrag menu:Geschäft[
+    Lieferant &gt; Aufträge suchen]. 
+Wählen Sie den gewünschten Auftrag in den Suchergebnissem und klicken 
+Sie die Schaltfläche Auftrag anzeigen/bearbeiten.
+
+Um eine Auswahl unter den Rechnungen, die mit einem gegebenen 
+Auftrag verbunden sind, zu treffen, nutzen Sie den Menüeintrag menu:Geschäft[Lieferant &gt; Auftrag suchen]. Wählen Sie den 
+gewünschten Auftrag in den Suchergebnissen und klicken Sie die Schaltfläche 
+Rechnungen anzeigen. Ein Fenster erscheint, das 
+die Rechnungen und Gutschriften, die mit diesem Auftrag verbunden sind, 
+auflistet. Wählen Sie eine Rechnung oder Gutschrift und klicken Sie 
+die Schaltfläche Rechnung anzeigen, um den 
+Rechnungseditor im Hauptanwendungsfenster zu öffnen.
+
+[[bus-ap-payment1]]
+
+=== Zahlung verarbeiten
+
+Irgendwann müssen Sie Ihre Rechnungen auch bezahlen. Dazu nutzen 
+Sie die Zahlungsanwendung unter menu:Geschäft[Lieferant &gt; Zahlung verarbeiten…].
+
+Darunter ist das Fenster GnuCash Zahlungen verarbeiten.
+
+[[bus-ap-payment]]
+.Zahlungen verarbeiten
+image::figures/bus_ap_payment.png["Zahlungen verarbeiten",width=]
+

@@ -1,0 +1,33 @@
+[[chapter_bus_intro]]
+
+== Vorstellung für Geschäftsleute
+
+Die Anforderungen an eine geschäftliche Buchhaltung unterscheiden 
+sich sehr von der einer persönlichen. 
+Im Wirtschaftsleben gibt es Kunden, die Geld schulden (Debitoren), 
+Lieferanten, denen Geld geschuldet wird (Kreditoren ), Arbeitnehmer 
+Gehaltskosten, kompliziertere Steuergesetze etc. 
+GnuCash bietet geschäftlich orientierte 
+Eigenschaften, um diese Anforderungen zu unterstützen.
+
+Im Wirtschaftsleben wird die __Debitorenbuchhaltung__ genutzt, 
+um Verkäufe aufzuzeichen, die nicht sofort bezahlt werden. 
+Dies wird in der Bilanz als Aktiva dargestellt, weil die Erwartung 
+besteht, dass Sie die Zahlung bald erhalten werden.
+
+
+In der __Kreditorenbuchhaltung__ werden die 
+(Eingangs-)Rechnungen aufgezeichnet, die Sie erhalten haben, aber 
+später bezahlt werden dürfen. 
+Dies wird in der Bilanz als Verbindlichkeit dargestellt, weil Sie 
+diese bezahlen müssen.
+
+
+Konten für Lieferungen und Leistungen und für Verbindlichkeiten 
+werden in erster Linie dafür genutzt, wenn Sie eine Menge Rechnungen 
+und Lieferscheine haben, die ein- und ausgehen, und Sie nicht den 
+Überblick verlieren wollen, gerade weil Sie nicht rechtzeitig zahlen oder 
+bezahlt werden. Für die meisten Privatnutzer ist die Debitoren- 
+und Kreditorenbuchhaltung zu schwierig, um der Mühe wert zu sein.
+
+

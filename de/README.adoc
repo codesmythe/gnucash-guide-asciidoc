@@ -1,0 +1,56 @@
+= GnuCash Kurs und Konzepte
+
+*THIS IS NOT OFFICIAL DOCUMENTATION! Please see the main GnuCash website at http://www.gnucash.org*
+
+== Autor
+
+The GnuCash Documentation Team
+
+_This Guide contains a tutorial for using GnuCash and describes the concepts behind GnuCash._
+
+== Copyright
+
+Copyright © 2009-2017 GnuCash Documentation Team
+
+Copyright © 2010-2011 Yawar Amin
+
+Copyright © 2010 Tom Bullock
+
+Copyright © 2010-2011 Cristian Marchi
+
+Copyright © 2006 Chris Lyttle
+
+Copyright © 2003-2004 Jon Lapham
+
+Copyright © 2002 Chris Lyttle
+
+Copyright © 2001 Carol Champagne and Chris Lyttle
+
+== Rechtlicher Hinweis
+
+== Feedback
+
+To report a bug or make a suggestion regarding this package or this manual, follow the directions at the GNOME Bug Tracking System.
+
+== Verlauf
+
+|===
+|Title|Date|Author|Publisher
+|GnuCash Tutorial and Concepts Guide v2.6.15|26 March 2017    |Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.6.11|11 January 2016  |Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.6.8 |27 September 2015|Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.6.7 |28 June 2015     |Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.6.3 |30 March 2014    |Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.6.2 |2 March 2014     |Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.6.1|26 January 2014|Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.6.0|29 December 2013|Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.4.2|17 November 2012|Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.4.1|1 July 2011|Multiple authors|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.3.16|November 7, 2010|Jon Lapham, Bengt Thuree, Dave Herman|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v2.0.0|July 2006|Jon Lapham, Bengt Thuree, Dave Herman|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v1.8.3|Aug 2003|Jon Lapham|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v1.8.2|Aug 2003|Jon Lapham|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v1.8.1|May 2003|Chris Lyttle|GnuCash Documentation Team
+|GnuCash Tutorial and Concepts Guide v1.8.0|Jan 2003|Chris Lyttle|GnuCash Documentation Team
+|GnuCash User Guide v1.6.5|June 2002|Chris Lyttle|GnuCash Documentation Team
+|GnuCash User Guide v1.6.0|October 2001|Carol Champagne|GnuCash Documentation Team

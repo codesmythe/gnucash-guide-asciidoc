@@ -1,0 +1,374 @@
+[[chapter_oview]]
+
+== Übersicht
+
+[[oview-intro1]]
+
+=== Einführung
+
+((("Einführung")))GnuCash ist __das__ Finanzsoftware Paket, das für Sie gemacht ist. 
+Es ist flexibel genug, um all Ihre Finanzinformationen, von den einfachen zu den sehr komplexen, zu verwalten. 
+Es ist eines der wenigen Finanzsoftware Pakete, das globale Währungen unterstützt, und es ist das einzige freie Programm seiner Art. 
+Besser noch: GnuCash ist leicht zu erlernen und zu benutzen! 
+
+Was genau kann GnuCash für Sie tun? 
+Es kann Ihre persönlichen Finanzen so detailliert protokollieren, wie Sie möchten. 
+Wenn Sie gerade beginnen, benutzen Sie GnuCash, um Ihr Girokonto zu verfolgen. 
+Dann möchten Sie vielleicht auch Ihre Kreditkartenkäufe verfolgen, um besser festzustellen, wo Sie Ihr Geld ausgeben. 
+Wenn Sie anfangen zu investieren, können Sie GnuCash benutzen, um Ihr Wertpapierbestand zu beobachten. 
+Kaufen Sie ein Auto oder ein Haus? 
+GnuCash hilft Ihnen, die Investition zu planen und die Darlehensrückzahlungen zu verfolgen. 
+Sollten Ihre Anlagen den Globus umspannen, bietet GnuCash Unterstützung für mehrere Währungen. 
+
+[[oview-intro]]
+.GnuCash Liste mit Konten in verschiedenen Währungen und Wertpapieren
+image::figures/oview_intro.png["Die Abbildung zeigt eine Liste mit Konten in verschiedenen Währungen und Wertpapieren.",width=]
+
+Obwohl GnuCash gut für persönliche Finanzen geeignet ist, ist
+es auch mächtig genug für die geschäftliche Nutzung. Von einem
+System zur Verwaltung von Konten mit Forderungen und
+Verbindlichkeiten bis zum Erstellen der Steuererklärung sind
+viele erstaunlich mächtige und einfach zu benutzende geschäftliche
+Funktionen vorhanden.
+
+
+[[oview-features1]]
+
+=== Funktionen
+
+[[oview-featureseasy2]]
+
+==== Einfach zu benutzen
+
+
+
+++++++++++++++++++++++++++++++++++++++
+<!--Bei der Entwicklung von <application>&app;</application> wurde von Anfang an Wert auf die einfache Bedienung gelegt.-->
+++++++++++++++++++++++++++++++++++++++
+    
+ 
+Innerhalb von Minuten werden Sie in der Lage sein, Ihre Finanzdaten einzugeben und eine graphische Übersicht über Ihre Finanzen zu erstellen. 
+Wenn Sie ein normales Girokonto führen können, dann sind Sie auch in der Lage, GnuCash zu benutzen! 
+Machen Sie Eingaben direkt im Kontenbuch und benutzen Sie die automatische Vervollständigung, um Buchungen automatisch abzuschließen. Die Benutzeroberfläche können Sie in der Anwendung selbst an Ihre Bedürfnisse anpassen.
+
+
+
+
+** __Einfach zu benutzende Menüs:__ 
+Die Menüs von GnuCash entsprechen den GNOME Human Interface Guidelines. 
+Das bedeutet, dass sie einfach und in ihrem Erscheinen ähnlich zu denen vieler anderer GNOME Anwendungen sind.
+
+
+** __Dokumentation__: GnuCash besitzt eine eingebaute Hilfe und dieses umfangreiche Benutzerhandbuch.
+
+
+** __Importfunktionen__: 
+GnuCash bietet, abgesehen von der Eingabe per Hand, mehrere Arten, Buchungen zu erfassen. 
+Wenn Sie einen Online-Zugang zu Ihrem Bankkonto haben, ist das besonders nützlich, denn eine der folgenden Importfunktionen wird von den meisten Banken unterstützt. 
+Sie verbringen dann weniger Zeit mit der Eingabe von Daten und mehr Zeit mit der Analyse von Ergebnissen.
+
++
+
+
+** __Quicken Import File (QIF):__
+Die Importfunktion für Quicken QIF Dateien. Dies ist ein Format, das von vielen kommerziellen Softwarepaketen zur Finanzverwaltung benutzt wird.
+
+
+** __Open Financial Exchange (OFX):__GnuCash ist die erste Freie Software Anwendung, die das Open Financial Exchange Protokoll unterstützt. 
+Dieses Format wird von immer mehr Finanzinstituten benutzt.
+
+** __Home Banking Computer Interface (HBCI):__GnuCash ist die erste Freie Software Anwendung, die das deutsche Home Banking Computer Interface Protokoll unterstützt. 
+Mit diesem Protokoll können Kontoauszüge heruntergeladen, Überweisungen und Abbuchungen vorgenommen werden.
+
+
+
+** __Berichte:__GnuCash wird mit über 30 vorgefertigten Berichten geliefert, einschließlich einer Übersicht über Konten, Einnahmen, Ausgaben, Überweisungen, einer Bilanz, Gewinn- und Verlustrechnung, einer Depotbewertung und vieler anderer. 
+Die Berichte beinhalten auch eine graphische Aufbereitung der Daten, inklusive Tortengrafiken, Balkengrafiken und Punktwolken. 
+Berichte können als HTML
+Dateien exportiert und einfach an individuelle
+Bedürfnisse angepasst werden.
+
+
+** __Terminierte Buchungen:__GnuCash kann automatische Buchungen anlegen und ausführen und Sie an wiederkehrende Überweisungen erinnern. 
+Sie können dann entscheiden, ob Sie die terminierten Buchungen eintragen oder verschieben wollen. 
+Wiederkehrende Buchungen können auch für eine bestimmte Zeit ausgesetzt werden. 
+
+** __Hypotheken- und Darlehensassistent__:
+Benutzen Sie diesen Assistenten, wenn Sie Darlehen oder Hypotheken mit einer variablen Rate zurückzahlen.
+
+
+** __Einfache Kontenabstimmung__: 
+Die eingebaute Kontenabstimmung vereinfacht den Abgleich der in GnuCash eingetragenen Konten mit Kontoauszügen. 
+
+** __Verfügbarkeit auf mehreren Plattformen:__GnuCash ist für eine Vielzahl von Plattformen und Betriebssysteme verfügbar. 
+Für GnuCash 2.6.16 sind dies: GNU/Linux (x86, x86_64, Sparc, PPC), FreeBSD (x86, x86_64), OpenBSD (x86, x86_64), Solaris (Sparc), und MacOS X (Intel und PPC). 
+Ältere Versionen von GnuCash liefen bereits auf SGI IRIX (MIPS), IBM AIX 4.1.5 (RS/6000), Unixware 7 (Intel), und SCO OpenServer 5.0.4 (Intel), aber ihr gegenwärtiger Status ist nicht bekannt.
+
+
+
+[[oview-featuresinvest2]]
+
+==== Verwalten Sie Ihre Vermögensanlagen
+
+GnuCash besitzt eine Reihe von 
+Funktionen, um Ihre Kapitalanlagen zu verfolgen. 
+Mit GnuCash können Sie Aktien einzeln (eine pro Konto) oder in einem Kontendepot (eine Gruppe von Konten, die zusammen dargestellt werden) verfolgen.
+
+GnuCash unterstützt Sie, die Börsenkurse der Aktien und offenen Investmentsfonds online abzurufen. 
+Der Prozess kann automatisiert werden, und Sie können den aktuellen Wert Ihrer Aktien sehen. 
+
+[[oview-featuresintl2]]
+
+==== Internationale Unterstützung
+
+GnuCash ist eine Anwendung, die von Benutzern überall auf der Welt verwendet werden kann. 
+Es gibt viele eingebaute Funktionen, die Ihnen in unserer globalisierten Welt nützliche Dienste leisten.
+
+
+
+
+** __Sprachunterstützung:__GnuCash wurde bereits vollständig in folgende 12 Sprachen übersetzt:
+Chinesisch, Deutsch, Englisch, Französisch, Holländisch, Italienisch, Portugiesisch, Russisch, Schwedisch, Slovakisch, Spanisch und Tschechisch. 
+Mehr als 25 andere Sprachen werden teilweise unterstützt.
+
+
+** __Unterstützung von internationalen Datums- und Zahlenformaten:__GnuCash unterstützt die unterschiedlichen Datums- und Zahlenformate der jeweiligen Länder.
+Dadurch können Sie mit den Formaten arbeiten, die Sie gewohnt sind.
+
+** __Unterstützung für mehrere Währungen und Währungshandel__: 
+GnuCash unterstützt die Verwendung mehrerer Währungen und den Handel mit ihnen. 
+Bei Aktivierung der Devisenhandelskonten bleibt Ihre Bilanz auch bei Wechselkursänderungen ausgeglichen. 
+
+** __Online-Kursabfragen:__
+Mit GnuCash brauchen Sie viele Ihrer Wertpapier- und Devisenkurse nicht mehr einzeln nachzusehen. 
+Es lassen sich automatisch die aktuellen Kurse in Ihrer bevorzugten Währung von verschiedenen Quellen online abrufen.
+
+
+
+[[oview-featuresbus2]]
+
+==== Unterstützung bei der geschäftliche Buchführung
+
+GnuCash besitzt viele Funktionen, die für die geschäftliche Buchführung benötigt werden.
+
+
+
+
+** __Forderungen/Verbindlichkeiten:__GnuCash besitzt ein System für Konten mit Forderungen und Verbindlichkeiten. 
+Sie können Kunden und Lieferanten verwalten, Rechnungsstellung und Zahlungen erledigen.
+Auch unterschiedliche Besteuerungs- und Zahlungsregelungen in kleinen Unternehmen werden unterstützt.
+
+** 
+
+++++++++++++++++++++++++++++++++++++++
+<!-- FIXME: existiert nicht [mehr?] in C; trotzdem drinlassen? -Ja, denn es gibt die Mitarbeiterverwaltung - Mechtilde 2015-09-13-->
+++++++++++++++++++++++++++++++++++++++
+    
+__Mitarbeiterverwaltung:__ 
+Mit GnuCash können Sie auch die Auslagen Ihrer Mitarbeiter abrechnen. 
+
+** __Abschreibungen:__GnuCash kann die Abschreibung von Wirtschaftsgütern verfolgen.
+
+** __Berichte:__GnuCash bietet eine große Vielzahl von fertigen Geschäftsberichten. 
+
+
+[[oview-featuresaccounting2]]
+
+==== Funktionen für die Buchhaltung
+
+Für diejenigen, die sich mit Buchführung auskennen, ist hier eine Liste der entsprechenden Funktionen in GnuCash.
+
+
+
+** __Doppelte Buchführung:__ 
+Jede Transaktion muss ein Konto belasten und einem anderen einen gleichen Betrag gutschreiben. 
+Dies stellt die "Bruttobilanz" sicher, dass die Konten stets ausgeglichen sind - dass die Differenz zwischen Einnahmen und Ausgaben genau gleich der Summe aller Bank-, Bar-, Aktien- und anderer Guthaben ist. 
+
+** __Mehrteilige Buchungen:__ 
+Eine einzelne Buchung kann in mehrere Teile geteilt werden, um
+Steuern, Gebühren und andere Bestandteile anzuzeigen. 
+
+** __Kontenübersicht:__ 
+Ein Oberkonto kann eine Hierarchie detaillierter Unterkonten haben. 
+Dies ermöglicht es, ähnliche Kontotypen wie Barbestand, Bankkonto und Aktien zum Oberkonto "Aktiva" zu gruppieren.
+
+** __Journal:__ 
+Dies ist eine Ansicht, welche mehrere Konten im selben Zeitraum darstellen kann. 
+Dies erleichtert die Suche nach Tipp- und Eingabefehlern. 
+Es bietet auch eine bequeme Möglichkeit, ein aus vielen Aktien bestehendes Portfolio zu betrachten, indem alle dort stattfindenden Transaktionen angezeigt werden. 
+
+** __Einnahmen-/Ausgaben-Kontotypen (Kategorien):__
+Diese kategorisieren den Fluss Ihrer Finanzen und liefern, wenn sie richtig mit der doppelten Buchführung kombiniert werden, eine genaue Gewinn- und Verlustrechnung.
+
+
+
+[[oview-about1]]
+
+=== Über dieses Handbuch
+
+((("Handbuch")))
+Ziel dieses Handbuchs ist es, Ihnen zu helfen, Zeit zu sparen.
+Es versetzt Sie in die Lage, schnell mit GnuCash arbeiten zu können.
+
+
+Jedes Kapitel hat eine einfache Aufteilung. 
+Ein Kapitel beginnt mit der Beschreibung von "Konzepten", die Themen und Begriffe einführen, von denen dieses Kapitel handelt. 
+"How-To-" Abschnitte, die bestimmte
+Vorgehensweisen Schritt für Schritt erläutern, folgen. Der
+Abschnitt "Alles zusammensetzen" schließt das
+Kapitel ab und enthält detaillierte, anschauliche Beispiele.
+
+
+
+Für Anfänger sind die Abschnitte "Konzepte" besonders hilfreich. 
+Sie bieten Informationen, wie man die Entwicklung seiner Finanzen verfolgt und dienen als grundlegende Einführung in die finanziellen Hintergründe und Begrifflichkeiten. 
+Erfahrene Benutzer können direkt zu den "How-To-" Abschnitten springen, um sich einen Überblick über Vorgehensweisen in GnuCash zu verschaffen. 
+Diese Abschnitte bieten Schritt-für-Schritt Anleitungen, um bestimmte Aufgaben zu erledigen. 
+Die Abschnitte "Alles zusammensetzen" bieten Beispiele aus der täglichen Arbeit in Form einer Übung. 
+Beginnend mit dem Anlegen einer Datei in <<chapter_basics>>, baut jedes Kapitel
+sukzessive auf den Übungen der vorigen Kapitel auf. 
+
+Dieses Handbuch ist in 3 große Teile unterteilt:
+
+
+** __Einführung__
+
+** __Persönliche Finanzen verwalten__
+
+** __Geschäftliche Finanzen verwalten__
+
+
+
+
+Die __Einführung__ stattet Sie mit den grundlegendsten Informationen aus, die man für die Benutzung von GnuCash benötigt. 
+Die Kapitel in diesem Abschnitt erklären das Konzept, das zur Nutzung von  GnuCash wesentlich ist. 
+Neue Nutzer von GnuCash sollten sich mit den Informationen in diesem Kapitel vertraut machen, um es für sich lauffähig zu machen:
+
+
+** <<chapter_oview>> - (Dieses Kapitel gibt einen allgemeinen Überblick über GnuCash)
+
+** <<chapter_basics>> - gibt den Nutzern eine sehr kurze Einführung in die Grundlagen der Buchführung und stellt dann Informationen bereit, wie GnuCash seine Daten strukturiert. 
+Es gibt also Informationen über grundlegende Schnittstellenelemente in GnuCash. 
+Schließlich wird in diesem Kapitel erklärt, wie GnuCash die Daten speichert und verwaltet. 
+
+** <<chapter_accts>> - gibt weitere Informationen über Konten und wie diese zu gliedern sind.
+
+** <<chapter_txns>> - gibt grundlegende Informationen über Buchungen und wie diese eingegeben werden.
+
+
+
+
+Der Teil __Persönliche Finanzen verwalten__ beschreibt
+übliche Anwendungen und Funktionen von GnuCash im Detail. 
+Dort finden Sie konkrete Beispiele, wie Sie GnuCash in häufig vorkommenden Alltagssituationen einsetzen. 
+Hier die Anwendungen und Funktionen, die in diesem Teil behandelt werden.
+
+
+** <<chapter_cbook>> - Girokonten 
+
+** <<chapter_cc>> - Kreditkarten 
+
+** <<chapter_loans>> - Darlehen 
+
+** <<chapter_invest>> - Kapitalanlagen 
+
+** <<chapter_capgain>> - Kapitalerträge
+
+** <<chapter_currency>> - mehrere Währungen
+
+
+
+
+Im Teil __Geschäftliche Finanzen verwalten__ wird die
+Verwendung von GnuCash zur Buchführung in Unternehmen beschrieben:
+
+
+** <<chapter_bus_intro>> - Einführung in die geschäftliche Buchführung
+
+** <<chapter_bus_setup>> - Einrichten der geschäftlichen Buchführung
+
+** <<chapter_bus_ar>> - Forderungen
+
+** <<chapter_bus_ap>> - Verbindlichkeiten
+
+** <<chapter_other_assets>>
+
+
+
+
+Dieses Handbuch enthält auch verschiedene __Anhänge__, die Extrainformationen enthalten, die Sie wissen sollten: 
+
+
+
+** <<appendixe>> Anhang 
+
+++++++++++++++++++++++++++++++++++++++
+<!--E-->
+++++++++++++++++++++++++++++++++++++++
+    
+: Kommandozeilenoptionen, Tastenkürzel … 
+
+** 
+
+++++++++++++++++++++++++++++++++++++++
+<!-- xref linkend="fdl"></xref -->
+++++++++++++++++++++++++++++++++++++++
+    
+ - GNU Lizenz für Freie Dokumentation
+
+
+Und schließlich bieten ein Glossar und ein Index die Möglichkeit, schnell Themen zu finden.
+
+[[more_help]]
+
+=== Mehr Hilfe erhalten
+
+[[online_help]]
+
+==== Online Hilfe
+
+Die Online-Hilfe ist das Gegenstück zu diesem Leitfaden. Er
+bietet detaillierte Anleitungen GnuCash's Menüs, 
+Fenster und Bedienelemente zu nutzen. Um die Online-Hilfe zu öffnen, 
+wählen Sie menu:Hilfe[Inhalt].
+
+[[wiki]]
+
+==== GnuCash Wiki
+
+Eine umfangreiche weiniger formale Dokumenation, sowohl von 
+GnuCash selbst als auch der Pflege und Entwicklung von 
+GnuCashkann man im link:$$https://wiki.gnucash.org/wiki$$[ GnuCashWiki (en)] finden; die Seite mit link:$$https://wiki.gnucash.org/wiki/FAQ$$[Häufig gestllten Fragen (en) ] sollte immer dann die erste Anlaufstelle sein, wenn man auf 
+Schwierigkeiten bei der Nutzung von GnuCash stößt.
+
+[[on-line-assistance]]
+
+==== GnuCash Online Hilfe
+
+Mailing-ListeDie erste Quelle der Nutzer Unterstützung 
+ist die link:$$mailto:gnucash-de@gnucash.org$$[Mailinglistee User-DE]. 
+Wenn sie eine Web-Forum ähliche Darstellung bevorzugen, können Sie sie via link:$$http://gnucash.1415818.n4.nabble.com/GnuCash-User-f1415819.html$$[Nabble] nutzen. 
+um einen Beitrag zu veröffentlichen, muss man auf  link:$$https://lists.gnucash.org/mailman/listinfo/gnucash--de$$[User-de]
+eingeschrieben sein..
+
+IRCEtliche Entwickler beobachten den 
+#gnucash Kanal auf irc.gnome.org. Normalerweise sind sie auch mit anderen 
+Dingen beschäftigt und natürlich nicht immer an ihren Compputern. Loggen 
+Sie sich ein, stellen Ihre Frage und bleiben Sie eingeloggt; es kann 
+bemehrere Stunden dauern, bis Ihre Frage bemerkt und darauf geantwortet wird. 
+Um nachzusehen, ob Sie etws verpasst haben, link:$$https://code.gnucash.org/logs$$[prüfen Sie die IRC Logs].
+
+Auf der link:$$http://www.gnucash.org$$[GnuCash Webseite ]
+finden Sie weitre Einzelheiten zu diesen Kanälen. Sie werden dort auch 
+Hinweise zu weiteren nützlichen Ressources, wie das GnuCash wiki
+and Fehlerverfolgungssystem finden.
+
+[[oview-install1]]
+
+=== Installation
+
+((("Installation")))
+Die Installation von GnuCash ist normalerweise sehr einfach.
+
+Die link:$$http://www.gnucash.org/download.phtml$$[GnuCash Download-Seite] enthält ausführliche Anweisungen, wie GnuCash auf den unterstützten Systemen installiert wird..
+
